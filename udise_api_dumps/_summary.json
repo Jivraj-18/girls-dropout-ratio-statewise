@@ -1,0 +1,44 @@
+{
+  "tabular_map117_national_year22": {
+    "url": "https://dashboard.udiseplus.gov.in/BackEnd-master/api/report/getTabularData",
+    "status": 200,
+    "bytes": 10877,
+    "out": "udise_api_dumps/tabular_map117_national_year22.json"
+  },
+  "tabular_map113_national_year22": {
+    "url": "https://dashboard.udiseplus.gov.in/BackEnd-master/api/report/getTabularData",
+    "status": 200,
+    "bytes": 10943,
+    "out": "udise_api_dumps/tabular_map113_national_year22.json"
+  },
+  "tabular_map117_stateall_year22": {
+    "url": "https://dashboard.udiseplus.gov.in/BackEnd-master/api/report/getTabularData",
+    "status": 200,
+    "bytes": 307462,
+    "out": "udise_api_dumps/tabular_map117_stateall_year22.json"
+  },
+  "tabular_map113_stateall_year22": {
+    "url": "https://dashboard.udiseplus.gov.in/BackEnd-master/api/report/getTabularData",
+    "status": 200,
+    "bytes": 307528,
+    "out": "udise_api_dumps/tabular_map113_stateall_year22.json"
+  },
+  "master_get_state_year22": {
+    "url": "https://dashboard.udiseplus.gov.in/BackEnd-master/api/report/getMasterData",
+    "status": 200,
+    "bytes": 2118,
+    "out": "udise_api_dumps/master_get_state_year22.json"
+  },
+  "master_get_district_all_year22": {
+    "url": "https://dashboard.udiseplus.gov.in/BackEnd-master/api/report/getMasterData",
+    "status": 200,
+    "bytes": 261,
+    "out": "udise_api_dumps/master_get_district_all_year22.json"
+  },
+  "master_get_district_kerala_year22": {
+    "url": "https://dashboard.udiseplus.gov.in/BackEnd-master/api/report/getMasterData",
+    "status": 200,
+    "bytes": 261,
+    "out": "udise_api_dumps/master_get_district_kerala_year22.json"
+  }
+}

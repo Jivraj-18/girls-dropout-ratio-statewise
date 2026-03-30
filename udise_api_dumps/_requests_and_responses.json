@@ -1,0 +1,252 @@
+{
+  "_run": {
+    "fetched_at": "2026-03-30T17:59:58.387839+00:00",
+    "note": "Fetched via Playwright (browser context) and saved to disk."
+  },
+  "_archive_url": "https://dashboard.udiseplus.gov.in/udiseplus-archive/",
+  "tabular_map117_national_year22": {
+    "method": "POST",
+    "url": "https://dashboard.udiseplus.gov.in/BackEnd-master/api/report/getTabularData",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Accept": "application/json, text/plain, */*"
+    },
+    "payload": {
+      "mapId": 117,
+      "dependencyValue": "{\"year\": \"22\", \"state\": \"national\", \"dist\": \"none\", \"block\": \"none\"}",
+      "isDependency": "",
+      "paramName": "civilian",
+      "paramValue": "",
+      "schemaName": "national",
+      "reportType": "T"
+    },
+    "status": 200,
+    "bytes": 10877,
+    "out": "udise_api_dumps/tabular_map117_national_year22.json"
+  },
+  "tabular_map113_national_year22": {
+    "method": "POST",
+    "url": "https://dashboard.udiseplus.gov.in/BackEnd-master/api/report/getTabularData",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Accept": "application/json, text/plain, */*"
+    },
+    "payload": {
+      "mapId": 113,
+      "dependencyValue": "{\"year\": \"22\", \"state\": \"national\", \"dist\": \"none\", \"block\": \"none\"}",
+      "isDependency": "",
+      "paramName": "civilian",
+      "paramValue": "",
+      "schemaName": "national",
+      "reportType": "T"
+    },
+    "status": 200,
+    "bytes": 10943,
+    "out": "udise_api_dumps/tabular_map113_national_year22.json"
+  },
+  "tabular_map117_stateall_year16": {
+    "method": "POST",
+    "url": "https://dashboard.udiseplus.gov.in/BackEnd-master/api/report/getTabularData",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Accept": "application/json, text/plain, */*"
+    },
+    "payload": {
+      "mapId": "117",
+      "dependencyValue": "{\"year\": \"16\", \"state\": \"all\", \"dist\": \"none\", \"block\": \"none\"}",
+      "isDependency": "Y",
+      "paramName": "civilian",
+      "paramValue": "",
+      "schemaName": "national",
+      "reportType": "T"
+    },
+    "status": 200,
+    "bytes": 309202,
+    "out": "udise_api_dumps/tabular_map117_stateall_year16.json"
+  },
+  "tabular_map117_stateall_year17": {
+    "method": "POST",
+    "url": "https://dashboard.udiseplus.gov.in/BackEnd-master/api/report/getTabularData",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Accept": "application/json, text/plain, */*"
+    },
+    "payload": {
+      "mapId": "117",
+      "dependencyValue": "{\"year\": \"17\", \"state\": \"all\", \"dist\": \"none\", \"block\": \"none\"}",
+      "isDependency": "Y",
+      "paramName": "civilian",
+      "paramValue": "",
+      "schemaName": "national",
+      "reportType": "T"
+    },
+    "status": 200,
+    "bytes": 309319,
+    "out": "udise_api_dumps/tabular_map117_stateall_year17.json"
+  },
+  "tabular_map117_stateall_year18": {
+    "method": "POST",
+    "url": "https://dashboard.udiseplus.gov.in/BackEnd-master/api/report/getTabularData",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Accept": "application/json, text/plain, */*"
+    },
+    "payload": {
+      "mapId": "117",
+      "dependencyValue": "{\"year\": \"18\", \"state\": \"all\", \"dist\": \"none\", \"block\": \"none\"}",
+      "isDependency": "Y",
+      "paramName": "civilian",
+      "paramValue": "",
+      "schemaName": "national",
+      "reportType": "T"
+    },
+    "status": 200,
+    "bytes": 309528,
+    "out": "udise_api_dumps/tabular_map117_stateall_year18.json"
+  },
+  "tabular_map117_stateall_year19": {
+    "method": "POST",
+    "url": "https://dashboard.udiseplus.gov.in/BackEnd-master/api/report/getTabularData",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Accept": "application/json, text/plain, */*"
+    },
+    "payload": {
+      "mapId": "117",
+      "dependencyValue": "{\"year\": \"19\", \"state\": \"all\", \"dist\": \"none\", \"block\": \"none\"}",
+      "isDependency": "Y",
+      "paramName": "civilian",
+      "paramValue": "",
+      "schemaName": "national",
+      "reportType": "T"
+    },
+    "status": 200,
+    "bytes": 309445,
+    "out": "udise_api_dumps/tabular_map117_stateall_year19.json"
+  },
+  "tabular_map117_stateall_year20": {
+    "method": "POST",
+    "url": "https://dashboard.udiseplus.gov.in/BackEnd-master/api/report/getTabularData",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Accept": "application/json, text/plain, */*"
+    },
+    "payload": {
+      "mapId": "117",
+      "dependencyValue": "{\"year\": \"20\", \"state\": \"all\", \"dist\": \"none\", \"block\": \"none\"}",
+      "isDependency": "Y",
+      "paramName": "civilian",
+      "paramValue": "",
+      "schemaName": "national",
+      "reportType": "T"
+    },
+    "status": 200,
+    "bytes": 316935,
+    "out": "udise_api_dumps/tabular_map117_stateall_year20.json"
+  },
+  "tabular_map117_stateall_year21": {
+    "method": "POST",
+    "url": "https://dashboard.udiseplus.gov.in/BackEnd-master/api/report/getTabularData",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Accept": "application/json, text/plain, */*"
+    },
+    "payload": {
+      "mapId": "117",
+      "dependencyValue": "{\"year\": \"21\", \"state\": \"all\", \"dist\": \"none\", \"block\": \"none\"}",
+      "isDependency": "Y",
+      "paramName": "civilian",
+      "paramValue": "",
+      "schemaName": "national",
+      "reportType": "T"
+    },
+    "status": 200,
+    "bytes": 316009,
+    "out": "udise_api_dumps/tabular_map117_stateall_year21.json"
+  },
+  "tabular_map117_stateall_year22": {
+    "method": "POST",
+    "url": "https://dashboard.udiseplus.gov.in/BackEnd-master/api/report/getTabularData",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Accept": "application/json, text/plain, */*"
+    },
+    "payload": {
+      "mapId": "117",
+      "dependencyValue": "{\"year\": \"22\", \"state\": \"all\", \"dist\": \"none\", \"block\": \"none\"}",
+      "isDependency": "Y",
+      "paramName": "civilian",
+      "paramValue": "",
+      "schemaName": "national",
+      "reportType": "T"
+    },
+    "status": 200,
+    "bytes": 307462,
+    "out": "udise_api_dumps/tabular_map117_stateall_year22.json"
+  },
+  "tabular_map113_stateall_year22": {
+    "method": "POST",
+    "url": "https://dashboard.udiseplus.gov.in/BackEnd-master/api/report/getTabularData",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Accept": "application/json, text/plain, */*"
+    },
+    "payload": {
+      "mapId": "113",
+      "dependencyValue": "{\"year\": \"22\", \"state\": \"all\", \"dist\": \"none\", \"block\": \"none\"}",
+      "isDependency": "Y",
+      "paramName": "civilian",
+      "paramValue": "",
+      "schemaName": "national",
+      "reportType": "T"
+    },
+    "status": 200,
+    "bytes": 307528,
+    "out": "udise_api_dumps/tabular_map113_stateall_year22.json"
+  },
+  "master_get_state_year22": {
+    "method": "POST",
+    "url": "https://dashboard.udiseplus.gov.in/BackEnd-master/api/report/getMasterData",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Accept": "application/json, text/plain, */*"
+    },
+    "payload": {
+      "extensionCall": "GET_STATE",
+      "condition": " where year_id='22' order by state_name"
+    },
+    "status": 200,
+    "bytes": 2118,
+    "out": "udise_api_dumps/master_get_state_year22.json"
+  },
+  "master_get_district_all_year22": {
+    "method": "POST",
+    "url": "https://dashboard.udiseplus.gov.in/BackEnd-master/api/report/getMasterData",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Accept": "application/json, text/plain, */*"
+    },
+    "payload": {
+      "extensionCall": "GET_DISTRICT",
+      "condition": "where udise_state_code= 'all' and ac_year ='22' order by district_name "
+    },
+    "status": 200,
+    "bytes": 261,
+    "out": "udise_api_dumps/master_get_district_all_year22.json"
+  },
+  "master_get_district_kerala_year22": {
+    "method": "POST",
+    "url": "https://dashboard.udiseplus.gov.in/BackEnd-master/api/report/getMasterData",
+    "headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "Accept": "application/json, text/plain, */*"
+    },
+    "payload": {
+      "extensionCall": "GET_DISTRICT",
+      "condition": "where udise_state_code= '32' and ac_year ='22' order by district_name "
+    },
+    "status": 200,
+    "bytes": 261,
+    "out": "udise_api_dumps/master_get_district_kerala_year22.json"
+  }
+}
