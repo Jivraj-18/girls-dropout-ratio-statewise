@@ -88,9 +88,11 @@ python udise_pipeline.py all --skip-fetch
 ## 🎯 For Different Users
 
 ### **Policy Makers / Presenters**
-1. Read [`PRESENTATION.md`](PRESENTATION.md) (15 min)
-2. Use charts from `outputs/charts/` for slides
-3. See [`DELIVERABLES.md`](DELIVERABLES.md) for 120-min briefing outline
+1. **[POLICY_BRIEF.md](POLICY_BRIEF.md)** ← Start here! (1 page, ₹425cr intervention plan, ready to print)
+2. **[CRISIS_STATE_PLAYBOOK.md](CRISIS_STATE_PLAYBOOK.md)** ← For IAS officers (4-step framework, 12-month roadmap, implementation checklist)
+3. [`PRESENTATION.md`](PRESENTATION.md) ← Full analysis (15 min read)
+4. Use charts from `outputs/charts/` for slides
+5. See [`DELIVERABLES.md`](DELIVERABLES.md) for 120-min briefing outline
 
 ### **Data Analysts**
 1. Run `python udise_pipeline.py all --skip-fetch`
