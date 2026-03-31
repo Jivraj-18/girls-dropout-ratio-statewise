@@ -1,0 +1,126 @@
+# UDISE+ 2024-25 - DATA SNIPPETS
+
+======================================================================
+
+Table 6.12: Repetition Rate by level of education and gender, 2024-25 .................................................................. 119
+Table 6.13: Dropout Rate by level of education and gender, 2024-25 ...................................................................... 120
+Table 6.14: Transition Rate by level of education and gender, 2024-25 .................................................................. 121
+consolidated data collected till 2021-22 and hence data from the year UDISE+ 2024-25 data is not strictly
+comparable with reports upto 2021-22 on various educational indicators such as GER, NER, Dropout rate etc.
+Similarly, population projections used for generating various educational indicators have been moderated based
+UDISE+ 2024-25 data is not strictly comparable with the previous reports upto 2021-22 on various
+educational indicators like GER, NER, Dropout rates etc. However, 2022-23, 2023-24 & 2024-25 are
+comparable.
+in case they have left behind or dropped out. This was possible only through building a unique
+student wise database which also helps in identifying dropout of students. It also helps in
+identifying ghost students and helps in transferring benefits to deserving students resulting into
+overall
+6%
+11%
+27%
+15%
+Pre-Primary General
+45%
+Primary SC
+Higher Secondary
+18%
+26% 42%
+10%
+12
+Table 1:
+['Chart 2: Percentage of distribution\nof students by social category-\noverall\n27%\nGeneral\n45%\nSC\nST\nOBC\n18%\n10%']
+students who provided Aadhaar number are represented in map 2.1.3. Andhra Pradesh has seeded
+Aadhaar numbers for 99.6% of students, while Andaman and Nicobar Islands has achieved 99.5%
+seeding - both representing the highest levels among all States and UTs, followed by Lakshadweep
+(99.1 %), Puducherry (98.9%), Chandigarh (98.5%), Haryana (98.5%) and Maharashtra (98.1%).
+States with lowest Aadhaar seeding data are Meghalaya (31.9%), Manipur (61.0%) and Nagaland
+(62.6%) with national average of 89.4%.
+Map 2.1.3: Percentage distribution of Students’ Aadhaar received– 2024-25
+schools are significantly less as compared to enrolled students indicating more students per school.
+Graph 2.1.4 Distribution of schools, students and teachers by States/UTs (%)
+18.0
+RTE, the commensurate increase in schools at secondary and higher secondary level have not come
+up. This poses the risk of large-scale dropout of students at the higher classes. Graph 2.1.5, 2.1.6 and
+2.1.7 represents the distribution of schools, students, and teachers across different types of school
+category respectively. West Bengal has 79 % primary schools with 48% students and only 3.5%
+secondary schools whereas in Chandigarh, 45 % schools are Higher Secondary schools and only 6.1 %
+primary schools.
+participation, and learning outcomes in school education will continue to be one of the major
+goals of all education sector development programs. At the national level, 48.3 % students
+are girls. The Gender Parity Index (GPI) measured as ratio of GER of girls to GER of boys
+compared to boys. Further, the representation of minorities in total enrolment is more than
+20%. Amongst the minorities 79.1 % are Muslim, 10.2% are Christians, 7.3% are Sikh, 2 %
+are Buddhist, 1.3% are Jains and 0.1% Parsi. Chart 2.2.1 represents State wise distribution of
+students among various social background. At the national level, 27.1% students registered in
+UDISE+ are from General category, 17.8 % from SC, 9.9% from ST, 45.2% are OBC
+category.
+Chart 2.2.1: Distribution of students by social groups (%)
+Lakshadweep
+school category - Overall
+7% 1% 4%
+5%
+23%
+11% 32%
+35%
+8%
+16%
+12% 16% 29%
+Pre-Primary Only Pre-Primary and Primary Primary Only
+teachers by social category - Overall teachers by management - Overall
+2.5%
+39%
+41%
+39.1%
+50.9%
+12% 7.5%
+Government Government Aided
+['Chart 2.3.1: Percentage distribution of teachers by classes taught -\nOverall\n7% 1% 4%\n5%\n11%\n35%\n8%\n16%\n12%\nPre-Primary Only Pre-Primary and Primary Primary Only\nPrimary and Upper Primary Upper Primary Only Upper Primary and Secondary\nSecondary Only Secondary and Higher Secondary Higher Secondary Only', 'Chart 2.3.2: Percentage\ndistribution of teachers by\nschool category - Overall\n23%\n32%\n16% 29%\nPrimary Upper Primary\nSecondary Higher Secondary']
+Table 2:
+['Chart 2.3.3: Percentage distribution of\nteachers by social category - Overall\n39%\n41%\n8%\n12%\nGeneral SC ST OBC', 'Chart 2.3.4: Percentage distribution of\nteachers by management - Overall\n2.5%\n39.1%\n50.9%\n7.5%\nGovernment Government Aided\nPrivate Others']
+--- PAGE 20 ---
+Chart 2.4.1 : % of schools with basic infrastructure facilities
+99.3
+facilities Harvesting
+2.5 Gross Enrolment Ratio (GER) and Dropout Rate:
+2.5.1 The National Education Policy 2020 (NEP 2020) identified universal education as a key priority,
+with several initiatives aimed at transforming the education sector and empowering the nation’s
+youth. At the heart of the NEP vision to achieve 100% Gross Enrolment Ratio (GER) till secondary
+level by 2030, it is necessary to measure GER. The Gross Enrolment Ratio (GER) compares the
+in the long run is of interest. Chart 2.5.1 to 2.5.4 shows the GER for different levels of education
+across the States. It may also be noted that GER greater than 100% might indicate presence of over
+or under age children in a particular level of education, inter State migration etc.
+["Chart 2.4.1 : % of schools with basic infrastructure facilities\n99.3\n97.3 96.2 95.9\n93.6\n89.5\n83.0\n75.5\n64.7 63.5\n54.9\n40.2\n35.6\n29.4\n10.8\nDrinking Girls' Boys' Hand wash Electricity Library Playground Medical Computer Internet Ramp and Kitchen CWSN Functional Solar Panel\nWater Toilet Toilet facility Check facility Facility Handrails Garden Toilet Rainwater\nfacilities Harvesting", None]
+[None, "Chart 2.4.1 : % of schools with basic infrastructure facilities\n99.3\n97.3 96.2 95.9\n93.6\n89.5\n83.0\n75.5\n64.7 63.5\n54.9\n40.2\n35.6\n29.4\n10.8\nDrinking Girls' Boys' Hand wash Electricity Library Playground Medical Computer Internet Ramp and Kitchen CWSN Functional Solar Panel\nWater Toilet Toilet facility Check facility Facility Handrails Garden Toilet Rainwater\nfacilities Harvesting"]
+2.5.2 Drop out of students & Retention:
+Curtailing dropouts and ensuring universal access to education at all levels by 2030 is one of the
+primary goals of National Education Policy (NEP) 2020 and Sustainable Development Goals
+bringing them back to school. This will also help in monitoring of progression of students in their
+entire school life. Chart 2.5.5 depicts the level wise Dropout Rate at the national level. This is
+calculated based on actual movement of students from one level to other using individual student
+wise data and represent actual scenario more precisely.
+Chart 2.5.5: Dropout Rate: 2024-25
+11.5
+--- PAGE 24 ---
+2.5.3 State wise Dropout rate by level of education are presented in Maps 2.5.2 to 2.5.4.
+Map 2.5.2: Dropout Rate: Primary – 2024-25
+Dropout Rate - Primary
+0 - 3.0
+['Dropout Rate - Primary', None]
+['', '0 - 3.0']
+--- PAGE 25 ---
+Map 2.5.3: Dropout Rate: Upper Primary – 2024-25
+Dropout Rate –Upper Primary
+['Dropout Rate –Upper Primary', None]
+--- PAGE 26 ---
+Map 2.5.4: Dropout Rate: Secondary – 2024-25
+Dropout Rate –Secondary
+['Dropout Rate –Secondary', None]
+Gross Enrolment Ratio (GER) – Higher Secondary 51.9
+Dropout Rates – All Categories
+Dropout Rates - Primary 0.3
+Dropout Rates – Upper Primary 3.5
+Dropout Rates - Secondary 11.5
+Transition Rates – All Categories
+['Gross Enrolment Ratio (GER) – Higher Secondary', None, None, '51.9', None, None]
+['', 'Dropout Rates – All Categories', None, None, None, '']
+['Dropout Rates - Primary', None, None, '0.3', None, None]

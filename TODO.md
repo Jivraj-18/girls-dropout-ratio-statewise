@@ -23,3 +23,16 @@
 - `outputs/charts/` (core figures for the deck)
 - `outputs/findings_udise_secondary_girls.md` (slide-ready bullets/tables)
 - `outputs/status_quo_forecast_secondary_girls.csv` (status-quo forecast table)
+
+
+
+
+
+## Work to be done by Evening :
+### These are the skills I need to pass to LLM and get presentation recreated.
+1. https://github.com/sanand0/scripts/blob/main/agents/data-story/SKILL.md
+2. https://github.com/sanand0/scripts/blob/main/agents/data-analysis/SKILL.md
+
+
+### Download datadump from this url :
+1. https://github.com/gsidhu/udise-csv-data

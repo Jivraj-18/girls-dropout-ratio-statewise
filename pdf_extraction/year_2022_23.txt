@@ -1,0 +1,110 @@
+# UDISE+ 2022-23 - DATA SNIPPETS
+
+======================================================================
+
+Education, 2022-23 ................................................................................................................................................... 103
+Table 6.11: Dropout Rate by level of education and gender, 2022-23 ...................................................................... 104
+Table 6.12: Transition Rate by level of education and gender, 2022-23 .................................................................. 105
+2022-23 data is not strictly comparable with the previous reports on various educational indicators like
+GER, NER, Dropout rates etc.
+1.9. With effect from 2022-23, the school ecosystem is reclassified into the new pedagogical and curricular
+educational levels -overall students by social category-Overall
+22%
+26%
+General
+46%
+SC
+OBC
+27%
+25% 18%
+10%
+Foundational Preparatory Middle Secondary
+provided Aadhar number are represented in map 2.1.3. Lakshadweep has seeded Aadhar number in
+respect of 98.5 % of students which is also highest level among all States/UTs followed by Andhra
+Pradesh (98.1%) and Andaman & Nicobar (98%). States with lowest Aadhar seeding data are
+Meghalaya (19.1%), Bihar (35.2%) and Assam (47%) with national average of 75.5%.
+Map 2.1.3: Percentage distribution of Students’ Aadhaar received – 2022-23
+.
+2.1.4 Distribution of schools, students and teachers by States/UTs (%)
+18.0
+post RTE, the commensurate increase in schools at secondary and higher secondary level have not come
+up. This poses the risk of large-scale dropout of students at the higher classes. Graphs 2.1.5, 2.1.6 and
+2.1.7 represent the distribution of schools, students, and teachers across different levels of education
+respectively. West Bengal has 79 % Foundational and Preparatory schools and only 11.6% Secondary
+schools whereas in Chandigarh, 75.6 % schools are Secondary schools and only 6.1 % Foundational and
+Preparatory schools.
+education sector development programmes. Chart 2.2.1 represents State wise distribution of
+students among various social background. At the national level, 26.4% students registered in
+UDISE+ are from general category, 18.2% from S.C, 9.9% from S.T, 45.5% are OBC and
+15.6% are from Muslims. The state wise distribution of students is presented in chart 2.2.1.
+120
+Chart 2.2.1: Distribution of students by social groups (%)
+100
+by Classes Taught -Overall teachers by school category - overall
+1%
+25%
+41%
+8%
+18%
+Foundational
+Foundational and Preparatory
+29%
+Foundational, Preparatory and Middle
+teachers by Social category -Overall
+3%
+39% 41% 37%
+52%
+12%
+Government Government Aided
+Table 1:
+['Chart 2.3.1: Percentage distribution of teachers\nby Classes Taught -Overall\n1%\n22%\n41%\n8%\n18%\nFoundational\n10%\nFoundational and Preparatory\nFoundational, Preparatory and Middle\nMiddle\nMiddle and Secondary\nSecondary', 'Chart 2.3.2: percentage distribution of\nteachers by school category - overall\n25%\n46%\n29%\nFoundational + Preparatory Middle Secondary']
+Table 2:
+['Chart 2.3.3: Percentage distribution of\nteachers by Social category -Overall\n39%\n41%\n8%\n12%\nGeneral SC ST OBC', 'Chart 2.3.3: Percentage distribution of\nteachers by Social category -Overall\n39%\n41%\n8%\n12%\nGeneral SC ST OBC', 'Chart 2.3.4: Percentage distribution of\nteachers by Management -Overall\n3%\n37%\n52%\n8%\nGovernment Government Aided\nPrivate Recognized Others', 'Chart 2.3.4: Percentage distribution of\nteachers by Management -Overall\n3%\n37%\n52%\n8%\nGovernment Government Aided\nPrivate Recognized Others']
+section of this report.
+Chart 2.4.1 : % of schools with basic infrastructure facilities
+98 97 96
+facilities
+2.5 Gross Enrolment Ratio (GER) and Dropout Rate:
+2.5.1 The National Education Policy 2020 (NEP 2020) identified universal education as a key priority,
+with several initiatives aimed at transforming the education sector and empowering the nation’s
+youth. At the heart of the NEP vision to achieve 100% Gross Enrolment Ratio (GER) till secondary
+level by 2030, it is necessary to measure GER. The Gross Enrolment Ratio (GER) compares the
+movement in the long run is of interest. Chart 2.5.1 to 2.5.4 shows the GER for different levels of
+education across the States. It may also be noted that GER greater than 100% might indicate presence
+of over or underage children in a particular level of education, inter State migration etc.
+2.5.2 Drop out of students & Retention:
+Curtailing dropouts and ensuring universal access to education at all levels by 2030 is one of the
+primary goals of National Education Policy (NEP) 2020 and Sustainable Development Goals (SDGs).
+individual student wise data and represents actual scenario more precisely. Chart 2.5.5 and Chart 2.5.6
+shows level wise Dropout and Retention rate of students in 2022-23 respectively at the national level.
+The zero-dropout rate at Foundational level is mainly due to admission of students from Anganwadi,
+standalone private pre-primary school directly to class I in recognized schools.
+Chart 2.5.5: Dropout Rate by Level of Education
+13.8
+--- PAGE 23 ---
+2.5.3 State wise Dropout rate by level of education are presented in Maps 2.5.2 to 2.5.4.
+Map 2.5.2: Dropout Rate: Preparatory – 2022-23
+Dropout Rate - Preparatory
+0 - 3.0
+['Dropout Rate - Preparatory', None]
+['', '0 - 3.0']
+--- PAGE 24 ---
+Map 2.5.3: Dropout Rate: Middle – 2022-23
+Dropout Rate - Middle
+['Dropout Rate - Middle', None]
+--- PAGE 25 ---
+Map 2.5.4: Dropout Rate: Secondary – 2022-23
+Dropout Rate - Secondary
+['Dropout Rate - Secondary', None]
+Gross Enrolment Ratio (GER) – Secondary 64.0
+Dropout Rates – All Categories
+Dropout Rates - Preparatory 8.7
+Dropout Rates – Middle 8.1
+Dropout Rates - Secondary 13.8
+Transition Rates – All Categories
+['Gross Enrolment Ratio (GER) – Secondary', None, None, '64.0', None, None]
+['', 'Dropout Rates – All Categories', None, None, None, '']
+['Dropout Rates - Preparatory', None, None, '8.7', None, None]
+['Dropout Rates – Middle', None, None, '8.1', None, None]
+['Dropout Rates - Secondary', None, None, '13.8', None, None]
+['', 'Transition Rates – All Categories', None, None, None, '']
