@@ -4,8 +4,11 @@
 
 ## ⚡ TL;DR — The Headline
 
-🎯 **India improved girls' secondary education retention by 32% in 7 years (18.26% → 12.46%).** 
-At current -1.4 pp/year rate, national average reaches **9.17% by academic year 2024-25** (if trend holds). But 5 states still lose 20%+ of girls — requiring targeted intervention now.
+🎯 **Confirmed Data (2015-22):** India improved girls' secondary education retention by 32% in 7 years (18.26% → 12.46%).
+
+📊 **Forecast (extrapolation only):** At current -1.4 pp/year rate, would reach 9.17% by 2024-25 IF trend continues. [Note: Actual 2023-24/2024-25 data not yet released by UDISE+]
+
+🚨 **Action needed:** 5 states still lose 20%+ of girls — requiring targeted intervention now.
 
 **For a 5-minute summary:** Start with [POLICY_BRIEF.md](POLICY_BRIEF.md)  
 **For implementation action:** Start with [CRISIS_STATE_PLAYBOOK.md](CRISIS_STATE_PLAYBOOK.md)  

@@ -338,7 +338,8 @@ When we look at state pairs with similar baseline conditions, institutional impl
 
 ## APPENDIX: Methodology Note
 
-**Data Source:** UDISE+ (mapId=117, Years 16-22 = Academic Years 2015-16 to 2021-22)
+**Data Source:** UDISE+ (mapId=117, Years 16-22 = Academic Years 2015-16 to 2021-22)  
+**Data Availability:** Latest ACTUAL data = 2021-22 (released Dec 2022). Years 23-24 [2023-24, 2024-25] not yet published by UDISE+. All forecasts beyond 2021-22 are extrapolations based on -1.40 pp/year historical trend.
 
 **Calculation:** School enrollment cohort-flow method
 - **Dropout = Class IX-X Previous Year Enrollment − Class X-XI Current Year Enrollment**

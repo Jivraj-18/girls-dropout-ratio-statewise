@@ -4,14 +4,14 @@ Data: UDISE archive `mapId=117`, years 16–22, caste_id=5 (Overall).
 
 ## National picture (latest year)
 
-- Primary girls dropout: 1.32%
-- Upper primary girls dropout: 3.21%
-- Secondary girls dropout: 12.46%
+- Primary girls dropout: nan%
+- Upper primary girls dropout: nan%
+- Secondary girls dropout: nan%
 
 ## Status-quo forecast (national, secondary girls)
 
-Linear trend over available years implies ~-1.40 pp/year change.
-Next 3-year projection (percentage): 11.98%, 10.58%, 9.17%
+Linear trend over available years implies ~nan pp/year change.
+Next 3-year projection (percentage): nan%, nan%, nan%
 
 ## State ranking (secondary girls dropout, latest year)
 

@@ -3,7 +3,7 @@
 **For:** Ministry of Education Leadership  
 **Date:** March 2026  
 **Data Source:** UDISE+ (2015-22)  
-**Status:** India is **on track** to achieve single-digit girls' secondary dropout (9.17%) by academic year 2024-25—but critical state interventions are needed now to sustain momentum.
+**Status:** Based on confirmed data through 2021-22, India shows strong -1.40 pp/year improvement. IF this trend continues, single digits reached by 2024-25. [Actual 2023-24 data not yet available from UDISE+. Critical interventions needed to sustain momentum.]
 
 ---
 
