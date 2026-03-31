@@ -1,0 +1,103 @@
+
+====================================================================================================
+DATA VALIDATION REPORT - GIRLS SECONDARY DROPOUT BRIEFING
+====================================================================================================
+Generated: 2026-03-31 23:11:10
+
+1. SECONDARY (CLASSES 9-10) DROPOUT RATES - 2024-25
+----------------------------------------------------------------------------------------------------
+
+National Figures:
+  • Boys dropout:    7.3%
+  • Girls dropout:   3.5%
+  • Gender gap:      +3.8pp (Boys higher)
+  • Source: Table 6.13 (UDISE+ 2024-25)
+
+
+2. GENDER GAP PATTERN ACROSS STATES
+----------------------------------------------------------------------------------------------------
+
+State Count: 35
+  • States where boys dropout > girls:  34 / 35
+  • States where girls dropout > boys:  1 / 35
+  • Exception states (girls > boys):    ['Lakshadweep']
+    - Lakshadweep: Boys 3.2%, Girls 5.0% (gap: -1.8pp)
+
+
+3. PROMOTION + REPETITION + DROPOUT = 100% (Formula Validation)
+----------------------------------------------------------------------------------------------------
+
+Boys:
+  • Promotion:      89.90%
+  • Repetition:      2.90%
+  • Dropout:         7.30%
+  • SUM:           100.10%  ✅ VALID
+
+Girls:
+  • Promotion:      95.20%
+  • Repetition:      1.30%
+  • Dropout:         3.50%
+  • SUM:           100.00%  ✅ VALID
+
+Why boys dropout more:
+  • Promotion gap:   -5.30pp (boys get promoted less)
+  • Repetition gap:  +1.60pp (boys repeat more)
+  • Dropout gap:     +3.80pp (result of above)
+
+
+4. STATE-LEVEL RANKINGS
+----------------------------------------------------------------------------------------------------
+
+Top 5 HIGHEST girls secondary dropout:
+  1. Arunachal Pradesh                        Girls:  17.7%  Boys:  19.0%  Gap: +1.3pp
+  2. Assam                                    Girls:  16.7%  Boys:  18.5%  Gap: +1.8pp
+  3. West Bengal                              Girls:  16.7%  Boys:  23.4%  Gap: +6.7pp
+  4. Meghalaya                                Girls:  16.6%  Boys:  18.4%  Gap: +1.8pp
+  5. Mizoram                                  Girls:  16.0%  Boys:  18.9%  Gap: +2.9pp
+
+Top 5 LOWEST girls secondary dropout:
+  1. Chandigarh                               Girls:   1.1%  Boys:   2.8%  Gap: +1.7pp
+  2. Jharkhand                                Girls:   2.4%  Boys:   4.6%  Gap: +2.2pp
+  3. Uttarakhand                              Girls:   3.0%  Boys:   6.0%  Gap: +3.0pp
+  4. Puducherry                               Girls:   3.1%  Boys:   8.7%  Gap: +5.6pp
+  5. Kerala                                   Girls:   3.7%  Boys:   5.8%  Gap: +2.1pp
+
+Top 5 LARGEST gender gaps (Boys disadvantaged):
+  1. Chhattisgarh                             Gap: +7.6pp  Boys:  19.2%  Girls:  11.6%
+  2. Dadra and Nagar Haveli and Daman and Diu Gap: +7.5pp  Boys:  16.1%  Girls:   8.6%
+  3. Karnataka                                Gap: +7.3pp  Boys:  21.9%  Girls:  14.6%
+  4. West Bengal                              Gap: +6.7pp  Boys:  23.4%  Girls:  16.7%
+  5. Tamil Nadu                               Gap: +6.3pp  Boys:  11.6%  Girls:   5.3%
+
+
+5. REGIONAL PATTERN ANALYSIS
+----------------------------------------------------------------------------------------------------
+
+Northeast States (Girls Dropout):
+  • Average: 13.2%
+  • Range: 8.4% to 17.7%
+  • Count: 8 states
+
+Southern States (Girls Dropout):
+  • Average: 9.4%
+  • Range: 3.7% to 14.6%
+  • Count: 5 states
+
+
+====================================================================================================
+VALIDATION SUMMARY
+====================================================================================================
+
+✅ All data points verified and regeneratable from raw UDISE+ sources
+✅ Gender gap pattern confirmed: 34 of 35 states have boys > girls
+✅ Formula validated: Promotion + Repetition + Dropout = 100% (±0.2%)
+✅ Regional patterns identified: Northeast clusters high, South performs better
+
+⚠️  No false claims detected. All figures sourced from UDISE+ Table 6.11, 6.12, 6.13
+
+Files regenerated from:
+  • udise_csv_data/2024-25/csv_files/Table 6.11 (Promotion Rates)
+  • udise_csv_data/2024-25/csv_files/Table 6.12 (Repetition Rates)
+  • udise_csv_data/2024-25/csv_files/Table 6.13 (Dropout Rates)
+
+====================================================================================================
