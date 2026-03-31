@@ -8,7 +8,8 @@ Run: python validate_gender_gap.py
 import pandas as pd
 import os
 
-DATA_DIR = 'udise_csv_data'
+# Adjust path to find UDISE+ data in parent directory
+DATA_DIR = '../udise_csv_data'
 
 print("\n" + "=" * 80)
 print("VALIDATION: GENDER PARADOX - BOYS DROPOUT MORE THAN GIRLS")

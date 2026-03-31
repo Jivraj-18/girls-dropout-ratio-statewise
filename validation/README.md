@@ -15,6 +15,7 @@ This directory contains **regeneratable scripts** that verify all claims in the 
 **Most comprehensive validation - START HERE**
 
 ```bash
+cd validation/
 python validate_all.py
 ```
 
@@ -25,7 +26,7 @@ Validates:
 - State rankings (top/bottom performers)
 - Regional patterns (Northeast vs South)
 
-Output:
+Output (saved in `validation/` directory):
 - `validation_summary.txt` - Human-readable report
 - `validation_results.json` - Machine-readable results
 
@@ -35,11 +36,12 @@ Output:
 **Focused validation on gender gap finding**
 
 ```bash
+cd validation/
 python validate_gender_gap.py
 ```
 
 Validates:
-- "35 out of 36 states have boys dropout > girls"
+- "34 out of 35 states have boys dropout > girls"
 - Identifies the one exception (Lakshadweep)
 - Shows top 5 largest gender gaps by state
 
@@ -49,6 +51,7 @@ Validates:
 **Checks internal consistency of data**
 
 ```bash
+cd validation/
 python validate_formula.py
 ```
 
@@ -85,15 +88,24 @@ Python 3.7+
 ## 📁 Data Directory Structure
 
 ```
-udise_csv_data/
-├── 2024-25/
-│   └── csv_files/
-│       ├── Table 6.11 Promotion Rate by level...
-│       ├── Table 6.12 Repetition Rate by level...
-│       └── Table 6.13 Dropout Rate by level...
-├── 2023-24/
-│   └── csv_files/ ...
-└── [2018-19 through 2022-23 similar structure]
+project_root/
+├── validation/           <- You are here
+│   ├── validate_all.py
+│   ├── validate_gender_gap.py
+│   ├── validate_formula.py
+│   ├── README.md         <- This file
+│   ├── validation_summary.txt      (generated)
+│   └── validation_results.json     (generated)
+├── udise_csv_data/
+│   ├── 2024-25/
+│   │   └── csv_files/
+│   │       ├── Table 6.11 Promotion Rate...
+│   │       ├── Table 6.12 Repetition Rate...
+│   │       └── Table 6.13 Dropout Rate...
+│   ├── 2023-24/
+│   │   └── csv_files/ ...
+│   └── [2018-19 through 2022-23]
+└── index.html
 ```
 
 ---
@@ -102,7 +114,8 @@ udise_csv_data/
 
 ### Quick Start (Recommended)
 ```bash
-# Run master validation
+# From the validation/ directory
+cd validation/
 python validate_all.py
 
 # Check results
@@ -110,8 +123,17 @@ cat validation_summary.txt
 cat validation_results.json
 ```
 
+### From Project Root
+```bash
+# Run from anywhere in the project
+cd validation/
+python validate_all.py
+```
+
 ### Step-by-Step Verification
 ```bash
+cd validation/
+
 # 1. Validate gender gap claim
 python validate_gender_gap.py
 
@@ -124,7 +146,7 @@ python validate_all.py
 
 ### Integration with CI/CD
 ```bash
-# Exit code 0 if all validations pass, 1 if any fail
+cd validation/
 python validate_all.py && echo "✅ Data valid"
 ```
 
@@ -174,6 +196,7 @@ National Figures:
 
 ## ✅ Validation Checklist for IAS Officers
 
+- [ ] Navigate to `validation/` directory
 - [ ] Run `python validate_all.py`
 - [ ] Check `validation_summary.txt` for key statistics
 - [ ] Verify gender gap in your state from output
@@ -185,11 +208,12 @@ National Figures:
 
 ## ⚠️ Important Notes
 
-1. **Data Source**: All scripts source from raw UDISE+ CSVs in `udise_csv_data/`
-2. **Rounding**: Figures displayed as rounded (e.g., 7.3%) but maintain full precision in JSON
-3. **Secondary Level**: All validations are for **Classes 9-10 (secondary)** unless otherwise noted
-4. **2024-25 Year**: Current scripts validate 2024-25 data. Modify `validate_all.py` line ~10 to validate other years
-5. **State Names**: UDISE+ uses official state names; update scripts if state name format differs
+1. **Data Source**: All scripts source from raw UDISE+ CSVs in `../udise_csv_data/`
+2. **Run Location**: Must be run from `validation/` directory (scripts use relative paths)
+3. **Rounding**: Figures displayed as rounded (e.g., 7.3%) but maintain full precision in JSON
+4. **Secondary Level**: All validations are for **Classes 9-10 (secondary)** unless otherwise noted
+5. **2024-25 Year**: Current scripts validate 2024-25 data. Modify `validate_all.py` line ~15 to validate other years
+6. **State Names**: UDISE+ uses official state names; update scripts if state name format differs
 
 ---
 
@@ -218,10 +242,11 @@ prim_dropout = load_secondary_data(
 ## 📞 Support
 
 If scripts fail:
-1. Check that `udise_csv_data/` directory exists with proper structure
+1. Check that `../udise_csv_data/` directory exists with proper structure
 2. Verify UDISE+ CSV files are not corrupted
 3. Ensure pandas is installed: `pip install pandas`
 4. Run with verbose output: `python validate_all.py 2>&1 | less`
+5. Verify you are running from the `validation/` directory
 
 ---
 

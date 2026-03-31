@@ -24,4 +24,12 @@
     "girls_dropout_pct": 3.5,
     "boys_sum": 100.10000000000001,
     "girls_sum": 100.0,
-    "boys_formula_valid": 
+    "boys_formula_valid": true,
+    "girls_formula_valid": true
+  },
+  "regional_analysis": {
+    "northeast_girls_avg": 13.175,
+    "southern_girls_avg": 9.36,
+    "regional_difference_pp": 3.8150000000000013
+  }
+}

@@ -8,7 +8,8 @@ Run: python validate_formula.py
 import pandas as pd
 import os
 
-DATA_DIR = 'udise_csv_data'
+# Adjust path to find UDISE+ data in parent directory
+DATA_DIR = '../udise_csv_data'
 
 print("\n" + "=" * 80)
 print("VALIDATION: PROMOTION + REPETITION + DROPOUT = 100%")
@@ -33,15 +34,18 @@ dropout_file = os.path.join(
     'Table 6.13 Dropout Rate by level of education and gender, 2024-25,,,, - page 120.csv'
 )
 
-# Read tables (columns 7, 8, 9 = Boys, Girls, Total for secondary)
-prom = pd.read_csv(promotion_file, skiprows=4, usecols=[0, 7, 8]).iloc[0]
-rep = pd.read_csv(repetition_file, skiprows=4, usecols=[0, 7, 8]).iloc[0]
-drop = pd.read_csv(dropout_file, skiprows=4, usecols=[0, 7, 8]).iloc[0]
+# Read tables (columns 0, 7, 8 = State, Boys, Girls for secondary)
+prom_df = pd.read_csv(promotion_file, skiprows=4, usecols=[0, 7, 8])
+rep_df = pd.read_csv(repetition_file, skiprows=4, usecols=[0, 7, 8])
+drop_df = pd.read_csv(dropout_file, skiprows=4, usecols=[0, 7, 8])
 
-# Convert to numeric
-prom_boys, prom_girls = float(prom[1]), float(prom[2])
-rep_boys, rep_girls = float(rep[1]), float(rep[2])
-drop_boys, drop_girls = float(drop[1]), float(drop[2])
+# Get national figures (first row = India aggregate), use iloc for positional access
+prom_boys = float(prom_df.iloc[0, 1])  # Column 1 (Boys) of first row
+prom_girls = float(prom_df.iloc[0, 2])  # Column 2 (Girls) of first row
+rep_boys = float(rep_df.iloc[0, 1])
+rep_girls = float(rep_df.iloc[0, 2])
+drop_boys = float(drop_df.iloc[0, 1])
+drop_girls = float(drop_df.iloc[0, 2])
 
 print(f"\nNATIONAL SECONDARY (9-10) 2024-25:\n")
 

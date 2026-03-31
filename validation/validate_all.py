@@ -18,7 +18,8 @@ import os
 import json
 from datetime import datetime
 
-DATA_DIR = 'udise_csv_data'
+# Adjust path to find UDISE+ data in parent directory
+DATA_DIR = '../udise_csv_data'
 OUTPUT_FILE = 'validation_summary.txt'
 
 def load_secondary_data(metric_name, file_path, year='2024-25'):
@@ -35,7 +36,7 @@ print("COMPREHENSIVE DATA VALIDATION FRAMEWORK")
 print("=" * 100)
 print(f"Timestamp: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 print(f"Data Source: UDISE+ (Ministry of Education)")
-print(f"Files: udise_csv_data/2024-25/csv_files/")
+print(f"Files: {DATA_DIR}/2024-25/csv_files/")
 
 results = {}
 output_lines = [
@@ -159,8 +160,8 @@ results['formula_validation'] = {
     'girls_dropout_pct': float(india_dropout['Girls']),
     'boys_sum': float(boys_sum),
     'girls_sum': float(girls_sum),
-    'boys_formula_valid': abs(boys_sum - 100) < 0.2,
-    'girls_formula_valid': abs(girls_sum - 100) < 0.2
+    'boys_formula_valid': bool(abs(boys_sum - 100) < 0.2),
+    'girls_formula_valid': bool(abs(girls_sum - 100) < 0.2)
 }
 
 # ============================================================================

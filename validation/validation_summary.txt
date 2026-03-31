@@ -2,7 +2,7 @@
 ====================================================================================================
 DATA VALIDATION REPORT - GIRLS SECONDARY DROPOUT BRIEFING
 ====================================================================================================
-Generated: 2026-03-31 23:11:10
+Generated: 2026-03-31 23:15:46
 
 1. SECONDARY (CLASSES 9-10) DROPOUT RATES - 2024-25
 ----------------------------------------------------------------------------------------------------
@@ -96,8 +96,8 @@ VALIDATION SUMMARY
 ⚠️  No false claims detected. All figures sourced from UDISE+ Table 6.11, 6.12, 6.13
 
 Files regenerated from:
-  • udise_csv_data/2024-25/csv_files/Table 6.11 (Promotion Rates)
-  • udise_csv_data/2024-25/csv_files/Table 6.12 (Repetition Rates)
-  • udise_csv_data/2024-25/csv_files/Table 6.13 (Dropout Rates)
+  • ../udise_csv_data/2024-25/csv_files/Table 6.11 (Promotion Rates)
+  • ../udise_csv_data/2024-25/csv_files/Table 6.12 (Repetition Rates)
+  • ../udise_csv_data/2024-25/csv_files/Table 6.13 (Dropout Rates)
 
 ====================================================================================================
