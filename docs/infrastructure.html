@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Infrastructure × Dropout — Does Building Toilets Keep Girls in School? | UDISE+</title>
+  <meta name="description" content="Analysis of infrastructure (girls' toilets, electricity, drinking water) correlation with girls' dropout rates. Infrastructure is necessary but NOT sufficient." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+</head>
+<body>
+  <script src="assets/nav.js"></script>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="kicker"><span class="dot"></span> Infrastructure ROI</p>
+      <h1 class="title">If You Build It, Will They Stay?</h1>
+      <p class="subtitle">A girl's toilet is not a building feature — it's a contract that says her presence is expected and her dignity is planned for. But is infrastructure alone enough?</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Key finding -->
+    <div class="kpi-grid">
+      <div class="kpi-card saffron">
+        <div class="kpi-label">Correlation</div>
+        <div class="kpi-value">-0.43</div>
+        <div class="kpi-detail">Toilet coverage vs. dropout (moderate negative)</div>
+      </div>
+      <div class="kpi-card success">
+        <div class="kpi-label">Better Than Expected</div>
+        <div class="kpi-value" id="kpi-better">—</div>
+        <div class="kpi-detail">States beating the prediction</div>
+      </div>
+      <div class="kpi-card crisis">
+        <div class="kpi-label">Worse Than Expected</div>
+        <div class="kpi-value" id="kpi-worse">—</div>
+        <div class="kpi-detail">High infra but high dropout</div>
+      </div>
+      <div class="kpi-card info">
+        <div class="kpi-label">The Verdict</div>
+        <div class="kpi-value" style="font-size:18px;">Necessary, Not Sufficient</div>
+        <div class="kpi-detail">Infrastructure alone doesn't solve dropout</div>
+      </div>
+    </div>
+
+    <!-- Main scatter plot -->
+    <div class="section-header">
+      <div class="icon">📊</div>
+      <h2>Girls' Toilet Coverage vs. Dropout Rate</h2>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h2>Functional Girls' Toilets (%) vs. Secondary Dropout Rate (%)</h2>
+        <span class="badge badge-info">36 States, 2024-25</span>
+      </div>
+      <div id="plot-scatter" class="plot" style="height:500px;"></div>
+      <div class="insight-box" style="margin-top:12px;">
+        <div class="insight-label">Key Insight</div>
+        <p>The regression line shows a negative relationship — more toilets, less dropout. But the <strong>outliers tell the real story</strong>. Mizoram and Assam have 90%+ toilet coverage but 16%+ dropout. Meanwhile, Jharkhand and Bihar beat the prediction despite average infrastructure. <strong>Policy and culture matter as much as bricks.</strong></p>
+      </div>
+    </div>
+
+    <!-- Outlier analysis -->
+    <div class="section-header">
+      <div class="icon">🎯</div>
+      <h2>The Outliers — Who Beats the Prediction?</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="card-header">
+          <h2>🟢 Better Than Expected</h2>
+          <span class="badge badge-success">Low dropout despite moderate infra</span>
+        </div>
+        <div id="better-list"></div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h2>🔴 Worse Than Expected</h2>
+          <span class="badge badge-crisis">High dropout despite good infra</span>
+        </div>
+        <div id="worse-list"></div>
+      </div>
+    </div>
+
+    <!-- Jharkhand case study -->
+    <div class="section-header">
+      <div class="icon">🏆</div>
+      <h2>Case Study: The Jharkhand Paradox</h2>
+    </div>
+    <div class="card" style="border-color: var(--success-border);">
+      <div class="callout success">
+        <div class="callout-icon">💡</div>
+        <div class="callout-body">
+          <div class="callout-title">Jharkhand: From 22.4% to 2.4% — The Best Turnaround in India</div>
+          <div class="callout-text">
+            Jharkhand doesn't have the best infrastructure. Its toilet coverage (96.2%) is slightly above average. Yet it achieved the <strong>most dramatic reduction in girls' dropout</strong> in India: from 22.4% in 2018-19 to just 2.4% in 2024-25 — a 20 percentage point improvement. This proves that <strong>targeted policy interventions</strong> (conditional cash transfers, girls' scholarships, community mobilization) can overcome infrastructure gaps.
+          </div>
+        </div>
+      </div>
+      <div id="plot-jharkhand" class="plot" style="height:320px;"></div>
+    </div>
+
+    <!-- Residual chart -->
+    <div class="section-header">
+      <div class="icon">📏</div>
+      <h2>Residual Analysis — What Infrastructure Doesn't Explain</h2>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h2>Gap Between Predicted and Actual Dropout</h2>
+        <span class="small">Positive = worse than infrastructure predicts. Negative = better than infrastructure predicts.</span>
+      </div>
+      <div id="plot-residuals" class="plot" style="height:600px;"></div>
+    </div>
+
+    <footer class="site-footer">
+      <p><a href="attrition.html">← Class 9 Cliff</a> · <a href="teachers.html">Teachers →</a></p>
+    </footer>
+  </main>
+
+  <script>
+  const PL = {
+    paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: 'rgba(0,0,0,0)',
+    font: { family: 'Inter, system-ui, sans-serif', color: '#94a3b8', size: 12 },
+    margin: { t: 30, r: 30, b: 60, l: 60 },
+    xaxis: { gridcolor: 'rgba(148,163,184,0.08)' },
+    yaxis: { gridcolor: 'rgba(148,163,184,0.08)' },
+    hoverlabel: { bgcolor: '#1a2235', bordercolor: '#FF9933', font: { color: '#f0f4fc', size: 13 } },
+  };
+  const PC = { displayModeBar: false, responsive: true };
+
+  async function init() {
+    const [task2, task9] = await Promise.all([
+      (await fetch('data/task_2.json')).json(),
+      (await fetch('data/task_9.json')).json(),
+    ]);
+
+    const points = task2.chart_data.points;
+    const findings = task2.findings;
+
+    document.getElementById('kpi-better').textContent = findings.efficiency_outliers.better_than_expected_low_dropout.length;
+    document.getElementById('kpi-worse').textContent = findings.efficiency_outliers.worse_than_expected_high_dropout.length;
+
+    renderScatter(points, findings);
+    renderOutlierLists(findings);
+    renderJharkhandTimeline(task9);
+    renderResiduals(points);
+  }
+
+  function renderScatter(points, findings) {
+    const better = new Set(findings.efficiency_outliers.better_than_expected_low_dropout);
+    const worse = new Set(findings.efficiency_outliers.worse_than_expected_high_dropout);
+
+    const colors = points.map(p => {
+      if (better.has(p.state_ut)) return '#22c55e';
+      if (worse.has(p.state_ut)) return '#ef4444';
+      return '#64748b';
+    });
+
+    const sizes = points.map(p => better.has(p.state_ut) || worse.has(p.state_ut) ? 12 : 8);
+
+    const scatter = {
+      x: points.map(p => p.functional_girls_toilet_pct),
+      y: points.map(p => p.secondary_dropout_rate),
+      text: points.map(p => p.state_ut),
+      mode: 'markers+text',
+      type: 'scatter',
+      marker: { color: colors, size: sizes, opacity: 0.85, line: { width: 1, color: 'rgba(255,255,255,0.2)' } },
+      textposition: 'top center',
+      textfont: { size: 9, color: '#94a3b8' },
+      hovertemplate: '<b>%{text}</b><br>Toilet Coverage: %{x:.1f}%<br>Dropout Rate: %{y:.1f}%<extra></extra>',
+    };
+
+    // Regression line
+    const reg = findings.regression;
+    const xRange = [82, 101];
+    const regLine = {
+      x: xRange,
+      y: xRange.map(x => reg.intercept + reg.slope * x),
+      mode: 'lines',
+      line: { color: 'rgba(255,153,51,0.5)', width: 2, dash: 'dash' },
+      name: 'Regression line',
+      hoverinfo: 'skip',
+    };
+
+    const layout = {
+      ...PL,
+      xaxis: { ...PL.xaxis, title: 'Functional Girls\' Toilet Coverage (%)', range: [82, 102] },
+      yaxis: { ...PL.yaxis, title: 'Girls\' Dropout Rate (%)', range: [0, 20] },
+      showlegend: false,
+      annotations: [
+        { x: 94, y: 17, text: '🔴 High dropout despite good infra', showarrow: false, font: { size: 10, color: '#ef4444' } },
+        { x: 96, y: 2, text: '🟢 Low dropout — policy-driven success', showarrow: false, font: { size: 10, color: '#22c55e' } },
+      ],
+    };
+
+    Plotly.newPlot('plot-scatter', [scatter, regLine], layout, PC);
+  }
+
+  function renderOutlierLists(findings) {
+    const betterDiv = document.getElementById('better-list');
+    findings.efficiency_outliers.better_than_expected_low_dropout.forEach(s => {
+      betterDiv.innerHTML += `<div style="padding:8px 0; border-bottom:1px solid var(--border-subtle); font-size:14px;">
+        <span class="severity-dot severity-good"></span> <strong>${s}</strong>
+        <span class="small" style="float:right;">Policy-driven</span>
+      </div>`;
+    });
+
+    const worseDiv = document.getElementById('worse-list');
+    findings.efficiency_outliers.worse_than_expected_high_dropout.forEach(s => {
+      worseDiv.innerHTML += `<div style="padding:8px 0; border-bottom:1px solid var(--border-subtle); font-size:14px;">
+        <span class="severity-dot severity-crisis"></span> <strong>${s}</strong>
+        <span class="small" style="float:right;">Needs deeper intervention</span>
+      </div>`;
+    });
+  }
+
+  function renderJharkhandTimeline(task9) {
+    const ts = task9.chart_data.time_series.filter(d => d.state_ut === 'Jharkhand');
+    const years = ts.map(d => d.year);
+    const rates = ts.map(d => d.rate);
+
+    const trace = {
+      x: years, y: rates, type: 'scatter',
+      mode: 'lines+markers',
+      line: { color: '#22c55e', width: 3, shape: 'spline' },
+      marker: { size: 10, color: '#22c55e' },
+      fill: 'tozeroy',
+      fillcolor: 'rgba(34,197,94,0.08)',
+      hovertemplate: 'Jharkhand %{x}: <b>%{y:.1f}%</b><extra></extra>',
+    };
+
+    const layout = {
+      ...PL,
+      yaxis: { ...PL.yaxis, title: 'Dropout Rate (%)', range: [0, 30] },
+      showlegend: false,
+      annotations: [
+        { x: years[0], y: rates[0] + 2, text: `Start: ${rates[0]}%`, showarrow: false, font: { size: 12, color: '#ef4444' } },
+        { x: years[years.length-1], y: rates[rates.length-1] + 2, text: `Now: ${rates[rates.length-1]}%`, showarrow: false, font: { size: 12, color: '#22c55e' } },
+      ],
+    };
+
+    Plotly.newPlot('plot-jharkhand', [trace], layout, PC);
+  }
+
+  function renderResiduals(points) {
+    const sorted = [...points].sort((a,b) => b.resid - a.resid);
+
+    const trace = {
+      y: sorted.map(p => p.state_ut),
+      x: sorted.map(p => p.resid),
+      type: 'bar',
+      orientation: 'h',
+      marker: {
+        color: sorted.map(p => p.resid > 0 ? '#ef4444' : '#22c55e'),
+        opacity: 0.85,
+      },
+      text: sorted.map(p => (p.resid > 0 ? '+' : '') + p.resid.toFixed(1) + 'pp'),
+      textposition: 'outside',
+      textfont: { size: 10, color: '#94a3b8' },
+      hovertemplate: '<b>%{y}</b><br>Residual: %{x:.1f}pp<br>(positive = worse than expected)<extra></extra>',
+    };
+
+    const layout = {
+      ...PL,
+      margin: { ...PL.margin, l: 230 },
+      xaxis: { ...PL.xaxis, title: 'Residual (pp) — Actual minus Predicted dropout', zeroline: true, zerolinecolor: 'rgba(255,153,51,0.3)', zerolinewidth: 2 },
+      yaxis: { ...PL.yaxis, autorange: 'reversed' },
+      showlegend: false,
+      annotations: [
+        { x: 5, y: -1.5, xanchor: 'left', text: '← Worse than infra predicts', showarrow: false, font: { size: 10, color: '#ef4444' } },
+        { x: -5, y: -1.5, xanchor: 'right', text: 'Better than infra predicts →', showarrow: false, font: { size: 10, color: '#22c55e' } },
+      ],
+    };
+
+    Plotly.newPlot('plot-residuals', [trace], layout, PC);
+  }
+
+  init();
+  </script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Female Teacher Effect — Role Model Impact on Girls' Dropout | UDISE+</title>
+  <meta name="description" content="Analysis of how female teacher proportion correlates with girls' dropout rates. When girls see women in front of the classroom, they see a future worth staying for." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+</head>
+<body>
+  <script src="assets/nav.js"></script>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="kicker"><span class="dot"></span> Role Model Effect</p>
+      <h1 class="title">The Female Teacher Multiplier</h1>
+      <p class="subtitle">In adolescent years, schools don't just teach — they signal safety and possibility. When girls see women in front of the classroom, they see a future worth staying for.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="kpi-grid">
+      <div class="kpi-card saffron">
+        <div class="kpi-label">Correlation Strength</div>
+        <div class="kpi-value">-0.41</div>
+        <div class="kpi-detail">Female teacher share vs. dropout (p < 0.015)</div>
+      </div>
+      <div class="kpi-card info">
+        <div class="kpi-label">Critical Mass Threshold</div>
+        <div class="kpi-value">75%</div>
+        <div class="kpi-detail">States above this have 6.9pp lower dropout</div>
+      </div>
+      <div class="kpi-card success">
+        <div class="kpi-label">Expected Impact</div>
+        <div class="kpi-value">~7pp</div>
+        <div class="kpi-detail">Dropout difference above vs. below threshold</div>
+      </div>
+      <div class="kpi-card warning">
+        <div class="kpi-label">States Below Threshold</div>
+        <div class="kpi-value" id="kpi-below">—</div>
+        <div class="kpi-detail">Need urgent female teacher recruitment</div>
+      </div>
+    </div>
+
+    <!-- Main scatter -->
+    <div class="section-header">
+      <div class="icon">📊</div>
+      <h2>Female Teacher Share vs. Girls' Dropout Rate</h2>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h2>Every State's Position — 2024-25</h2>
+        <span class="badge badge-info">Across 36 States/UTs</span>
+      </div>
+      <div id="plot-teacher-scatter" class="plot" style="height:500px;"></div>
+      <div class="insight-box" style="margin-top:12px;">
+        <div class="insight-label">Policy Prescription</div>
+        <p><strong>Recruitment and posting policy IS retention policy</strong> when it changes who girls see in front of the classroom. States with more than 75% female teachers have, on average, <strong>6.9 percentage points lower girls' dropout</strong>. This is one of the strongest actionable levers in the data.</p>
+      </div>
+    </div>
+
+    <!-- Quadrant Analysis -->
+    <div class="section-header">
+      <div class="icon">🎯</div>
+      <h2>The Four Quadrants</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="card" style="border-color: var(--success-border);">
+        <h3 style="color:var(--success);">✅ High Teachers + Low Dropout</h3>
+        <p class="small">These states have both high female teacher share AND low girls' dropout. Models to replicate.</p>
+        <div id="quadrant-good"></div>
+      </div>
+      <div class="card" style="border-color: var(--crisis-border);">
+        <h3 style="color:var(--crisis);">❌ Low Teachers + High Dropout</h3>
+        <p class="small">Low female teacher representation AND high girls' dropout. Priority for recruitment drives.</p>
+        <div id="quadrant-bad"></div>
+      </div>
+      <div class="card" style="border-color: var(--warning-border);">
+        <h3 style="color:var(--warning);">⚠️ High Teachers + High Dropout</h3>
+        <p class="small">Female teachers alone aren't enough here — other factors (poverty, culture) dominate.</p>
+        <div id="quadrant-anomaly"></div>
+      </div>
+      <div class="card" style="border-color: var(--info-border);">
+        <h3 style="color:var(--info);">💡 Low Teachers + Low Dropout</h3>
+        <p class="small">Achieved low dropout despite low female teacher share — strong policy environment.</p>
+        <div id="quadrant-surprise"></div>
+      </div>
+    </div>
+
+    <!-- Bar chart: Female teacher share ranking -->
+    <div class="section-header">
+      <div class="icon">📋</div>
+      <h2>State-wise Female Teacher Share</h2>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h2>Ranking by Female Teacher Percentage (2024-25)</h2>
+        <span class="small">Dashed line = 75% critical mass threshold</span>
+      </div>
+      <div id="plot-teacher-ranking" class="plot" style="height:700px;"></div>
+    </div>
+
+    <footer class="site-footer">
+      <p><a href="infrastructure.html">← Infrastructure</a> · <a href="success.html">Success Stories →</a></p>
+    </footer>
+  </main>
+
+  <script>
+  const PL = {
+    paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: 'rgba(0,0,0,0)',
+    font: { family: 'Inter, system-ui, sans-serif', color: '#94a3b8', size: 12 },
+    margin: { t: 30, r: 30, b: 60, l: 60 },
+    xaxis: { gridcolor: 'rgba(148,163,184,0.08)' },
+    yaxis: { gridcolor: 'rgba(148,163,184,0.08)' },
+    hoverlabel: { bgcolor: '#1a2235', bordercolor: '#FF9933', font: { color: '#f0f4fc', size: 13 } },
+  };
+  const PC = { displayModeBar: false, responsive: true };
+
+  async function init() {
+    const task3 = await (await fetch('data/task_3.json')).json();
+    const points = task3.chart_data.points;
+    const threshold = task3.findings.critical_mass_scan.threshold_pct / 100;
+
+    document.getElementById('kpi-below').textContent = points.filter(p => p.female_teacher_share < threshold).length;
+
+    renderScatter(points, threshold);
+    renderQuadrants(points, threshold);
+    renderRanking(points, threshold);
+  }
+
+  function renderScatter(points, threshold) {
+    const medianDropout = [...points.map(p => p.dropout_rate)].sort((a,b)=>a-b);
+    const medDrop = medianDropout[Math.floor(medianDropout.length/2)];
+
+    const colors = points.map(p => {
+      if (p.female_teacher_share >= threshold && p.dropout_rate < medDrop) return '#22c55e';
+      if (p.female_teacher_share < threshold && p.dropout_rate >= medDrop) return '#ef4444';
+      if (p.female_teacher_share >= threshold && p.dropout_rate >= medDrop) return '#f59e0b';
+      return '#3b82f6';
+    });
+
+    const scatter = {
+      x: points.map(p => (p.female_teacher_share * 100).toFixed(1)),
+      y: points.map(p => p.dropout_rate),
+      text: points.map(p => p.state_ut),
+      mode: 'markers+text',
+      type: 'scatter',
+      marker: { color: colors, size: 10, opacity: 0.85, line: { width: 1, color: 'rgba(255,255,255,0.2)' } },
+      textposition: 'top center',
+      textfont: { size: 8, color: '#94a3b8' },
+      hovertemplate: '<b>%{text}</b><br>Female Teachers: %{x}%<br>Dropout Rate: %{y:.1f}%<extra></extra>',
+    };
+
+    const layout = {
+      ...PL,
+      xaxis: { ...PL.xaxis, title: 'Female Teacher Share (%)', range: [35, 95] },
+      yaxis: { ...PL.yaxis, title: 'Girls\' Dropout Rate (%)', range: [0, 20] },
+      showlegend: false,
+      shapes: [
+        { type: 'line', x0: threshold*100, x1: threshold*100, y0: 0, y1: 20, line: { color: 'rgba(255,153,51,0.5)', width: 2, dash: 'dash' } },
+        { type: 'line', x0: 35, x1: 95, y0: medDrop, y1: medDrop, line: { color: 'rgba(148,163,184,0.3)', width: 1, dash: 'dot' } },
+      ],
+      annotations: [
+        { x: threshold*100 + 1, y: 19, text: `75% threshold →`, showarrow: false, font: { size: 10, color: '#FF9933' }, xanchor: 'left' },
+      ],
+    };
+
+    Plotly.newPlot('plot-teacher-scatter', [scatter], layout, PC);
+  }
+
+  function renderQuadrants(points, threshold) {
+    const medianDropout = [...points.map(p => p.dropout_rate)].sort((a,b)=>a-b);
+    const medDrop = medianDropout[Math.floor(medianDropout.length/2)];
+
+    const good = points.filter(p => p.female_teacher_share >= threshold && p.dropout_rate < medDrop);
+    const bad = points.filter(p => p.female_teacher_share < threshold && p.dropout_rate >= medDrop);
+    const anomaly = points.filter(p => p.female_teacher_share >= threshold && p.dropout_rate >= medDrop);
+    const surprise = points.filter(p => p.female_teacher_share < threshold && p.dropout_rate < medDrop);
+
+    function renderList(container, items, color) {
+      const el = document.getElementById(container);
+      items.forEach(p => {
+        el.innerHTML += `<div style="padding:6px 0;border-bottom:1px solid var(--border-subtle);font-size:13px;">
+          <strong>${p.state_ut}</strong>
+          <span style="float:right;color:${color}">${(p.female_teacher_share*100).toFixed(0)}% teachers · ${p.dropout_rate}% dropout</span>
+        </div>`;
+      });
+      if (items.length === 0) el.innerHTML = '<p class="small">No states in this quadrant</p>';
+    }
+
+    renderList('quadrant-good', good, '#22c55e');
+    renderList('quadrant-bad', bad, '#ef4444');
+    renderList('quadrant-anomaly', anomaly, '#f59e0b');
+    renderList('quadrant-surprise', surprise, '#3b82f6');
+  }
+
+  function renderRanking(points, threshold) {
+    const sorted = [...points].sort((a,b) => b.female_teacher_share - a.female_teacher_share);
+
+    const trace = {
+      y: sorted.map(p => p.state_ut),
+      x: sorted.map(p => (p.female_teacher_share * 100).toFixed(1)),
+      type: 'bar',
+      orientation: 'h',
+      marker: {
+        color: sorted.map(p => p.female_teacher_share >= threshold ? '#22c55e' : '#ef4444'),
+        opacity: 0.85,
+      },
+      text: sorted.map(p => (p.female_teacher_share * 100).toFixed(0) + '%'),
+      textposition: 'outside',
+      textfont: { size: 10, color: '#94a3b8' },
+      hovertemplate: '<b>%{y}</b>: %{x}% female teachers<extra></extra>',
+    };
+
+    const layout = {
+      ...PL,
+      margin: { ...PL.margin, l: 230 },
+      xaxis: { ...PL.xaxis, title: 'Female Teacher Share (%)', range: [0, 100] },
+      yaxis: { ...PL.yaxis, autorange: 'reversed' },
+      showlegend: false,
+      shapes: [{
+        type: 'line', x0: threshold*100, x1: threshold*100, y0: -0.5, y1: sorted.length - 0.5,
+        line: { color: 'rgba(255,153,51,0.5)', width: 2, dash: 'dash' },
+      }],
+      annotations: [{
+        x: threshold*100 + 1, y: -1.5, text: '75% critical mass', showarrow: false, font: { size: 10, color: '#FF9933' }, xanchor: 'left',
+      }],
+    };
+
+    Plotly.newPlot('plot-teacher-ranking', [trace], layout, PC);
+  }
+
+  init();
+  </script>
+</body>
+</html>
