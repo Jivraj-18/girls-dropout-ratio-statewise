@@ -28,11 +28,46 @@
 
 
 
-## Work to be done by Evening :
-### These are the skills I need to pass to LLM and get presentation recreated.
-1. https://github.com/sanand0/scripts/blob/main/agents/data-story/SKILL.md
-2. https://github.com/sanand0/scripts/blob/main/agents/data-analysis/SKILL.md
+## ✅ Skills Integrated
 
+### Narrative Data Story Skill (data-story/SKILL.md)
+- [x] Loaded and analyzed: Hook, Arc, Visualizations, Evidence, Caveats framework
+- [x] Applied to project strategy
+- [x] Created PROJECT_STRATEGY.md with story-driven approach
 
-### Download datadump from this url :
-1. https://github.com/gsidhu/udise-csv-data
+### Investigative Data Analysis Skill (data-analysis/SKILL.md)
+- [x] Loaded and analyzed: Understand Data, Define What Matters, Hunt for Signal, Verify & Stress-Test
+- [x] Applied to project structure
+- [x] Created comprehensive analysis plan
+
+### Data Source Integration (UDISE CSV Data)
+- [x] Downloaded full dataset: 2018-19 to 2023-24 from https://github.com/gsidhu/udise-csv-data
+- [x] Located dropout rate tables: Table 6.13 in each year's CSV
+- [x] Verified structure: ~40 CSV files per year, organized by csv_files/ subfolder
+- [x] Ready for extraction and integration
+
+## 📋 Work Remaining
+
+### Data Integration (High Priority)
+- [ ] Extract girls' secondary dropout rates from all CSV years (2018-24)
+- [ ] Validate 2021-22: Cross-check API data vs CSV data (should match)
+- [ ] Build master dataset spanning 10 years (2015-16 to 2024-25)
+- [ ] Add 2024-25 data from PDF extracts
+- [ ] Merge state-wise, by gender, by social category
+
+### Story Rewrite (Using Skills)
+- [ ] Rewrite PRESENTATION.md using 4-beat story arc:
+  - [ ] Hook: Open with tension/mystery, not statistics
+  - [ ] Setup: Show the world as it appears
+  - [ ] Complication: Reveal the plateau/crack
+  - [ ] Revelation: State-level breakthrough (Tripura model)
+  - [ ] Implications: Specific, actionable next steps
+- [ ] Refresh visualizations with revelatory headlines
+- [ ] Add "wait, really?" moment (surprising finding)
+- [ ] Embed evidence in narrative flow
+
+### Validation & Testing
+- [ ] Cross-validate 2021-22 between API and CSV sources
+- [ ] Test robustness: Is -1.4pp/year trend still valid over 10 years?
+- [ ] Check for pattern breaks: Verify 2019 plateau exists in full data
+- [ ] Stress-test findings: Do they hold when controlling for confounders?
