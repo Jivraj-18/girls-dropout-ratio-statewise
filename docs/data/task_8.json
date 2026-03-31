@@ -1,0 +1,626 @@
+{
+  "task_id": 8,
+  "title": "Digital Hope Factor (ICT Labs)",
+  "gender": "Girls",
+  "findings": {
+    "years_available": [
+      "2022-23",
+      "2023-24"
+    ],
+    "yearly_correlations": [
+      {
+        "year": "2022-23",
+        "n_states": 33,
+        "corr_govt_functional_vs_dropout": -0.6978275770744131,
+        "p_perm": 0.0001999600079984003
+      },
+      {
+        "year": "2023-24",
+        "n_states": 33,
+        "corr_govt_functional_vs_dropout": -0.5026456424825334,
+        "p_perm": 0.0023995200959808036
+      }
+    ]
+  },
+  "chart_data": {
+    "by_state_year": [
+      {
+        "year": "2023-24",
+        "state_ut": "India",
+        "govt_pct_any": 23.1,
+        "govt_pct_functional": 19.3,
+        "aided_pct_any": 25.3,
+        "aided_pct_functional": 19.2
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Andaman & Nicobar Islands",
+        "govt_pct_any": 84.2,
+        "govt_pct_functional": 82.9,
+        "aided_pct_any": 0.0,
+        "aided_pct_functional": 0.0
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Andhra Pradesh",
+        "govt_pct_any": 17.7,
+        "govt_pct_functional": 13.2,
+        "aided_pct_any": 11.9,
+        "aided_pct_functional": 11.0
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Arunachal Pradesh",
+        "govt_pct_any": 12.1,
+        "govt_pct_functional": 9.9,
+        "aided_pct_any": 14.8,
+        "aided_pct_functional": 13.1
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Assam",
+        "govt_pct_any": 41.5,
+        "govt_pct_functional": 32.1,
+        "aided_pct_any": 1.1,
+        "aided_pct_functional": 0.5
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Bihar",
+        "govt_pct_any": 6.9,
+        "govt_pct_functional": 6.3,
+        "aided_pct_any": 1.9,
+        "aided_pct_functional": 1.6
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Chandigarh",
+        "govt_pct_any": 96.5,
+        "govt_pct_functional": 92.2,
+        "aided_pct_any": 100.0,
+        "aided_pct_functional": 85.7
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Chhattisgarh",
+        "govt_pct_any": 12.0,
+        "govt_pct_functional": 8.0,
+        "aided_pct_any": 1.4,
+        "aided_pct_functional": 0.9
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Dadra & Nagar Haveli and Daman & Diu",
+        "govt_pct_any": 59.8,
+        "govt_pct_functional": 58.9,
+        "aided_pct_any": 75.0,
+        "aided_pct_functional": 75.0
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Delhi",
+        "govt_pct_any": 87.3,
+        "govt_pct_functional": 62.1,
+        "aided_pct_any": 68.8,
+        "aided_pct_functional": 26.1
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Goa",
+        "govt_pct_any": 40.3,
+        "govt_pct_functional": 37.3,
+        "aided_pct_any": 41.4,
+        "aided_pct_functional": 39.9
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Gujarat",
+        "govt_pct_any": 49.0,
+        "govt_pct_functional": 43.9,
+        "aided_pct_any": 38.3,
+        "aided_pct_functional": 27.4
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Haryana",
+        "govt_pct_any": 49.7,
+        "govt_pct_functional": 38.2,
+        "aided_pct_any": 25.0,
+        "aided_pct_functional": 25.0
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Himachal Pradesh",
+        "govt_pct_any": 55.6,
+        "govt_pct_functional": 53.3,
+        "aided_pct_any": 0.0,
+        "aided_pct_functional": 0.0
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Jammu & Kashmir",
+        "govt_pct_any": 23.8,
+        "govt_pct_functional": 21.3,
+        "aided_pct_any": 0.0,
+        "aided_pct_functional": 0.0
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Jharkhand",
+        "govt_pct_any": 20.1,
+        "govt_pct_functional": 18.1,
+        "aided_pct_any": 5.3,
+        "aided_pct_functional": 3.3
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Karnataka",
+        "govt_pct_any": 12.5,
+        "govt_pct_functional": 8.4,
+        "aided_pct_any": 12.0,
+        "aided_pct_functional": 4.5
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Kerala",
+        "govt_pct_any": 64.7,
+        "govt_pct_functional": 61.9,
+        "aided_pct_any": 68.4,
+        "aided_pct_functional": 65.7
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Ladakh",
+        "govt_pct_any": 27.0,
+        "govt_pct_functional": 25.6,
+        "aided_pct_any": 0.0,
+        "aided_pct_functional": 0.0
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Lakshadweep",
+        "govt_pct_any": 45.5,
+        "govt_pct_functional": 45.5,
+        "aided_pct_any": 0.0,
+        "aided_pct_functional": 0.0
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Madhya Pradesh",
+        "govt_pct_any": 6.3,
+        "govt_pct_functional": 5.7,
+        "aided_pct_any": 1.8,
+        "aided_pct_functional": 1.3
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Maharashtra",
+        "govt_pct_any": 8.7,
+        "govt_pct_functional": 6.7,
+        "aided_pct_any": 32.6,
+        "aided_pct_functional": 25.5
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Manipur",
+        "govt_pct_any": 34.5,
+        "govt_pct_functional": 22.6,
+        "aided_pct_any": 7.6,
+        "aided_pct_functional": 4.9
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Meghalaya",
+        "govt_pct_any": 5.9,
+        "govt_pct_functional": 4.4,
+        "aided_pct_any": 11.4,
+        "aided_pct_functional": 9.1
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Mizoram",
+        "govt_pct_any": 15.3,
+        "govt_pct_functional": 12.6,
+        "aided_pct_any": 4.3,
+        "aided_pct_functional": 1.7
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Nagaland",
+        "govt_pct_any": 18.0,
+        "govt_pct_functional": 11.3,
+        "aided_pct_any": 0.0,
+        "aided_pct_functional": 0.0
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Odisha",
+        "govt_pct_any": 31.7,
+        "govt_pct_functional": 22.7,
+        "aided_pct_any": 36.4,
+        "aided_pct_functional": 26.3
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Puducherry",
+        "govt_pct_any": 94.1,
+        "govt_pct_functional": 62.0,
+        "aided_pct_any": 22.6,
+        "aided_pct_functional": 16.1
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Punjab",
+        "govt_pct_any": 72.8,
+        "govt_pct_functional": 68.5,
+        "aided_pct_any": 34.8,
+        "aided_pct_functional": 33.3
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Rajasthan",
+        "govt_pct_any": 33.4,
+        "govt_pct_functional": 26.1,
+        "aided_pct_any": 0.0,
+        "aided_pct_functional": 0.0
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Sikkim",
+        "govt_pct_any": 60.2,
+        "govt_pct_functional": 59.4,
+        "aided_pct_any": 27.3,
+        "aided_pct_functional": 18.2
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Tamil Nadu",
+        "govt_pct_any": 42.7,
+        "govt_pct_functional": 42.7,
+        "aided_pct_any": 0.0,
+        "aided_pct_functional": 0.0
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Telangana",
+        "govt_pct_any": 46.3,
+        "govt_pct_functional": 30.7,
+        "aided_pct_any": 1.3,
+        "aided_pct_functional": 1.3
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Tripura",
+        "govt_pct_any": 30.7,
+        "govt_pct_functional": 29.7,
+        "aided_pct_any": 11.4,
+        "aided_pct_functional": 11.4
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Uttar Pradesh",
+        "govt_pct_any": 2.2,
+        "govt_pct_functional": 1.3,
+        "aided_pct_any": 8.9,
+        "aided_pct_functional": 3.9
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "Uttarakhand",
+        "govt_pct_any": 18.3,
+        "govt_pct_functional": 12.7,
+        "aided_pct_any": 5.0,
+        "aided_pct_functional": 3.1
+      },
+      {
+        "year": "2023-24",
+        "state_ut": "West Bengal",
+        "govt_pct_any": 55.7,
+        "govt_pct_functional": 53.9,
+        "aided_pct_any": 7.3,
+        "aided_pct_functional": 7.3
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "India",
+        "govt_pct_any": 19.5,
+        "govt_pct_functional": 16.0,
+        "aided_pct_any": 29.5,
+        "aided_pct_functional": 23.1
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Andaman & Nicobar Islands",
+        "govt_pct_any": 84.7,
+        "govt_pct_functional": 83.4,
+        "aided_pct_any": 0.0,
+        "aided_pct_functional": 0.0
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Andhra Pradesh",
+        "govt_pct_any": 21.8,
+        "govt_pct_functional": 16.3,
+        "aided_pct_any": 23.9,
+        "aided_pct_functional": 20.6
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Arunachal Pradesh",
+        "govt_pct_any": 10.3,
+        "govt_pct_functional": 7.7,
+        "aided_pct_any": 25.0,
+        "aided_pct_functional": 23.3
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Assam",
+        "govt_pct_any": 32.9,
+        "govt_pct_functional": 24.3,
+        "aided_pct_any": 1.6,
+        "aided_pct_functional": 0.6
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Bihar",
+        "govt_pct_any": 4.4,
+        "govt_pct_functional": 3.9,
+        "aided_pct_any": 1.7,
+        "aided_pct_functional": 1.7
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Chandigarh",
+        "govt_pct_any": 99.1,
+        "govt_pct_functional": 97.4,
+        "aided_pct_any": 100.0,
+        "aided_pct_functional": 100.0
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Chhattisgarh",
+        "govt_pct_any": 11.8,
+        "govt_pct_functional": 8.1,
+        "aided_pct_any": 2.8,
+        "aided_pct_functional": 2.8
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Dadra & Nagar Haveli and Daman & Diu",
+        "govt_pct_any": 52.9,
+        "govt_pct_functional": 51.6,
+        "aided_pct_any": 87.5,
+        "aided_pct_functional": 87.5
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Delhi",
+        "govt_pct_any": 89.2,
+        "govt_pct_functional": 84.1,
+        "aided_pct_any": 70.5,
+        "aided_pct_functional": 37.5
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Goa",
+        "govt_pct_any": 54.9,
+        "govt_pct_functional": 52.6,
+        "aided_pct_any": 65.6,
+        "aided_pct_functional": 63.6
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Gujarat",
+        "govt_pct_any": 9.9,
+        "govt_pct_functional": 7.6,
+        "aided_pct_any": 47.8,
+        "aided_pct_functional": 33.3
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Haryana",
+        "govt_pct_any": 50.2,
+        "govt_pct_functional": 39.6,
+        "aided_pct_any": 20.0,
+        "aided_pct_functional": 20.0
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Himachal Pradesh",
+        "govt_pct_any": 44.9,
+        "govt_pct_functional": 43.0,
+        "aided_pct_any": 0.0,
+        "aided_pct_functional": 0.0
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Jammu & Kashmir",
+        "govt_pct_any": 25.6,
+        "govt_pct_functional": 22.0,
+        "aided_pct_any": 0.0,
+        "aided_pct_functional": 0.0
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Jharkhand",
+        "govt_pct_any": 15.7,
+        "govt_pct_functional": 13.6,
+        "aided_pct_any": 4.9,
+        "aided_pct_functional": 4.6
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Karnataka",
+        "govt_pct_any": 13.9,
+        "govt_pct_functional": 7.9,
+        "aided_pct_any": 16.7,
+        "aided_pct_functional": 4.2
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Kerala",
+        "govt_pct_any": 89.7,
+        "govt_pct_functional": 85.4,
+        "aided_pct_any": 92.2,
+        "aided_pct_functional": 88.2
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Ladakh",
+        "govt_pct_any": 29.0,
+        "govt_pct_functional": 26.4,
+        "aided_pct_any": 0.0,
+        "aided_pct_functional": 0.0
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Lakshadweep",
+        "govt_pct_any": 50.0,
+        "govt_pct_functional": 50.0,
+        "aided_pct_any": 0.0,
+        "aided_pct_functional": 0.0
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Madhya Pradesh",
+        "govt_pct_any": 1.4,
+        "govt_pct_functional": 1.2,
+        "aided_pct_any": 1.2,
+        "aided_pct_functional": 0.5
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Maharashtra",
+        "govt_pct_any": 8.1,
+        "govt_pct_functional": 6.1,
+        "aided_pct_any": 38.2,
+        "aided_pct_functional": 30.1
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Manipur",
+        "govt_pct_any": 35.2,
+        "govt_pct_functional": 29.0,
+        "aided_pct_any": 7.6,
+        "aided_pct_functional": 5.4
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Meghalaya",
+        "govt_pct_any": 6.0,
+        "govt_pct_functional": 4.4,
+        "aided_pct_any": 15.1,
+        "aided_pct_functional": 12.0
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Mizoram",
+        "govt_pct_any": 11.4,
+        "govt_pct_functional": 8.0,
+        "aided_pct_any": 10.4,
+        "aided_pct_functional": 4.3
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Nagaland",
+        "govt_pct_any": 14.2,
+        "govt_pct_functional": 11.3,
+        "aided_pct_any": 0.0,
+        "aided_pct_functional": 0.0
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Odisha",
+        "govt_pct_any": 30.0,
+        "govt_pct_functional": 22.5,
+        "aided_pct_any": 33.3,
+        "aided_pct_functional": 31.5
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Puducherry",
+        "govt_pct_any": 94.7,
+        "govt_pct_functional": 73.0,
+        "aided_pct_any": 22.6,
+        "aided_pct_functional": 22.6
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Punjab",
+        "govt_pct_any": 96.0,
+        "govt_pct_functional": 91.3,
+        "aided_pct_any": 49.4,
+        "aided_pct_functional": 47.9
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Rajasthan",
+        "govt_pct_any": 30.3,
+        "govt_pct_functional": 23.3,
+        "aided_pct_any": 0.0,
+        "aided_pct_functional": 0.0
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Sikkim",
+        "govt_pct_any": 67.8,
+        "govt_pct_functional": 64.7,
+        "aided_pct_any": 53.8,
+        "aided_pct_functional": 53.8
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Tamil Nadu",
+        "govt_pct_any": 43.7,
+        "govt_pct_functional": 43.7,
+        "aided_pct_any": 0.0,
+        "aided_pct_functional": 0.0
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Telangana",
+        "govt_pct_any": 24.6,
+        "govt_pct_functional": 8.3,
+        "aided_pct_any": 0.8,
+        "aided_pct_functional": 0.5
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Tripura",
+        "govt_pct_any": 27.0,
+        "govt_pct_functional": 26.0,
+        "aided_pct_any": 17.1,
+        "aided_pct_functional": 17.1
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Uttar Pradesh",
+        "govt_pct_any": 1.5,
+        "govt_pct_functional": 1.1,
+        "aided_pct_any": 7.6,
+        "aided_pct_functional": 3.9
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "Uttarakhand",
+        "govt_pct_any": 19.2,
+        "govt_pct_functional": 17.8,
+        "aided_pct_any": 5.6,
+        "aided_pct_functional": 4.8
+      },
+      {
+        "year": "2022-23",
+        "state_ut": "West Bengal",
+        "govt_pct_any": 54.8,
+        "govt_pct_functional": 53.0,
+        "aided_pct_any": 9.3,
+        "aided_pct_functional": 9.3
+      }
+    ]
+  },
+  "narrative": {
+    "lede": "Modernity can be a retention tool if school feels like a bridge to work, not a corridor to nowhere.",
+    "so_what": "Look for states where ICT functionality rose and dropout fell — those are the implementation playbooks.",
+    "caveat": "ICT tables are only available for 2022-23 and 2023-24 in this dump."
+  }
+}

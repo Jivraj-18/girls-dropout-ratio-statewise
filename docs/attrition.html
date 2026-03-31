@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Class 9 Cliff — Girls' Attrition Analysis | UDISE+ 2018–2025</title>
+  <meta name="description" content="Detailed analysis of where exactly girls drop out of India's education system — the Class 9 cliff where secondary-level attrition spikes dramatically." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+</head>
+<body>
+  <script src="assets/nav.js"></script>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="kicker"><span class="dot"></span> Attrition Analysis</p>
+      <h1 class="title">The Class 9 Cliff</h1>
+      <p class="subtitle">Primary dropout is nearly zero. Upper primary is shrinking. But at the secondary gate — Classes 9 & 10 — the system still loses 1 in every 10 girls.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Survival Funnel -->
+    <div class="kpi-grid">
+      <div class="kpi-card success">
+        <div class="kpi-label">Primary (1-5)</div>
+        <div class="kpi-value">0.0%</div>
+        <div class="kpi-detail">Dropout virtually eliminated</div>
+      </div>
+      <div class="kpi-card warning">
+        <div class="kpi-label">Upper Primary (6-8)</div>
+        <div class="kpi-value">2.9%</div>
+        <div class="kpi-detail">Low but needs monitoring</div>
+      </div>
+      <div class="kpi-card crisis">
+        <div class="kpi-label">Secondary (9-10)</div>
+        <div class="kpi-value">9.6%</div>
+        <div class="kpi-detail">The crisis point</div>
+      </div>
+      <div class="kpi-card saffron">
+        <div class="kpi-label">Girls Lost per 100</div>
+        <div class="kpi-value" id="kpi-lost">—</div>
+        <div class="kpi-detail">Before completing Class 10</div>
+      </div>
+    </div>
+
+    <!-- Waterfall -->
+    <div class="section-header">
+      <div class="icon">💧</div>
+      <h2>The Leaking Pipeline</h2>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h2>Where Girls Drop — A Waterfall View</h2>
+        <span class="badge badge-crisis">2024-25</span>
+      </div>
+      <div id="plot-waterfall" class="plot" style="height:420px;"></div>
+      <div class="insight-box" style="margin-top:12px;">
+        <div class="insight-label">Policy Implication</div>
+        <p>The secondary level accounts for <strong>78% of all girls' dropout</strong>. Budget allocation should reflect this concentration — not spread equally across all levels.</p>
+      </div>
+    </div>
+
+    <!-- Level trend over time -->
+    <div class="section-header">
+      <div class="icon">📉</div>
+      <h2>How Each Level Has Changed</h2>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h2>Girls' Dropout by Level — 7 Year Trend</h2>
+        <span class="small">All three education levels, India national figures</span>
+      </div>
+      <div id="plot-level-trend" class="plot" style="height:420px;"></div>
+    </div>
+
+    <!-- State-level bottlenecks -->
+    <div class="section-header">
+      <div class="icon">🎯</div>
+      <h2>Where Is the Bottleneck in Each State?</h2>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h2>Peak Dropout Level by State (2024-25)</h2>
+        <span class="small">Which level has the highest dropout in each state</span>
+      </div>
+      <div id="plot-bottleneck" class="plot" style="height:600px;"></div>
+    </div>
+
+    <footer class="site-footer">
+      <p><a href="index.html">← Dashboard</a> · <a href="infrastructure.html">Infrastructure →</a></p>
+    </footer>
+  </main>
+
+  <script>
+  const PL = {
+    paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: 'rgba(0,0,0,0)',
+    font: { family: 'Inter, system-ui, sans-serif', color: '#94a3b8', size: 12 },
+    margin: { t: 30, r: 30, b: 60, l: 60 },
+    xaxis: { gridcolor: 'rgba(148,163,184,0.08)' },
+    yaxis: { gridcolor: 'rgba(148,163,184,0.08)' },
+    hoverlabel: { bgcolor: '#1a2235', bordercolor: '#FF9933', font: { color: '#f0f4fc', size: 13 } },
+  };
+  const PC = { displayModeBar: false, responsive: true };
+
+  async function init() {
+    const task1 = await (await fetch('data/task_1.json')).json();
+
+    const surv = task1.chart_data.survival_step;
+    const lost = Math.round(100 - surv.y[surv.y.length - 1]);
+    document.getElementById('kpi-lost').textContent = lost;
+
+    renderWaterfall(task1);
+    renderLevelTrend(task1);
+    renderBottleneck();
+  }
+
+  function renderWaterfall(task1) {
+    const surv = task1.chart_data.survival_step;
+
+    const trace = {
+      x: surv.x,
+      y: surv.y,
+      type: 'waterfall',
+      measure: ['absolute', 'relative', 'relative', 'total'],
+      textposition: 'outside',
+      text: surv.y.map((v,i) => i === 0 ? '100 girls start' : v.toFixed(1) + ' remain'),
+      textfont: { color: '#f0f4fc', size: 12 },
+      connector: { line: { color: 'rgba(148,163,184,0.2)' } },
+      decreasing: { marker: { color: '#ef4444' } },
+      increasing: { marker: { color: '#22c55e' } },
+      totals: { marker: { color: surv.y[surv.y.length-1] < 90 ? '#f59e0b' : '#22c55e' } },
+    };
+
+    // Plotly waterfall needs special handling
+    // Use bar chart instead for better control
+    const labels = surv.x;
+    const vals = surv.y;
+    const colors = vals.map((v,i) => {
+      if (i === 0) return '#3b82f6';
+      return v >= 97 ? '#22c55e' : v >= 90 ? '#f59e0b' : '#ef4444';
+    });
+
+    const barTrace = {
+      x: labels, y: vals, type: 'bar',
+      marker: { color: colors, opacity: 0.9, line: { width: 0 } },
+      text: vals.map((v,i) => {
+        if (i === 0) return '100 girls';
+        const lost = (100 - v).toFixed(0);
+        return v.toFixed(1) + ' remain';
+      }),
+      textposition: 'outside',
+      textfont: { size: 13, color: '#f0f4fc' },
+    };
+
+    // Add dropout annotations between bars
+    const annotations = [];
+    for (let i = 1; i < vals.length; i++) {
+      const dropped = vals[i-1] - vals[i];
+      if (dropped > 0) {
+        annotations.push({
+          x: labels[i], y: vals[i] + (vals[i-1] - vals[i])/2,
+          text: `↓ ${dropped.toFixed(1)} lost`,
+          showarrow: true, arrowhead: 0, arrowcolor: '#ef4444',
+          ax: -60, ay: 0,
+          font: { size: 11, color: '#ef4444' },
+        });
+      }
+    }
+
+    const layout = {
+      ...PL,
+      yaxis: { ...PL.yaxis, title: 'Girls remaining (out of 100)', range: [0, 120] },
+      showlegend: false,
+      annotations,
+    };
+
+    Plotly.newPlot('plot-waterfall', [barTrace], layout, PC);
+  }
+
+  function renderLevelTrend(task1) {
+    const data = task1.chart_data.india_dropout_by_level;
+    const years = [...new Set(data.map(d => d.year))].sort();
+    const levels = ['Primary (1-5)', 'Upper Primary (6-8)', 'Secondary (9-10)'];
+    const colors = { 'Primary (1-5)': '#22c55e', 'Upper Primary (6-8)': '#f59e0b', 'Secondary (9-10)': '#ef4444' };
+
+    const traces = levels.map(level => ({
+      x: years,
+      y: years.map(y => { const m = data.find(d => d.year === y && d.level === level); return m ? m.rate : null; }),
+      name: level,
+      mode: 'lines+markers',
+      line: { color: colors[level], width: 2.5 },
+      marker: { size: 7 },
+      fill: 'tozeroy',
+      fillcolor: colors[level].replace(')', ',0.06)').replace('rgb', 'rgba'),
+    }));
+
+    const layout = {
+      ...PL,
+      yaxis: { ...PL.yaxis, title: 'Dropout Rate (%)', range: [0, 20] },
+      showlegend: true,
+      legend: { orientation: 'h', y: -0.18, x: 0.5, xanchor: 'center' },
+    };
+
+    Plotly.newPlot('plot-level-trend', traces, layout, PC);
+  }
+
+  async function renderBottleneck() {
+    const task9 = await (await fetch('data/task_9.json')).json();
+    const ts = task9.chart_data.time_series;
+
+    // For each state, get 2024-25 value as secondary. We don't have primary/upper primary per state here
+    // So we'll make a horizontal bar chart of secondary dropout by state (2024-25 only)
+    const latest = {};
+    ts.forEach(d => { if (d.year === '2024-25') latest[d.state_ut] = d.rate; });
+
+    const sorted = Object.entries(latest).sort((a,b) => b[1] - a[1]);
+
+    const trace = {
+      y: sorted.map(s => s[0]),
+      x: sorted.map(s => s[1]),
+      type: 'bar',
+      orientation: 'h',
+      marker: {
+        color: sorted.map(s => s[1] >= 15 ? '#ef4444' : s[1] >= 10 ? '#f59e0b' : s[1] >= 5 ? '#3b82f6' : '#22c55e'),
+        opacity: 0.85,
+      },
+      text: sorted.map(s => s[1] + '%'),
+      textposition: 'outside',
+      textfont: { size: 10, color: '#94a3b8' },
+      hovertemplate: '<b>%{y}</b>: %{x:.1f}%<extra></extra>',
+    };
+
+    const layout = {
+      ...PL,
+      margin: { ...PL.margin, l: 200 },
+      xaxis: { ...PL.xaxis, title: 'Secondary Dropout Rate (%)' },
+      yaxis: { ...PL.yaxis, autorange: 'reversed' },
+      showlegend: false,
+      shapes: [{
+        type: 'line', x0: 15, x1: 15, y0: -0.5, y1: sorted.length - 0.5,
+        line: { color: 'rgba(239,68,68,0.4)', width: 2, dash: 'dash' },
+      }],
+    };
+
+    Plotly.newPlot('plot-bottleneck', [trace], layout, PC);
+  }
+
+  init();
+  </script>
+</body>
+</html>

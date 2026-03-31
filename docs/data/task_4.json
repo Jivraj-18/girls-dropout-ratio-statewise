@@ -1,0 +1,754 @@
+{
+  "task_id": 4,
+  "title": "Peer Benchmarking (Competitive Federalism)",
+  "year": "2024-25",
+  "gender": "Girls",
+  "findings": {
+    "k_peers": 5,
+    "best_10_vs_peers": [
+      {
+        "state_ut": "Uttarakhand",
+        "peers": [
+          "Punjab",
+          "Telangana",
+          "Karnataka",
+          "Maharashtra",
+          "West Bengal"
+        ],
+        "dropout_secondary": 3.0,
+        "peer_mean": 11.5,
+        "performance_delta": -8.5
+      },
+      {
+        "state_ut": "Punjab",
+        "peers": [
+          "Maharashtra",
+          "Karnataka",
+          "Uttarakhand",
+          "Assam",
+          "West Bengal"
+        ],
+        "dropout_secondary": 5.2,
+        "peer_mean": 12.26,
+        "performance_delta": -7.06
+      },
+      {
+        "state_ut": "Manipur",
+        "peers": [
+          "Tripura",
+          "Arunachal Pradesh",
+          "Mizoram",
+          "Assam",
+          "Ladakh"
+        ],
+        "dropout_secondary": 8.6,
+        "peer_mean": 15.0,
+        "performance_delta": -6.4
+      },
+      {
+        "state_ut": "Chandigarh",
+        "peers": [
+          "Dadra and Nagar Haveli and Daman and Diu",
+          "Delhi",
+          "Goa",
+          "Telangana",
+          "Himachal Pradesh"
+        ],
+        "dropout_secondary": 1.1,
+        "peer_mean": 7.239999999999999,
+        "performance_delta": -6.139999999999999
+      },
+      {
+        "state_ut": "Puducherry",
+        "peers": [
+          "Kerala",
+          "Tamil Nadu",
+          "Himachal Pradesh",
+          "Karnataka",
+          "West Bengal"
+        ],
+        "dropout_secondary": 3.1,
+        "peer_mean": 9.02,
+        "performance_delta": -5.92
+      },
+      {
+        "state_ut": "Uttar Pradesh",
+        "peers": [
+          "Madhya Pradesh",
+          "Gujarat",
+          "Jharkhand",
+          "Nagaland",
+          "Sikkim"
+        ],
+        "dropout_secondary": 5.1,
+        "peer_mean": 10.239999999999998,
+        "performance_delta": -5.139999999999999
+      },
+      {
+        "state_ut": "Jharkhand",
+        "peers": [
+          "Lakshadweep",
+          "Sikkim",
+          "Chhattisgarh",
+          "Rajasthan",
+          "Uttar Pradesh"
+        ],
+        "dropout_secondary": 2.4,
+        "peer_mean": 7.44,
+        "performance_delta": -5.040000000000001
+      },
+      {
+        "state_ut": "Andaman and Nicobar Islands",
+        "peers": [
+          "Tamil Nadu",
+          "Kerala",
+          "Andhra Pradesh",
+          "Odisha",
+          "Puducherry"
+        ],
+        "dropout_secondary": 3.5,
+        "peer_mean": 7.44,
+        "performance_delta": -3.9400000000000004
+      },
+      {
+        "state_ut": "Himachal Pradesh",
+        "peers": [
+          "Karnataka",
+          "West Bengal",
+          "Puducherry",
+          "Kerala",
+          "Punjab"
+        ],
+        "dropout_secondary": 4.8,
+        "peer_mean": 8.66,
+        "performance_delta": -3.8600000000000003
+      },
+      {
+        "state_ut": "Haryana",
+        "peers": [
+          "Andhra Pradesh",
+          "Tamil Nadu",
+          "Odisha",
+          "Kerala",
+          "Punjab"
+        ],
+        "dropout_secondary": 4.1,
+        "peer_mean": 7.860000000000001,
+        "performance_delta": -3.7600000000000016
+      }
+    ],
+    "worst_10_vs_peers": [
+      {
+        "state_ut": "West Bengal",
+        "peers": [
+          "Karnataka",
+          "Himachal Pradesh",
+          "Punjab",
+          "Uttarakhand",
+          "Puducherry"
+        ],
+        "dropout_secondary": 16.7,
+        "peer_mean": 6.14,
+        "performance_delta": 10.559999999999999
+      },
+      {
+        "state_ut": "Assam",
+        "peers": [
+          "Maharashtra",
+          "Ladakh",
+          "Punjab",
+          "Tripura",
+          "Uttarakhand"
+        ],
+        "dropout_secondary": 16.7,
+        "peer_mean": 8.620000000000001,
+        "performance_delta": 8.079999999999998
+      },
+      {
+        "state_ut": "Karnataka",
+        "peers": [
+          "West Bengal",
+          "Himachal Pradesh",
+          "Punjab",
+          "Uttarakhand",
+          "Puducherry"
+        ],
+        "dropout_secondary": 14.6,
+        "peer_mean": 6.56,
+        "performance_delta": 8.04
+      },
+      {
+        "state_ut": "Arunachal Pradesh",
+        "peers": [
+          "Jammu and Kashmir",
+          "Ladakh",
+          "Lakshadweep",
+          "Jharkhand",
+          "Assam"
+        ],
+        "dropout_secondary": 17.7,
+        "peer_mean": 10.14,
+        "performance_delta": 7.559999999999999
+      },
+      {
+        "state_ut": "Madhya Pradesh",
+        "peers": [
+          "Uttar Pradesh",
+          "Gujarat",
+          "Jharkhand",
+          "Sikkim",
+          "Bihar"
+        ],
+        "dropout_secondary": 14.6,
+        "peer_mean": 7.459999999999999,
+        "performance_delta": 7.140000000000001
+      },
+      {
+        "state_ut": "Gujarat",
+        "peers": [
+          "Rajasthan",
+          "Chhattisgarh",
+          "Uttar Pradesh",
+          "Jharkhand",
+          "Odisha"
+        ],
+        "dropout_secondary": 14.6,
+        "peer_mean": 7.76,
+        "performance_delta": 6.84
+      },
+      {
+        "state_ut": "Andhra Pradesh",
+        "peers": [
+          "Haryana",
+          "Odisha",
+          "Tamil Nadu",
+          "Kerala",
+          "Andaman and Nicobar Islands"
+        ],
+        "dropout_secondary": 12.5,
+        "peer_mean": 5.84,
+        "performance_delta": 6.66
+      },
+      {
+        "state_ut": "Mizoram",
+        "peers": [
+          "Telangana",
+          "Uttarakhand",
+          "Tripura",
+          "Goa",
+          "West Bengal"
+        ],
+        "dropout_secondary": 16.0,
+        "peer_mean": 9.379999999999999,
+        "performance_delta": 6.620000000000001
+      },
+      {
+        "state_ut": "Meghalaya",
+        "peers": [
+          "Mizoram",
+          "Manipur",
+          "Goa",
+          "Telangana",
+          "Tripura"
+        ],
+        "dropout_secondary": 16.6,
+        "peer_mean": 10.36,
+        "performance_delta": 6.240000000000002
+      },
+      {
+        "state_ut": "Odisha",
+        "peers": [
+          "Rajasthan",
+          "Chhattisgarh",
+          "Andhra Pradesh",
+          "Haryana",
+          "Andaman and Nicobar Islands"
+        ],
+        "dropout_secondary": 12.6,
+        "peer_mean": 7.76,
+        "performance_delta": 4.84
+      }
+    ]
+  },
+  "chart_data": {
+    "all": [
+      {
+        "state_ut": "Uttarakhand",
+        "peers": [
+          "Punjab",
+          "Telangana",
+          "Karnataka",
+          "Maharashtra",
+          "West Bengal"
+        ],
+        "dropout_secondary": 3.0,
+        "peer_mean": 11.5,
+        "performance_delta": -8.5
+      },
+      {
+        "state_ut": "Punjab",
+        "peers": [
+          "Maharashtra",
+          "Karnataka",
+          "Uttarakhand",
+          "Assam",
+          "West Bengal"
+        ],
+        "dropout_secondary": 5.2,
+        "peer_mean": 12.26,
+        "performance_delta": -7.06
+      },
+      {
+        "state_ut": "Manipur",
+        "peers": [
+          "Tripura",
+          "Arunachal Pradesh",
+          "Mizoram",
+          "Assam",
+          "Ladakh"
+        ],
+        "dropout_secondary": 8.6,
+        "peer_mean": 15.0,
+        "performance_delta": -6.4
+      },
+      {
+        "state_ut": "Chandigarh",
+        "peers": [
+          "Dadra and Nagar Haveli and Daman and Diu",
+          "Delhi",
+          "Goa",
+          "Telangana",
+          "Himachal Pradesh"
+        ],
+        "dropout_secondary": 1.1,
+        "peer_mean": 7.239999999999999,
+        "performance_delta": -6.139999999999999
+      },
+      {
+        "state_ut": "Puducherry",
+        "peers": [
+          "Kerala",
+          "Tamil Nadu",
+          "Himachal Pradesh",
+          "Karnataka",
+          "West Bengal"
+        ],
+        "dropout_secondary": 3.1,
+        "peer_mean": 9.02,
+        "performance_delta": -5.92
+      },
+      {
+        "state_ut": "Uttar Pradesh",
+        "peers": [
+          "Madhya Pradesh",
+          "Gujarat",
+          "Jharkhand",
+          "Nagaland",
+          "Sikkim"
+        ],
+        "dropout_secondary": 5.1,
+        "peer_mean": 10.239999999999998,
+        "performance_delta": -5.139999999999999
+      },
+      {
+        "state_ut": "Jharkhand",
+        "peers": [
+          "Lakshadweep",
+          "Sikkim",
+          "Chhattisgarh",
+          "Rajasthan",
+          "Uttar Pradesh"
+        ],
+        "dropout_secondary": 2.4,
+        "peer_mean": 7.44,
+        "performance_delta": -5.040000000000001
+      },
+      {
+        "state_ut": "Andaman and Nicobar Islands",
+        "peers": [
+          "Tamil Nadu",
+          "Kerala",
+          "Andhra Pradesh",
+          "Odisha",
+          "Puducherry"
+        ],
+        "dropout_secondary": 3.5,
+        "peer_mean": 7.44,
+        "performance_delta": -3.9400000000000004
+      },
+      {
+        "state_ut": "Himachal Pradesh",
+        "peers": [
+          "Karnataka",
+          "West Bengal",
+          "Puducherry",
+          "Kerala",
+          "Punjab"
+        ],
+        "dropout_secondary": 4.8,
+        "peer_mean": 8.66,
+        "performance_delta": -3.8600000000000003
+      },
+      {
+        "state_ut": "Haryana",
+        "peers": [
+          "Andhra Pradesh",
+          "Tamil Nadu",
+          "Odisha",
+          "Kerala",
+          "Punjab"
+        ],
+        "dropout_secondary": 4.1,
+        "peer_mean": 7.860000000000001,
+        "performance_delta": -3.7600000000000016
+      },
+      {
+        "state_ut": "Rajasthan",
+        "peers": [
+          "Chhattisgarh",
+          "Odisha",
+          "Gujarat",
+          "Jharkhand",
+          "Andhra Pradesh"
+        ],
+        "dropout_secondary": 7.1,
+        "peer_mean": 10.739999999999998,
+        "performance_delta": -3.639999999999999
+      },
+      {
+        "state_ut": "Lakshadweep",
+        "peers": [
+          "Jharkhand",
+          "Sikkim",
+          "Chhattisgarh",
+          "Rajasthan",
+          "Nagaland"
+        ],
+        "dropout_secondary": 5.0,
+        "peer_mean": 8.14,
+        "performance_delta": -3.1400000000000006
+      },
+      {
+        "state_ut": "Goa",
+        "peers": [
+          "Dadra and Nagar Haveli and Daman and Diu",
+          "Delhi",
+          "Telangana",
+          "West Bengal",
+          "Uttarakhand"
+        ],
+        "dropout_secondary": 6.3,
+        "peer_mean": 8.959999999999999,
+        "performance_delta": -2.6599999999999993
+      },
+      {
+        "state_ut": "Kerala",
+        "peers": [
+          "Tamil Nadu",
+          "Puducherry",
+          "Himachal Pradesh",
+          "Andaman and Nicobar Islands",
+          "Andhra Pradesh"
+        ],
+        "dropout_secondary": 3.7,
+        "peer_mean": 5.84,
+        "performance_delta": -2.1399999999999997
+      },
+      {
+        "state_ut": "Bihar",
+        "peers": [
+          "Madhya Pradesh",
+          "Uttar Pradesh",
+          "Nagaland",
+          "Sikkim",
+          "Jharkhand"
+        ],
+        "dropout_secondary": 6.8,
+        "peer_mean": 8.34,
+        "performance_delta": -1.54
+      },
+      {
+        "state_ut": "Delhi",
+        "peers": [
+          "Goa",
+          "Dadra and Nagar Haveli and Daman and Diu",
+          "Telangana",
+          "Chandigarh",
+          "Himachal Pradesh"
+        ],
+        "dropout_secondary": 5.8,
+        "peer_mean": 6.3,
+        "performance_delta": -0.5
+      },
+      {
+        "state_ut": "Maharashtra",
+        "peers": [
+          "Assam",
+          "Punjab",
+          "Ladakh",
+          "Uttarakhand",
+          "Karnataka"
+        ],
+        "dropout_secondary": 10.3,
+        "peer_mean": 10.78,
+        "performance_delta": -0.47999999999999865
+      },
+      {
+        "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+        "peers": [
+          "Goa",
+          "Delhi",
+          "Telangana",
+          "West Bengal",
+          "Himachal Pradesh"
+        ],
+        "dropout_secondary": 8.6,
+        "peer_mean": 8.86,
+        "performance_delta": -0.2599999999999998
+      },
+      {
+        "state_ut": "Tamil Nadu",
+        "peers": [
+          "Kerala",
+          "Puducherry",
+          "Andaman and Nicobar Islands",
+          "Andhra Pradesh",
+          "Haryana"
+        ],
+        "dropout_secondary": 5.3,
+        "peer_mean": 5.38,
+        "performance_delta": -0.08000000000000007
+      },
+      {
+        "state_ut": "Tripura",
+        "peers": [
+          "Assam",
+          "Uttarakhand",
+          "Maharashtra",
+          "Punjab",
+          "Ladakh"
+        ],
+        "dropout_secondary": 10.2,
+        "peer_mean": 9.92,
+        "performance_delta": 0.27999999999999936
+      },
+      {
+        "state_ut": "Sikkim",
+        "peers": [
+          "Nagaland",
+          "Jharkhand",
+          "Lakshadweep",
+          "Jammu and Kashmir",
+          "Uttar Pradesh"
+        ],
+        "dropout_secondary": 8.4,
+        "peer_mean": 7.18,
+        "performance_delta": 1.2200000000000006
+      },
+      {
+        "state_ut": "Telangana",
+        "peers": [
+          "Uttarakhand",
+          "Goa",
+          "Delhi",
+          "West Bengal",
+          "Karnataka"
+        ],
+        "dropout_secondary": 10.7,
+        "peer_mean": 9.28,
+        "performance_delta": 1.42
+      },
+      {
+        "state_ut": "Chhattisgarh",
+        "peers": [
+          "Rajasthan",
+          "Odisha",
+          "Jharkhand",
+          "Gujarat",
+          "Andhra Pradesh"
+        ],
+        "dropout_secondary": 11.6,
+        "peer_mean": 9.84,
+        "performance_delta": 1.7599999999999998
+      },
+      {
+        "state_ut": "Jammu and Kashmir",
+        "peers": [
+          "Arunachal Pradesh",
+          "Nagaland",
+          "Sikkim",
+          "Lakshadweep",
+          "Jharkhand"
+        ],
+        "dropout_secondary": 12.2,
+        "peer_mean": 8.94,
+        "performance_delta": 3.26
+      },
+      {
+        "state_ut": "Ladakh",
+        "peers": [
+          "Assam",
+          "Maharashtra",
+          "Odisha",
+          "Punjab",
+          "Tamil Nadu"
+        ],
+        "dropout_secondary": 14.4,
+        "peer_mean": 10.02,
+        "performance_delta": 4.380000000000001
+      },
+      {
+        "state_ut": "Nagaland",
+        "peers": [
+          "Sikkim",
+          "Jharkhand",
+          "Jammu and Kashmir",
+          "Lakshadweep",
+          "Uttar Pradesh"
+        ],
+        "dropout_secondary": 11.2,
+        "peer_mean": 6.62,
+        "performance_delta": 4.579999999999999
+      },
+      {
+        "state_ut": "Odisha",
+        "peers": [
+          "Rajasthan",
+          "Chhattisgarh",
+          "Andhra Pradesh",
+          "Haryana",
+          "Andaman and Nicobar Islands"
+        ],
+        "dropout_secondary": 12.6,
+        "peer_mean": 7.76,
+        "performance_delta": 4.84
+      },
+      {
+        "state_ut": "Meghalaya",
+        "peers": [
+          "Mizoram",
+          "Manipur",
+          "Goa",
+          "Telangana",
+          "Tripura"
+        ],
+        "dropout_secondary": 16.6,
+        "peer_mean": 10.36,
+        "performance_delta": 6.240000000000002
+      },
+      {
+        "state_ut": "Mizoram",
+        "peers": [
+          "Telangana",
+          "Uttarakhand",
+          "Tripura",
+          "Goa",
+          "West Bengal"
+        ],
+        "dropout_secondary": 16.0,
+        "peer_mean": 9.379999999999999,
+        "performance_delta": 6.620000000000001
+      },
+      {
+        "state_ut": "Andhra Pradesh",
+        "peers": [
+          "Haryana",
+          "Odisha",
+          "Tamil Nadu",
+          "Kerala",
+          "Andaman and Nicobar Islands"
+        ],
+        "dropout_secondary": 12.5,
+        "peer_mean": 5.84,
+        "performance_delta": 6.66
+      },
+      {
+        "state_ut": "Gujarat",
+        "peers": [
+          "Rajasthan",
+          "Chhattisgarh",
+          "Uttar Pradesh",
+          "Jharkhand",
+          "Odisha"
+        ],
+        "dropout_secondary": 14.6,
+        "peer_mean": 7.76,
+        "performance_delta": 6.84
+      },
+      {
+        "state_ut": "Madhya Pradesh",
+        "peers": [
+          "Uttar Pradesh",
+          "Gujarat",
+          "Jharkhand",
+          "Sikkim",
+          "Bihar"
+        ],
+        "dropout_secondary": 14.6,
+        "peer_mean": 7.459999999999999,
+        "performance_delta": 7.140000000000001
+      },
+      {
+        "state_ut": "Arunachal Pradesh",
+        "peers": [
+          "Jammu and Kashmir",
+          "Ladakh",
+          "Lakshadweep",
+          "Jharkhand",
+          "Assam"
+        ],
+        "dropout_secondary": 17.7,
+        "peer_mean": 10.14,
+        "performance_delta": 7.559999999999999
+      },
+      {
+        "state_ut": "Karnataka",
+        "peers": [
+          "West Bengal",
+          "Himachal Pradesh",
+          "Punjab",
+          "Uttarakhand",
+          "Puducherry"
+        ],
+        "dropout_secondary": 14.6,
+        "peer_mean": 6.56,
+        "performance_delta": 8.04
+      },
+      {
+        "state_ut": "Assam",
+        "peers": [
+          "Maharashtra",
+          "Ladakh",
+          "Punjab",
+          "Tripura",
+          "Uttarakhand"
+        ],
+        "dropout_secondary": 16.7,
+        "peer_mean": 8.620000000000001,
+        "performance_delta": 8.079999999999998
+      },
+      {
+        "state_ut": "West Bengal",
+        "peers": [
+          "Karnataka",
+          "Himachal Pradesh",
+          "Punjab",
+          "Uttarakhand",
+          "Puducherry"
+        ],
+        "dropout_secondary": 16.7,
+        "peer_mean": 6.14,
+        "performance_delta": 10.559999999999999
+      }
+    ],
+    "ger_levels_used": [
+      "Primary (1-5)",
+      "Upper Primary (6-8)",
+      "Secondary (9-10)"
+    ]
+  },
+  "narrative": {
+    "lede": "Peer benchmarking turns ‘big states vs small states’ arguments into ‘states with similar starting points’ learning loops.",
+    "so_what": "Use peers as accountability mirrors: same constraints, different outcomes."
+  }
+}

@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>7-Year Trend Analysis — Girls' Dropout Rate | UDISE+ 2018–2025</title>
+  <meta name="description" content="Interactive trend analysis showing how girls' dropout rates have changed across Indian states from 2018-19 to 2024-25, with COVID markers and policy milestones." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+</head>
+<body>
+  <script src="assets/nav.js"></script>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="kicker"><span class="dot"></span> Trend Analysis</p>
+      <h1 class="title">The 7-Year Journey</h1>
+      <p class="subtitle">How girls' dropout rates have evolved across India — showing which states improved, which stalled, and which got worse.</p>
+      <p class="meta">Data: UDISE+ Table 6.13 · Secondary Level (Classes 9-10) · Girls only</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- National Overview -->
+    <div class="section-header">
+      <div class="icon">📊</div>
+      <h2>National Average Trend</h2>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <h2>Girls' Dropout Rate at Secondary Level — All India</h2>
+          <p class="small mb-0">Average across all 36 states/UTs. Shaded area = COVID lockdown period.</p>
+        </div>
+        <span class="badge badge-success">↓ 7.5pp improvement</span>
+      </div>
+      <div id="plot-national" class="plot" style="height:420px;"></div>
+    </div>
+
+    <!-- Spaghetti chart: All states -->
+    <div class="section-header">
+      <div class="icon">🍝</div>
+      <h2>All States' Trajectories</h2>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <h2>Every State's 7-Year Path</h2>
+          <p class="small mb-0">Hover to highlight. Click legend to toggle. States above 15% threshold shown in red.</p>
+        </div>
+      </div>
+      <div id="plot-spaghetti" class="plot" style="height:520px;"></div>
+    </div>
+
+    <!-- State selector deep dive -->
+    <div class="section-header">
+      <div class="icon">🔍</div>
+      <h2>State Deep Dive</h2>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h2>Compare Any State</h2>
+        <div>
+          <select id="state-select-1" class="search-input" style="max-width:200px; display:inline-block;">
+          </select>
+          <span style="color:var(--text-muted); margin:0 8px;">vs.</span>
+          <select id="state-select-2" class="search-input" style="max-width:200px; display:inline-block;">
+          </select>
+        </div>
+      </div>
+      <div id="plot-compare" class="plot" style="height:400px;"></div>
+    </div>
+
+    <!-- Improvement Leaders Table -->
+    <div class="section-header">
+      <div class="icon">🏆</div>
+      <h2>Improvement Leaderboard</h2>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h2>States Ranked by 7-Year Change</h2>
+        <span class="badge badge-info">2018-19 → 2024-25</span>
+      </div>
+      <div class="state-table-wrapper" style="max-height:500px; overflow-y:auto;">
+        <table class="state-table" id="trend-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>State / UT</th>
+              <th>2018-19 (%)</th>
+              <th>2024-25 (%)</th>
+              <th>Change (pp)</th>
+              <th>Direction</th>
+              <th>Sparkline</th>
+            </tr>
+          </thead>
+          <tbody id="trend-table-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Year-over-Year Heatmap -->
+    <div class="section-header">
+      <div class="icon">🔥</div>
+      <h2>Year-over-Year Progression</h2>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h2>Heatmap: Every State × Every Year</h2>
+        <span class="small">Red = high dropout, Green = low dropout. Hover for details.</span>
+      </div>
+      <div id="plot-heatmap" class="plot" style="height:700px;"></div>
+    </div>
+
+    <footer class="site-footer">
+      <p>Data: UDISE+ Ministry of Education · <a href="index.html">← Back to Dashboard</a></p>
+    </footer>
+  </main>
+
+  <script>
+  const PL = {
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    plot_bgcolor: 'rgba(0,0,0,0)',
+    font: { family: 'Inter, system-ui, sans-serif', color: '#94a3b8', size: 12 },
+    margin: { t: 30, r: 30, b: 60, l: 60 },
+    xaxis: { gridcolor: 'rgba(148,163,184,0.08)', zerolinecolor: 'rgba(148,163,184,0.15)' },
+    yaxis: { gridcolor: 'rgba(148,163,184,0.08)', zerolinecolor: 'rgba(148,163,184,0.15)' },
+    hoverlabel: { bgcolor: '#1a2235', bordercolor: '#FF9933', font: { color: '#f0f4fc', size: 13 } },
+  };
+  const PC = { displayModeBar: false, responsive: true };
+
+  const YEARS = ['2018-19','2019-20','2020-21','2021-22','2022-23','2023-24','2024-25'];
+
+  async function init() {
+    const task9 = await (await fetch('data/task_9.json')).json();
+    const ts = task9.chart_data.time_series;
+
+    // Build state map
+    const stateMap = {};
+    ts.forEach(d => {
+      if (!stateMap[d.state_ut]) stateMap[d.state_ut] = {};
+      stateMap[d.state_ut][d.year] = d.rate;
+    });
+
+    const stateNames = Object.keys(stateMap).sort();
+
+    renderNational(stateMap);
+    renderSpaghetti(stateMap, stateNames);
+    renderCompareDropdowns(stateMap, stateNames);
+    renderTrendTable(stateMap, stateNames);
+    renderHeatmap(stateMap, stateNames);
+  }
+
+  function renderNational(stateMap) {
+    const avg = YEARS.map(y => {
+      const rates = Object.values(stateMap).map(s => s[y]).filter(v => v != null);
+      return rates.reduce((a,b)=>a+b, 0) / rates.length;
+    });
+
+    const trace = {
+      x: YEARS, y: avg, name: 'National Average',
+      mode: 'lines+markers',
+      line: { color: '#FF9933', width: 3, shape: 'spline' },
+      marker: { size: 8, color: '#FF9933' },
+      fill: 'tozeroy',
+      fillcolor: 'rgba(255,153,51,0.08)',
+    };
+
+    const layout = {
+      ...PL,
+      yaxis: { ...PL.yaxis, title: 'Avg Dropout Rate (%)', range: [0, Math.max(...avg) * 1.3] },
+      shapes: [{
+        type: 'rect', x0: '2019-20', x1: '2020-21', y0: 0, y1: 100,
+        fillcolor: 'rgba(239,68,68,0.06)', line: { width: 0 },
+      },{
+        type: 'line', x0: 0, x1: 1, xref: 'paper', y0: 15, y1: 15,
+        line: { color: 'rgba(239,68,68,0.4)', width: 1, dash: 'dash' },
+      }],
+      annotations: [
+        { x: '2020-21', y: avg[2]+2, text: 'COVID-19', showarrow: false, font: { size: 10, color: '#ef4444' } },
+        { x: 1.02, y: 15, xref: 'paper', text: 'Crisis threshold (15%)', showarrow: false, font: { size: 10, color: '#ef4444' }, xanchor: 'left' },
+      ],
+      showlegend: false,
+    };
+
+    Plotly.newPlot('plot-national', [trace], layout, PC);
+  }
+
+  function renderSpaghetti(stateMap, stateNames) {
+    const crisisStates = ['Arunachal Pradesh','Assam','West Bengal','Meghalaya','Mizoram'];
+    const successStates = ['Jharkhand','Kerala','Chandigarh','Puducherry'];
+
+    const traces = stateNames.map(s => {
+      const vals = YEARS.map(y => stateMap[s]?.[y] ?? null);
+      const isCrisis = crisisStates.includes(s);
+      const isSuccess = successStates.includes(s);
+      return {
+        x: YEARS, y: vals, name: s,
+        mode: 'lines',
+        line: {
+          color: isCrisis ? '#ef4444' : isSuccess ? '#22c55e' : 'rgba(148,163,184,0.25)',
+          width: isCrisis || isSuccess ? 2.5 : 1,
+        },
+        opacity: isCrisis || isSuccess ? 1 : 0.6,
+        hovertemplate: `<b>${s}</b><br>%{x}: %{y:.1f}%<extra></extra>`,
+      };
+    });
+
+    // Sort so highlighted states render on top
+    traces.sort((a,b) => (a.line.width > 1 ? 1 : 0) - (b.line.width > 1 ? 1 : 0));
+
+    const layout = {
+      ...PL,
+      yaxis: { ...PL.yaxis, title: 'Dropout Rate (%)', range: [0, 40] },
+      showlegend: false,
+      shapes: [{
+        type: 'line', x0: 0, x1: 1, xref: 'paper', y0: 15, y1: 15,
+        line: { color: 'rgba(239,68,68,0.3)', width: 1, dash: 'dash' },
+      }],
+      annotations: [
+        { x: 1.01, y: 15, xref: 'paper', text: '15% crisis line', showarrow: false, font: { size: 9, color: '#ef4444' }, xanchor: 'left' },
+      ],
+    };
+
+    Plotly.newPlot('plot-spaghetti', traces, layout, PC);
+  }
+
+  function renderCompareDropdowns(stateMap, stateNames) {
+    const sel1 = document.getElementById('state-select-1');
+    const sel2 = document.getElementById('state-select-2');
+
+    stateNames.forEach(s => {
+      sel1.innerHTML += `<option value="${s}" ${s==='Jharkhand'?'selected':''}>${s}</option>`;
+      sel2.innerHTML += `<option value="${s}" ${s==='Mizoram'?'selected':''}>${s}</option>`;
+    });
+
+    function updateCompare() {
+      const s1 = sel1.value, s2 = sel2.value;
+      const trace1 = {
+        x: YEARS, y: YEARS.map(y => stateMap[s1]?.[y] ?? null), name: s1,
+        mode: 'lines+markers',
+        line: { color: '#22c55e', width: 3 }, marker: { size: 8 },
+      };
+      const trace2 = {
+        x: YEARS, y: YEARS.map(y => stateMap[s2]?.[y] ?? null), name: s2,
+        mode: 'lines+markers',
+        line: { color: '#ef4444', width: 3 }, marker: { size: 8 },
+      };
+      const layout = {
+        ...PL,
+        yaxis: { ...PL.yaxis, title: 'Dropout Rate (%)' },
+        showlegend: true,
+        legend: { orientation: 'h', y: -0.18, x: 0.5, xanchor: 'center' },
+      };
+      Plotly.newPlot('plot-compare', [trace1, trace2], layout, PC);
+    }
+
+    sel1.addEventListener('change', updateCompare);
+    sel2.addEventListener('change', updateCompare);
+    updateCompare();
+  }
+
+  function renderTrendTable(stateMap, stateNames) {
+    const rows = stateNames
+      .filter(s => stateMap[s]['2024-25'] != null)
+      .map(s => ({
+        state: s,
+        first: stateMap[s]['2018-19'] ?? null,
+        latest: stateMap[s]['2024-25'],
+        change: stateMap[s]['2018-19'] != null ? stateMap[s]['2018-19'] - stateMap[s]['2024-25'] : null,
+      }))
+      .sort((a,b) => (b.change ?? -999) - (a.change ?? -999));
+
+    const tbody = document.getElementById('trend-table-body');
+    tbody.innerHTML = rows.map((r, i) => {
+      const dir = r.change === null ? 'stable' : r.change > 0 ? 'improving' : 'worsening';
+      const dirLabel = r.change === null ? '—' : r.change > 0 ? '✅ Improved' : '❌ Worsened';
+      const sparkVals = YEARS.map(y => stateMap[r.state]?.[y]);
+      const maxV = Math.max(...sparkVals.filter(v=>v!=null), 1);
+      const spark = sparkVals.map(v => {
+        if (v == null) return '<div class="sparkline-bar" style="height:0;background:transparent;"></div>';
+        const h = Math.max(3, (v/maxV)*100);
+        const c = v >= 15 ? '#ef4444' : v >= 10 ? '#f59e0b' : v >= 5 ? '#3b82f6' : '#22c55e';
+        return `<div class="sparkline-bar" style="height:${h}%;background:${c};" title="${v}%"></div>`;
+      }).join('');
+
+      return `<tr>
+        <td class="rank-cell">${i+1}</td>
+        <td class="state-name">${r.state}</td>
+        <td>${r.first != null ? r.first + '%' : '—'}</td>
+        <td class="rate-cell" style="color:${r.latest>=15?'#ef4444':r.latest>=10?'#f59e0b':'#94a3b8'}">${r.latest}%</td>
+        <td><span class="trend-arrow ${dir}">${r.change != null ? (r.change > 0 ? '↓ '+r.change.toFixed(1) : '↑ '+Math.abs(r.change).toFixed(1)) : '—'}pp</span></td>
+        <td>${dirLabel}</td>
+        <td><div class="sparkline-container">${spark}</div></td>
+      </tr>`;
+    }).join('');
+  }
+
+  function renderHeatmap(stateMap, stateNames) {
+    const sorted = stateNames.filter(s => stateMap[s]['2024-25'] != null)
+      .sort((a,b) => (stateMap[b]['2024-25'] ?? 0) - (stateMap[a]['2024-25'] ?? 0));
+
+    const z = sorted.map(s => YEARS.map(y => stateMap[s]?.[y] ?? null));
+
+    const trace = {
+      z, x: YEARS, y: sorted,
+      type: 'heatmap',
+      colorscale: [
+        [0, '#022c22'],
+        [0.15, '#14532d'],
+        [0.3, '#166534'],
+        [0.45, '#ca8a04'],
+        [0.6, '#d97706'],
+        [0.8, '#dc2626'],
+        [1, '#7f1d1d'],
+      ],
+      hovertemplate: '<b>%{y}</b><br>Year: %{x}<br>Dropout: %{z:.1f}%<extra></extra>',
+      colorbar: {
+        title: { text: 'Dropout %', font: { color: '#94a3b8' } },
+        tickfont: { color: '#94a3b8' },
+      },
+    };
+
+    const layout = {
+      ...PL,
+      margin: { ...PL.margin, l: 200 },
+      yaxis: { ...PL.yaxis, dtick: 1, autorange: 'reversed' },
+    };
+
+    Plotly.newPlot('plot-heatmap', [trace], layout, PC);
+  }
+
+  init();
+  </script>
+</body>
+</html>

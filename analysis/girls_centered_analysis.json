@@ -1,0 +1,346 @@
+{
+  "girls_hotspots": {
+    "tier1_crisis": [
+      {
+        "State": "Arunachal Pradesh",
+        "Girls_Dropout": 17.7
+      },
+      {
+        "State": "Assam",
+        "Girls_Dropout": 16.7
+      },
+      {
+        "State": "West Bengal",
+        "Girls_Dropout": 16.7
+      },
+      {
+        "State": "Meghalaya",
+        "Girls_Dropout": 16.6
+      },
+      {
+        "State": "Mizoram",
+        "Girls_Dropout": 16.0
+      }
+    ],
+    "tier2_concern": [
+      {
+        "State": "Karnataka",
+        "Girls_Dropout": 14.6
+      },
+      {
+        "State": "Madhya Pradesh",
+        "Girls_Dropout": 14.6
+      },
+      {
+        "State": "Gujarat",
+        "Girls_Dropout": 14.6
+      },
+      {
+        "State": "Ladakh",
+        "Girls_Dropout": 14.4
+      },
+      {
+        "State": "Odisha",
+        "Girls_Dropout": 12.6
+      },
+      {
+        "State": "Andhra Pradesh",
+        "Girls_Dropout": 12.5
+      },
+      {
+        "State": "Jammu and Kashmir",
+        "Girls_Dropout": 12.2
+      },
+      {
+        "State": "Chhattisgarh",
+        "Girls_Dropout": 11.6
+      },
+      {
+        "State": "Nagaland",
+        "Girls_Dropout": 11.2
+      },
+      {
+        "State": "Telangana",
+        "Girls_Dropout": 10.7
+      },
+      {
+        "State": "Maharashtra",
+        "Girls_Dropout": 10.3
+      },
+      {
+        "State": "Tripura",
+        "Girls_Dropout": 10.2
+      }
+    ],
+    "best_performers": [
+      {
+        "State": "Himachal Pradesh",
+        "Girls_Dropout": 4.8
+      },
+      {
+        "State": "Haryana",
+        "Girls_Dropout": 4.1
+      },
+      {
+        "State": "Kerala",
+        "Girls_Dropout": 3.7
+      },
+      {
+        "State": "Andaman and Nicobar Islands",
+        "Girls_Dropout": 3.5
+      },
+      {
+        "State": "Puducherry",
+        "Girls_Dropout": 3.1
+      },
+      {
+        "State": "Uttarakhand",
+        "Girls_Dropout": 3.0
+      },
+      {
+        "State": "Jharkhand",
+        "Girls_Dropout": 2.4
+      },
+      {
+        "State": "Chandigarh",
+        "Girls_Dropout": 1.1
+      }
+    ]
+  },
+  "infrastructure_available": true,
+  "teacher_gender_available": true,
+  "key_questions": [
+    "Do girl toilets correlate with lower girls dropout?",
+    "Do female teachers correlate with lower girls dropout?",
+    "Do free meals reduce girls dropout?",
+    "Do transportation programs help retain girls?",
+    "What policies are common in low-dropout states?"
+  ],
+  "state_groups": {
+    "high_girls_dropout": [
+      {
+        "State": "Arunachal Pradesh",
+        "Girls_Dropout": 17.7
+      },
+      {
+        "State": "Assam",
+        "Girls_Dropout": 16.7
+      },
+      {
+        "State": "West Bengal",
+        "Girls_Dropout": 16.7
+      },
+      {
+        "State": "Meghalaya",
+        "Girls_Dropout": 16.6
+      },
+      {
+        "State": "Mizoram",
+        "Girls_Dropout": 16.0
+      },
+      {
+        "State": "Karnataka",
+        "Girls_Dropout": 14.6
+      },
+      {
+        "State": "Madhya Pradesh",
+        "Girls_Dropout": 14.6
+      },
+      {
+        "State": "Gujarat",
+        "Girls_Dropout": 14.6
+      },
+      {
+        "State": "Ladakh",
+        "Girls_Dropout": 14.4
+      },
+      {
+        "State": "Odisha",
+        "Girls_Dropout": 12.6
+      },
+      {
+        "State": "Andhra Pradesh",
+        "Girls_Dropout": 12.5
+      },
+      {
+        "State": "Jammu and Kashmir",
+        "Girls_Dropout": 12.2
+      }
+    ],
+    "low_girls_dropout": [
+      {
+        "State": "Delhi",
+        "Girls_Dropout": 5.8
+      },
+      {
+        "State": "Tamil Nadu",
+        "Girls_Dropout": 5.3
+      },
+      {
+        "State": "Punjab",
+        "Girls_Dropout": 5.2
+      },
+      {
+        "State": "Uttar Pradesh",
+        "Girls_Dropout": 5.1
+      },
+      {
+        "State": "Lakshadweep",
+        "Girls_Dropout": 5.0
+      },
+      {
+        "State": "Himachal Pradesh",
+        "Girls_Dropout": 4.8
+      },
+      {
+        "State": "Haryana",
+        "Girls_Dropout": 4.1
+      },
+      {
+        "State": "Kerala",
+        "Girls_Dropout": 3.7
+      },
+      {
+        "State": "Andaman and Nicobar Islands",
+        "Girls_Dropout": 3.5
+      },
+      {
+        "State": "Puducherry",
+        "Girls_Dropout": 3.1
+      },
+      {
+        "State": "Uttarakhand",
+        "Girls_Dropout": 3.0
+      },
+      {
+        "State": "Jharkhand",
+        "Girls_Dropout": 2.4
+      },
+      {
+        "State": "Chandigarh",
+        "Girls_Dropout": 1.1
+      }
+    ]
+  },
+  "girls_trends": {
+    "improving": [
+      {
+        "State": "Bihar",
+        "Girls_2018": 29.5,
+        "Girls_2024": 6.8,
+        "Girls_Change": 22.7
+      },
+      {
+        "State": "Jharkhand",
+        "Girls_2018": 22.4,
+        "Girls_2024": 2.4,
+        "Girls_Change": 20.0
+      },
+      {
+        "State": "Tripura",
+        "Girls_2018": 29.7,
+        "Girls_2024": 10.2,
+        "Girls_Change": 19.5
+      },
+      {
+        "State": "Arunachal Pradesh",
+        "Girls_2018": 35.0,
+        "Girls_2024": 17.7,
+        "Girls_Change": 17.3
+      },
+      {
+        "State": "Assam",
+        "Girls_2018": 32.1,
+        "Girls_2024": 16.7,
+        "Girls_Change": 15.400000000000002
+      },
+      {
+        "State": "Andaman and Nicobar Islands",
+        "Girls_2018": 18.0,
+        "Girls_2024": 3.5,
+        "Girls_Change": 14.5
+      },
+      {
+        "State": "Sikkim",
+        "Girls_2018": 21.3,
+        "Girls_2024": 8.4,
+        "Girls_Change": 12.9
+      },
+      {
+        "State": "Nagaland",
+        "Girls_2018": 22.5,
+        "Girls_2024": 11.2,
+        "Girls_Change": 11.3
+      },
+      {
+        "State": "Uttar Pradesh",
+        "Girls_2018": 15.6,
+        "Girls_2024": 5.1,
+        "Girls_Change": 10.5
+      },
+      {
+        "State": "Haryana",
+        "Girls_2018": 13.7,
+        "Girls_2024": 4.1,
+        "Girls_Change": 9.6
+      },
+      {
+        "State": "Madhya Pradesh",
+        "Girls_2018": 24.0,
+        "Girls_2024": 14.6,
+        "Girls_Change": 9.4
+      },
+      {
+        "State": "Delhi",
+        "Girls_2018": 13.7,
+        "Girls_2024": 5.8,
+        "Girls_Change": 7.8999999999999995
+      },
+      {
+        "State": "Gujarat",
+        "Girls_2018": 21.2,
+        "Girls_2024": 14.6,
+        "Girls_Change": 6.6
+      },
+      {
+        "State": "Uttarakhand",
+        "Girls_2018": 9.5,
+        "Girls_2024": 3.0,
+        "Girls_Change": 6.5
+      },
+      {
+        "State": "Rajasthan",
+        "Girls_2018": 12.8,
+        "Girls_2024": 7.1,
+        "Girls_Change": 5.700000000000001
+      },
+      {
+        "State": "Karnataka",
+        "Girls_2018": 20.2,
+        "Girls_2024": 14.6,
+        "Girls_Change": 5.6
+      },
+      {
+        "State": "Jammu and Kashmir",
+        "Girls_2018": 17.7,
+        "Girls_2024": 12.2,
+        "Girls_Change": 5.5
+      }
+    ],
+    "worsening": [
+      {
+        "State": "Odisha",
+        "Girls_2018": 7.2,
+        "Girls_2024": 12.6,
+        "Girls_Change": -5.3999999999999995
+      },
+      {
+        "State": "Mizoram",
+        "Girls_2018": 10.1,
+        "Girls_2024": 16.0,
+        "Girls_Change": -5.9
+      }
+    ],
+    "avg_improvement": 6.8
+  }
+}

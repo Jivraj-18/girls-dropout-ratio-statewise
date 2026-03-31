@@ -1,0 +1,301 @@
+{
+  "task_id": 2,
+  "title": "Infrastructure ROI (Toilets & Retention)",
+  "year": "2024-25",
+  "gender": "Girls",
+  "findings": {
+    "n_states": 36,
+    "correlation": -0.432540140272995,
+    "correlation_perm_p": 0.010797840431913617,
+    "regression": {
+      "intercept": 56.09951492824631,
+      "slope": -0.4983872374397667
+    },
+    "efficiency_outliers": {
+      "better_than_expected_low_dropout": [
+        "Delhi",
+        "Chandigarh",
+        "Jharkhand",
+        "Tamil Nadu",
+        "Puducherry",
+        "Uttarakhand"
+      ],
+      "worse_than_expected_high_dropout": [
+        "West Bengal",
+        "Assam",
+        "Arunachal Pradesh",
+        "Madhya Pradesh",
+        "Gujarat",
+        "Karnataka"
+      ]
+    }
+  },
+  "checksums": {
+    "join_coverage": {
+      "infra_rows": 36,
+      "dropout_rows_secondary": 37,
+      "merged_rows": 36
+    }
+  },
+  "chart_data": {
+    "points": [
+      {
+        "state_ut": "Andaman and Nicobar Islands",
+        "functional_girls_toilet_pct": 99.26470588235294,
+        "secondary_dropout_rate": 3.5,
+        "yhat": 6.627252388269461,
+        "resid": -3.1272523882694614
+      },
+      {
+        "state_ut": "Andhra Pradesh",
+        "functional_girls_toilet_pct": 88.22512516920267,
+        "secondary_dropout_rate": 12.5,
+        "yhat": 12.129238522389755,
+        "resid": 0.3707614776102446
+      },
+      {
+        "state_ut": "Arunachal Pradesh",
+        "functional_girls_toilet_pct": 90.8640445958501,
+        "secondary_dropout_rate": 17.7,
+        "yhat": 10.814034759516808,
+        "resid": 6.885965240483191
+      },
+      {
+        "state_ut": "Assam",
+        "functional_girls_toilet_pct": 94.00177269685075,
+        "secondary_dropout_rate": 16.7,
+        "yhat": 9.250231119421976,
+        "resid": 7.4497688805780236
+      },
+      {
+        "state_ut": "Bihar",
+        "functional_girls_toilet_pct": 97.26306193620879,
+        "secondary_dropout_rate": 6.8,
+        "yhat": 7.624846184926284,
+        "resid": -0.824846184926284
+      },
+      {
+        "state_ut": "Chandigarh",
+        "functional_girls_toilet_pct": 98.55072463768116,
+        "secondary_dropout_rate": 1.1,
+        "yhat": 6.983091528385245,
+        "resid": -5.883091528385245
+      },
+      {
+        "state_ut": "Chhattisgarh",
+        "functional_girls_toilet_pct": 90.14999471849583,
+        "secondary_dropout_rate": 11.6,
+        "yhat": 11.169908105285607,
+        "resid": 0.43009189471439235
+      },
+      {
+        "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+        "functional_girls_toilet_pct": 99.30715935334872,
+        "secondary_dropout_rate": 8.6,
+        "yhat": 6.606094120140149,
+        "resid": 1.9939058798598506
+      },
+      {
+        "state_ut": "Delhi",
+        "functional_girls_toilet_pct": 86.05111591072715,
+        "secondary_dropout_rate": 5.8,
+        "yhat": 13.212736990889852,
+        "resid": -7.412736990889852
+      },
+      {
+        "state_ut": "Goa",
+        "functional_girls_toilet_pct": 99.25625422582826,
+        "secondary_dropout_rate": 6.3,
+        "yhat": 6.631464586016591,
+        "resid": -0.33146458601659123
+      },
+      {
+        "state_ut": "Gujarat",
+        "functional_girls_toilet_pct": 95.4887077124918,
+        "secondary_dropout_rate": 14.6,
+        "yhat": 8.509161684724177,
+        "resid": 6.090838315275823
+      },
+      {
+        "state_ut": "Haryana",
+        "functional_girls_toilet_pct": 95.74359410913425,
+        "secondary_dropout_rate": 4.1,
+        "yhat": 8.382129557640567,
+        "resid": -4.282129557640568
+      },
+      {
+        "state_ut": "Himachal Pradesh",
+        "functional_girls_toilet_pct": 98.9267166762839,
+        "secondary_dropout_rate": 4.8,
+        "yhat": 6.795701894966676,
+        "resid": -1.9957018949666763
+      },
+      {
+        "state_ut": "Jammu and Kashmir",
+        "functional_girls_toilet_pct": 88.8516865079365,
+        "secondary_dropout_rate": 12.2,
+        "yhat": 11.816968347691642,
+        "resid": 0.38303165230835745
+      },
+      {
+        "state_ut": "Jharkhand",
+        "functional_girls_toilet_pct": 96.22318370290247,
+        "secondary_dropout_rate": 2.4,
+        "yhat": 8.14310822489756,
+        "resid": -5.74310822489756
+      },
+      {
+        "state_ut": "Karnataka",
+        "functional_girls_toilet_pct": 95.20966082902524,
+        "secondary_dropout_rate": 14.6,
+        "yhat": 8.648235090091248,
+        "resid": 5.951764909908752
+      },
+      {
+        "state_ut": "Kerala",
+        "functional_girls_toilet_pct": 98.18493368026908,
+        "secondary_dropout_rate": 3.7,
+        "yhat": 7.165397073130293,
+        "resid": -3.465397073130293
+      },
+      {
+        "state_ut": "Ladakh",
+        "functional_girls_toilet_pct": 92.2996878251821,
+        "secondary_dropout_rate": 14.4,
+        "yhat": 10.098528496500933,
+        "resid": 4.301471503499068
+      },
+      {
+        "state_ut": "Lakshadweep",
+        "functional_girls_toilet_pct": 100.0,
+        "secondary_dropout_rate": 5.0,
+        "yhat": 6.260791184269635,
+        "resid": -1.2607911842696353
+      },
+      {
+        "state_ut": "Madhya Pradesh",
+        "functional_girls_toilet_pct": 95.96626269243367,
+        "secondary_dropout_rate": 14.6,
+        "yhat": 8.271154377545344,
+        "resid": 6.328845622454656
+      },
+      {
+        "state_ut": "Maharashtra",
+        "functional_girls_toilet_pct": 94.38983833718245,
+        "secondary_dropout_rate": 10.3,
+        "yhat": 9.056824156991759,
+        "resid": 1.2431758430082418
+      },
+      {
+        "state_ut": "Manipur",
+        "functional_girls_toilet_pct": 85.94084869267039,
+        "secondary_dropout_rate": 8.6,
+        "yhat": 13.267692765077328,
+        "resid": -4.667692765077328
+      },
+      {
+        "state_ut": "Meghalaya",
+        "functional_girls_toilet_pct": 85.98066771783094,
+        "secondary_dropout_rate": 16.6,
+        "yhat": 13.247847471130015,
+        "resid": 3.3521525288699863
+      },
+      {
+        "state_ut": "Mizoram",
+        "functional_girls_toilet_pct": 90.16104680422748,
+        "secondary_dropout_rate": 16.0,
+        "yhat": 11.164399886809868,
+        "resid": 4.835600113190132
+      },
+      {
+        "state_ut": "Nagaland",
+        "functional_girls_toilet_pct": 92.58181818181818,
+        "secondary_dropout_rate": 11.2,
+        "yhat": 9.957918327459183,
+        "resid": 1.2420816725408166
+      },
+      {
+        "state_ut": "Odisha",
+        "functional_girls_toilet_pct": 96.37456346950377,
+        "secondary_dropout_rate": 12.6,
+        "yhat": 8.067662481216864,
+        "resid": 4.532337518783136
+      },
+      {
+        "state_ut": "Puducherry",
+        "functional_girls_toilet_pct": 95.41284403669725,
+        "secondary_dropout_rate": 3.1,
+        "yhat": 8.546971172525446,
+        "resid": -5.446971172525446
+      },
+      {
+        "state_ut": "Punjab",
+        "functional_girls_toilet_pct": 97.11154283200763,
+        "secondary_dropout_rate": 5.2,
+        "yhat": 7.700361372688448,
+        "resid": -2.500361372688448
+      },
+      {
+        "state_ut": "Rajasthan",
+        "functional_girls_toilet_pct": 92.41218415457847,
+        "secondary_dropout_rate": 7.1,
+        "yhat": 10.042461761670964,
+        "resid": -2.9424617616709643
+      },
+      {
+        "state_ut": "Sikkim",
+        "functional_girls_toilet_pct": 98.63453815261045,
+        "secondary_dropout_rate": 8.4,
+        "yhat": 6.941319942219515,
+        "resid": 1.4586800577804855
+      },
+      {
+        "state_ut": "Tamil Nadu",
+        "functional_girls_toilet_pct": 90.67920945887633,
+        "secondary_dropout_rate": 5.3,
+        "yhat": 10.90615423281497,
+        "resid": -5.60615423281497
+      },
+      {
+        "state_ut": "Telangana",
+        "functional_girls_toilet_pct": 86.8123464800482,
+        "secondary_dropout_rate": 10.7,
+        "yhat": 12.833349390391227,
+        "resid": -2.1333493903912277
+      },
+      {
+        "state_ut": "Tripura",
+        "functional_girls_toilet_pct": 92.00890147683593,
+        "secondary_dropout_rate": 10.2,
+        "yhat": 10.243452701338377,
+        "resid": -0.043452701338377864
+      },
+      {
+        "state_ut": "Uttar Pradesh",
+        "functional_girls_toilet_pct": 96.71479428872,
+        "secondary_dropout_rate": 5.1,
+        "yhat": 7.8980957831358225,
+        "resid": -2.798095783135823
+      },
+      {
+        "state_ut": "Uttarakhand",
+        "functional_girls_toilet_pct": 96.17851416354891,
+        "secondary_dropout_rate": 3.0,
+        "yhat": 8.165370953213689,
+        "resid": -5.165370953213689
+      },
+      {
+        "state_ut": "West Bengal",
+        "functional_girls_toilet_pct": 96.67075708264419,
+        "secondary_dropout_rate": 16.7,
+        "yhat": 7.920043364616511,
+        "resid": 8.779956635383488
+      }
+    ]
+  },
+  "narrative": {
+    "lede": "A toilet is not a building feature — it’s a contract. It says a girl’s presence is expected, and her dignity is planned for.",
+    "so_what": "The line is less important than the outliers: copy who beats the prediction; audit who fails it.",
+    "caveat": "Correlation across states is not causal proof."
+  }
+}

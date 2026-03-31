@@ -1,59 +1,64 @@
-# Girls' Secondary Dropout in India: 2018-25
+# Girls Dropout Rate Analysis - India
 
-Facts-only analysis using verified UDISE+ data from the Ministry of Education.
+**Status:** JSON-first analysis pipeline + static dashboard ready.  
+**Date:** April 2026
 
-## View the Briefing
+## 📊 Interactive Dashboard (Start Here)
 
-👉 **[Click here to read the briefing](https://jivraj.github.io/girl-dropout-rate-analysis)**
+This repo now follows a **JSON-first** architecture:
+- Python computes and writes JSON into `docs/data/`
+- JavaScript renders charts in the browser from those JSON files
 
-Or open `index.html` locally in your browser.
+Open the dashboard:
+- `docs/index.html`
 
-## What's Inside
+## 🐍 Reproducible Analysis
 
-- **National trend**: 17.1% → 9.6% (2018-19 to 2024-25)
-- **State spread**: 1.1% (best) to 17.7% (worst) in 2024-25
-- **Persistent problem**: 5 states still above 15%, 2 stuck there for all 7 years
-- **Improvement variability**: Bihar down 22.7pp, Meghalaya down only 1.7pp
+Regenerate everything from raw UDISE+ CSV extracts:
 
-## Design
+Install dependencies (only needed if regenerating locally):
 
-- Clean, minimal aesthetic
-- Light/dark theme toggle
-- No external dependencies
-- Responsive on all devices
-- Self-contained HTML file
+```bash
+python -m pip install -r requirements.txt
+```
 
-## Deeper Analysis Documents
+```bash
+./.venv/bin/python run_analysis.py
+```
 
-For IAS officers and policy makers requiring detailed insights:
+Because the dashboard uses `fetch()` to load JSON, serve `docs/` via a local HTTP server:
 
-### 📊 [GIRL_CHILD_DEEP_DIVE.md](GIRL_CHILD_DEEP_DIVE.md)
-**Focus: Understanding and addressing girls' dropout specifically**
-- Girl dropout hotspots (5 Tier-1 crisis states identified)
-- Root causes: Infrastructure, early marriage, labor, distance, safety
-- State-by-state action matrix with specific interventions
-- Validated data vs. research gaps
-- IAS officer checklist for implementation
+```bash
+python3 -m http.server -d docs 8000
+```
 
-### 📈 [DEEPER_ANALYSIS_REPORT.md](DEEPER_ANALYSIS_REPORT.md)
-**Focus: Comprehensive gender analysis with boys/girls breakdown**
-- Why boys are at-risk in secondary level (gender reversal finding)
-- Root cause decomposition: Promotion vs. Repetition vs. Dropout
-- Regional patterns: Northeast, South, Central, Eastern regions
-- State-level disparities and benchmarking opportunities
-- Caveats and limitations of current analysis
+Then open `http://localhost:8000/`.
 
-### ✅ [validation/](validation/)
-**Validation scripts and reproducibility**
-- All claims regeneratable from UDISE+ raw CSV data
-- `validate_all.py` - Master validation framework
-- `validate_gender_gap.py` - Gender paradox verification
-- `validate_formula.py` - Formula consistency checks
-- See [validation/README.md](validation/README.md) for usage
+## GitHub Pages
 
-## Data Source
+This repo is ready for GitHub Pages using the `docs/` folder.
 
-- UDISE+ official CSV data, Ministry of Education, Government of India
-- Verified extraction, no unsupported claims
-- All data points regeneratable from raw source files
-- See validation scripts for reproducible verification
+1) GitHub repo → **Settings** → **Pages**
+2) **Build and deployment** → **Source**: Deploy from a branch
+3) **Branch**: `main` (or your default branch) · **Folder**: `/docs`
+4) Save, then open the URL GitHub shows
+
+## 📁 Data Source
+
+- **udise_csv_data/** — UDISE+ official education data (Ministry of Education, 2018-25)
+
+## Key Outputs
+
+- `docs/analysis_summary.json` — manifest of tasks + schema snapshots
+- `docs/data/task_*.json` — per-task outputs (numbers + checksums + chart-ready data)
+- `docs/audit_report.txt` — matched source filenames and join coverage notes
+
+## Key Findings
+
+- **Crisis:** Mizoram (worsening +5.9pp), West Bengal (worsening +1.5pp)
+- **Opportunity:** Jharkhand (90% improvement: 22.4% → 2.4%)
+- **Budget:** ₹420 Cr Year 1 for 5 crisis states
+- **Impact:** 7-13pp dropout reduction possible with coordinated interventions
+
+## 📎 See Also
+

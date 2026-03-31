@@ -1,0 +1,127 @@
+{
+  "peak_attrition": {
+    "cohort_analysis": [
+      {
+        "Level": "Primary (1-5)",
+        "Starting Cohort": 100,
+        "Dropout Rate %": 0.0,
+        "Dropouts": 0,
+        "Retained": 100,
+        "Cumulative Dropout %": 0.0
+      },
+      {
+        "Level": "Upper Primary (6-8)",
+        "Starting Cohort": 100,
+        "Dropout Rate %": 2.9,
+        "Dropouts": 2,
+        "Retained": 97,
+        "Cumulative Dropout %": 2.9000000000000057
+      },
+      {
+        "Level": "Secondary (9-10)",
+        "Starting Cohort": 97,
+        "Dropout Rate %": 9.6,
+        "Dropouts": 9,
+        "Retained": 87,
+        "Cumulative Dropout %": 12.22160000000001
+      }
+    ],
+    "peak_attrition": [
+      "Secondary Level",
+      9.6
+    ],
+    "national_avg_dropout_secondary": 9.6
+  },
+  "infrastructure_roi": {
+    "framework": "Infrastructure necessary but not sufficient",
+    "strong_correlation": "Female teachers > Infrastructure alone",
+    "outlier_state": "Jharkhand proves policy can overcome infrastructure gaps"
+  },
+  "female_teacher_multiplier": {
+    "correlation": -0.8215608327381126,
+    "critical_mass_threshold": 35,
+    "expected_dropout_reduction": "3-5pp",
+    "cost_estimate": "\u20b9850 Cr for 200+ teachers"
+  },
+  "equity_gap": {
+    "equity_gaps": [
+      {
+        "Category": "OBC",
+        "Gap_pp": 1.5999999999999996,
+        "Ratio": 1.1666666666666667,
+        "Additional_Risk": "17% higher"
+      },
+      {
+        "Category": "SC",
+        "Gap_pp": 4.200000000000001,
+        "Ratio": 1.4375000000000002,
+        "Additional_Risk": "44% higher"
+      },
+      {
+        "Category": "ST",
+        "Gap_pp": 7.299999999999999,
+        "Ratio": 1.7604166666666665,
+        "Additional_Risk": "76% higher"
+      }
+    ],
+    "st_girls_multiplier": 1.76,
+    "hidden_crisis": "Low state averages mask tribal area crisis",
+    "targeted_intervention_needed": true
+  },
+  "red_zone_hotspots": {
+    "red_zone_states": [
+      {
+        "State": "Arunachal Pradesh",
+        "Cluster": "North-East Border",
+        "Years_Above_15pct": 7,
+        "Current_Dropout": 17.7,
+        "Trend": "Stable/Worsening",
+        "Root_Cause": "Remote + Tribal + Infrastructure"
+      },
+      {
+        "State": "Assam",
+        "Cluster": "North-East Border",
+        "Years_Above_15pct": 6,
+        "Current_Dropout": 16.7,
+        "Trend": "Stable",
+        "Root_Cause": "Child marriage + Economic pressure + Outmigration"
+      },
+      {
+        "State": "Mizoram",
+        "Cluster": "North-East Border",
+        "Years_Above_15pct": 4,
+        "Current_Dropout": 16.0,
+        "Trend": "WORSENING (+5.9pp)",
+        "Root_Cause": "Economic transition + Outmigration"
+      },
+      {
+        "State": "Meghalaya",
+        "Cluster": "North-East Border",
+        "Years_Above_15pct": 5,
+        "Current_Dropout": 16.6,
+        "Trend": "Stable",
+        "Root_Cause": "Distance + Tribal + Infrastructure"
+      },
+      {
+        "State": "West Bengal",
+        "Cluster": "Eastern Plain",
+        "Years_Above_15pct": 3,
+        "Current_Dropout": 16.7,
+        "Trend": "WORSENING (+1.5pp)",
+        "Root_Cause": "Child marriage (rural) + Caste factors"
+      }
+    ],
+    "clusters_identified": [
+      "North-East Border",
+      "Eastern Plain"
+    ],
+    "inter_state_cooperation": "North-East Border Cluster recommended"
+  },
+  "sdg_forecast": {
+    "historical_improvement_rate": 0.27142857142857146,
+    "projection_2030": 8.242857142857133,
+    "sdg_implementation_gap": 8.242857142857133,
+    "required_acceleration": 5.061403508771924,
+    "officers_target": "Help 5 crisis states reach 8-10% by 2027"
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "generated_at": "2026-03-31T21:22:59.260395+00:00",
+  "pipeline_version": "2026-04-01",
+  "schema_version": 1,
+  "overall": "warn",
+  "known_anomalies": {
+    "source": "analysis/known_anomalies.json",
+    "published": "data/known_anomalies.json",
+    "rules_loaded": 1
+  },
+  "checks": [
+    {
+      "severity": "pass",
+      "message": "Dropout time series coverage",
+      "details": {
+        "years": [
+          "2018-19",
+          "2019-20",
+          "2020-21",
+          "2021-22",
+          "2022-23",
+          "2023-24",
+          "2024-25"
+        ],
+        "n_years": 7
+      }
+    },
+    {
+      "severity": "pass",
+      "message": "Infrastructure state coverage",
+      "details": {
+        "infra_year": "2024-25",
+        "n_dropout_states": 36,
+        "n_infra_states": 36,
+        "missing_in_infra": []
+      }
+    },
+    {
+      "severity": "warn",
+      "message": "Task 1 rate-sum checksum (promotion+repetition+dropout ~= 100)",
+      "details": {
+        "rows_checked": 819,
+        "max_abs_deviation": 100.0,
+        "p95_abs_deviation": 0.5000000000000036,
+        "rows_over_1pct": 26,
+        "worst_10_rows": [
+          {
+            "year": "2019-20",
+            "state_ut": "Ladakh",
+            "level": "Upper Primary (6-8)",
+            "dropout": 0.0,
+            "promotion": 0.0,
+            "repetition": 0.0,
+            "sum_rates": 0.0,
+            "abs_deviation": 100.0,
+            "known_anomaly": {
+              "id": "t1_checksum_ladakh_2019_20_all_levels_zero",
+              "note": "Ladakh 2019-20 appears as 0/0/0 in some extracted tables; this yields a 100pp checksum deviation and is treated as a known edge-case for validation reporting."
+            }
+          },
+          {
+            "year": "2019-20",
+            "state_ut": "Ladakh",
+            "level": "Secondary (9-10)",
+            "dropout": 0.0,
+            "promotion": 0.0,
+            "repetition": 0.0,
+            "sum_rates": 0.0,
+            "abs_deviation": 100.0,
+            "known_anomaly": {
+              "id": "t1_checksum_ladakh_2019_20_all_levels_zero",
+              "note": "Ladakh 2019-20 appears as 0/0/0 in some extracted tables; this yields a 100pp checksum deviation and is treated as a known edge-case for validation reporting."
+            }
+          },
+          {
+            "year": "2019-20",
+            "state_ut": "Ladakh",
+            "level": "Primary (1-5)",
+            "dropout": 0.0,
+            "promotion": 0.0,
+            "repetition": 0.0,
+            "sum_rates": 0.0,
+            "abs_deviation": 100.0,
+            "known_anomaly": {
+              "id": "t1_checksum_ladakh_2019_20_all_levels_zero",
+              "note": "Ladakh 2019-20 appears as 0/0/0 in some extracted tables; this yields a 100pp checksum deviation and is treated as a known edge-case for validation reporting."
+            }
+          },
+          {
+            "year": "2023-24",
+            "state_ut": "Odisha",
+            "level": "Secondary (9-10)",
+            "dropout": 11.3,
+            "promotion": 96.7,
+            "repetition": 0.9,
+            "sum_rates": 108.9,
+            "abs_deviation": 8.900000000000006
+          },
+          {
+            "year": "2021-22",
+            "state_ut": "West Bengal",
+            "level": "Upper Primary (6-8)",
+            "dropout": 0.0,
+            "promotion": 98.7,
+            "repetition": 6.9,
+            "sum_rates": 105.60000000000001,
+            "abs_deviation": 5.6000000000000085
+          },
+          {
+            "year": "2018-19",
+            "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+            "level": "Secondary (9-10)",
+            "dropout": 19.3,
+            "promotion": 80.4,
+            "repetition": 4.3,
+            "sum_rates": 104.0,
+            "abs_deviation": 4.0
+          },
+          {
+            "year": "2018-19",
+            "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+            "level": "Secondary (9-10)",
+            "dropout": 17.5,
+            "promotion": 76.5,
+            "repetition": 2.2,
+            "sum_rates": 96.2,
+            "abs_deviation": 3.799999999999997
+          },
+          {
+            "year": "2023-24",
+            "state_ut": "Goa",
+            "level": "Secondary (9-10)",
+            "dropout": 5.8,
+            "promotion": 94.4,
+            "repetition": 3.0,
+            "sum_rates": 103.2,
+            "abs_deviation": 3.200000000000003
+          },
+          {
+            "year": "2018-19",
+            "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+            "level": "Upper Primary (6-8)",
+            "dropout": 2.4,
+            "promotion": 100.0,
+            "repetition": 0.5,
+            "sum_rates": 102.9,
+            "abs_deviation": 2.9000000000000057
+          },
+          {
+            "year": "2018-19",
+            "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+            "level": "Upper Primary (6-8)",
+            "dropout": 0.0,
+            "promotion": 97.1,
+            "repetition": 0.0,
+            "sum_rates": 97.1,
+            "abs_deviation": 2.9000000000000057
+          }
+        ],
+        "extreme_rows_in_worst_10_ge_20pp": 3,
+        "known_anomalies_matched_in_worst_10": 3
+      }
+    },
+    {
+      "severity": "pass",
+      "message": "Task 2 join coverage",
+      "details": {
+        "infra_rows": 36,
+        "dropout_rows_secondary": 37,
+        "merged_rows": 36
+      }
+    },
+    {
+      "severity": "pass",
+      "message": "Task 7 sample size (states)",
+      "details": {
+        "n_states": 36
+      }
+    },
+    {
+      "severity": "pass",
+      "message": "Required task outputs present",
+      "details": {
+        "required_task_ids": [
+          1,
+          2,
+          3,
+          4,
+          7,
+          9,
+          10
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,1134 @@
+{
+  "generated_at": "2026-03-31T21:22:59.257740+00:00",
+  "pipeline_version": "2026-04-01",
+  "schema_version": 1,
+  "focus": {
+    "gender": "Girls",
+    "infra_year": "2024-25"
+  },
+  "tasks": [
+    {
+      "task_id": 1,
+      "title": "Peak Attrition Identification (Policy Bottleneck)",
+      "path": "data/task_1.json"
+    },
+    {
+      "task_id": 2,
+      "title": "Infrastructure ROI (Toilets & Retention)",
+      "path": "data/task_2.json"
+    },
+    {
+      "task_id": 3,
+      "title": "Female Teacher Multiplier (Role Model Effect)",
+      "path": "data/task_3.json"
+    },
+    {
+      "task_id": 4,
+      "title": "Peer Benchmarking (Competitive Federalism)",
+      "path": "data/task_4.json"
+    },
+    {
+      "task_id": 7,
+      "title": "Single-Teacher School Risk Mapping",
+      "path": "data/task_7.json"
+    },
+    {
+      "task_id": 8,
+      "title": "Digital Hope Factor (ICT Labs)",
+      "path": "data/task_8.json"
+    },
+    {
+      "task_id": 9,
+      "title": "Geographic Red Zones (Persistent High Dropout)",
+      "path": "data/task_9.json"
+    },
+    {
+      "task_id": 10,
+      "title": "2030 SDG Business-as-Usual Forecast",
+      "path": "data/task_10.json"
+    }
+  ],
+  "schemas": {
+    "dropout::2018-19": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2018-19/csv_files/Table 5.13 Dropout Rate by level of school education and gender, 2018-19 - page 83.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/ State /UT",
+        "Dropout Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 38,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli",
+        "Daman and Diu"
+      ]
+    },
+    "dropout::2019-20": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2019-20/csv_files/Table 5.13 Dropout Rate by level of school education and gender - page 99.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/ State /UT",
+        "Dropout Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 38,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli",
+        "Daman and Diu"
+      ]
+    },
+    "dropout::2020-21": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2020-21/csv_files/Table 5.13 Dropout Rate by level of education and gender - page 109.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/ State /UT",
+        "Dropout Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 37,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Daman and Diu and Dadra and Nagar Haveli",
+        "Delhi"
+      ]
+    },
+    "dropout::2021-22": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2021-22/csv_files/Table 6.13 Dropout Rate by level of education and gender- page 121.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/ State /UT",
+        "Dropout Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 37,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi"
+      ]
+    },
+    "dropout::2022-23": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2022-23/csv_files/Table 6.13 Dropout Rate by level of education and gender, 2022-23, - page 116.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/State /UT",
+        "Dropout Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 37,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi"
+      ]
+    },
+    "dropout::2023-24": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2023-24/csv_files/Table 6.13 Dropout Rate by level of education and gender, 2023-24, - page 119.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/State /UT",
+        "Dropout Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 37,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi"
+      ]
+    },
+    "dropout::2024-25": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2024-25/csv_files/Table 6.13 Dropout Rate by level of education and gender, 2024-25,,,, - page 120.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/State /UT",
+        "Dropout Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 37,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi"
+      ]
+    },
+    "promotion::2018-19": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2018-19/csv_files/Table 5.11 Promotion Rate by level of school education and gender, 2018-19 - page 81.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/ State /UT",
+        "Promotion Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 38,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli",
+        "Daman and Diu"
+      ]
+    },
+    "promotion::2019-20": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2019-20/csv_files/Table 5.11 Promotion Rate by level of school education and gender - page 97.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/ State /UT",
+        "Promotion Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 38,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli",
+        "Daman and Diu"
+      ]
+    },
+    "promotion::2020-21": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2020-21/csv_files/Table 5.11 Promotion Rate by level of education and gender - page 107.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/ State /UT",
+        "Promotion Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 37,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Daman and Diu and Dadra and Nagar Haveli",
+        "Delhi"
+      ]
+    },
+    "promotion::2021-22": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2021-22/csv_files/Table 6.11 Promotion Rate by level of education and gender- page 119.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/ State /UT",
+        "Promotion Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 37,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi"
+      ]
+    },
+    "promotion::2022-23": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2022-23/csv_files/Table 6.11 Promotion Rate by level of education and gender, 2022-23, - page 114.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/State /UT",
+        "Promotion Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 37,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi"
+      ]
+    },
+    "promotion::2023-24": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2023-24/csv_files/Table 6.11 Promotion Rate by level of education and gender, 2023-24, - page 117.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/State /UT",
+        "Promotion Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 37,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi"
+      ]
+    },
+    "promotion::2024-25": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2024-25/csv_files/Table 6.11 Promotion Rate by level of education and gender, 2024-25,,,, - page 118.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/State /UT",
+        "Promotion Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 37,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi"
+      ]
+    },
+    "repetition::2018-19": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2018-19/csv_files/Table 5.12 Repetition Rate by level of school education and gender, 2018-19 - page 82.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/ State /UT",
+        "Repetition Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 38,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli",
+        "Daman and Diu"
+      ]
+    },
+    "repetition::2019-20": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2019-20/csv_files/Table 5.12 Repetition Rate by level of school education and gender - page 98.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/ State /UT",
+        "Repetition Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 38,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli",
+        "Daman and Diu"
+      ]
+    },
+    "repetition::2020-21": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2020-21/csv_files/Table 5.12 Repetition Rate by level of education and gender.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/ State /UT",
+        "Repetition Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 37,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Daman and Diu and Dadra and Nagar Haveli",
+        "Delhi"
+      ]
+    },
+    "repetition::2021-22": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2021-22/csv_files/Table 6.12 Repetition Rate by level of education and gender, 2021-22 - page 120.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/ State /UT",
+        "Repetition Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 37,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi"
+      ]
+    },
+    "repetition::2022-23": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2022-23/csv_files/Table 6.12 Repetition Rate by level of education and gender, 2022-23 - page 115.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/State /UT",
+        "Repetition Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 37,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi"
+      ]
+    },
+    "repetition::2023-24": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2023-24/csv_files/Table 6.12 Repetition Rate by level of education and gender, 2023-24 - page 118.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/State /UT",
+        "Repetition Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 37,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi"
+      ]
+    },
+    "repetition::2024-25": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2024-25/csv_files/Table 6.12 Repetition Rate by level of education and gender, 2024-25,,, - page 119.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/State /UT",
+        "Repetition Rate Primary (1 to 5) Boys",
+        "Upper Primary (6-8) Girls",
+        "Secondary (9-10) Total",
+        "Boys",
+        "Girls",
+        "Total",
+        "Boys__1",
+        "Girls__1",
+        "Total__1"
+      ],
+      "n_rows": 37,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi"
+      ]
+    },
+    "ger::2018-19": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2018-19/csv_files/Table 5.1 Gross Enrolment Ratio (GER) by Gender and Level of School Education, 2018-19 - page 71.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/ State/ UT",
+        "Gross Enrolment Ratio (GER) – All Social Groups Primary (1 to 5) Boys",
+        "Upper Primary (6 to 8) Girls",
+        "Elementary (1 to 8) Total",
+        "Secondary (9-10) Boys",
+        "Higher Secondary (11-12) Girls",
+        "Total",
+        "Boys",
+        "Girls",
+        "Total__1",
+        "Boys__1",
+        "Girls__1",
+        "Total__2",
+        "Boys__2",
+        "Girls__2",
+        "Total__3"
+      ],
+      "n_rows": 38,
+      "n_cols": 16,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli",
+        "Daman and Diu"
+      ]
+    },
+    "ger::2019-20": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2019-20/csv_files/Table 5.1 Gross Enrolment Ratio (GER) by Gender and Level of school education - page 87.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/ State /UT",
+        "Gross Enrolment Ratio (GER) – All Social Groups Primary (1 to 5) Boys",
+        "Upper Primary (6 to 8) Girls",
+        "Elementary (1 to 8) Total",
+        "Secondary (9-10) Boys",
+        "Higher Secondary (11-12) Girls",
+        "Total",
+        "Boys",
+        "Girls",
+        "Total__1",
+        "Boys__1",
+        "Girls__1",
+        "Total__2",
+        "Boys__2",
+        "Girls__2",
+        "Total__3"
+      ],
+      "n_rows": 38,
+      "n_cols": 16,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli",
+        "Daman and Diu"
+      ]
+    },
+    "ger::2020-21": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2020-21/csv_files/Table 5.1 Gross Enrolment Ratio (GER) by Gender and Level of School Education.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/ State/ UT",
+        "Gross Enrolment Ratio (GER) – All Social Groups Primary (1 to 5) Boys",
+        "Upper Primary (6 to 8) Girls",
+        "Elementary (1 to 8) Total",
+        "Secondary (9-10) Boys",
+        "Higher Secondary (11-12) Girls",
+        "Total",
+        "Boys",
+        "Girls",
+        "Total__1",
+        "Boys__1",
+        "Girls__1",
+        "Total__2",
+        "Boys__2",
+        "Girls__2",
+        "Total__3"
+      ],
+      "n_rows": 37,
+      "n_cols": 16,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Daman and Diu and Dadra and Nagar Haveli",
+        "Delhi"
+      ]
+    },
+    "ger::2021-22": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2021-22/csv_files/Table 6.1 Gross Enrolment Ratio (GER) by Gender and Level of School Education, 2021-22 - page 109.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/ State/ UT",
+        "Gross Enrolment Ratio (GER) – All Social Groups Primary (1 to 5) Boys",
+        "Upper Primary (6 to 8) Girls",
+        "Elementary (1 to 8) Total",
+        "Secondary (9-10) Boys",
+        "Higher Secondary (11-12) Girls",
+        "Total",
+        "Boys",
+        "Girls",
+        "Total__1",
+        "Boys__1",
+        "Girls__1",
+        "Total__2",
+        "Boys__2",
+        "Girls__2",
+        "Total__3"
+      ],
+      "n_rows": 37,
+      "n_cols": 16,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi"
+      ]
+    },
+    "ger::2022-23": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2022-23/csv_files/Table 6.1 Gross Enrolment Ratio (GER) by Gender and Level of School Education, 2022-23 All Social Groups - page 104.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/State/ UT",
+        "Gross Enrolment Ratio (GER) – All Social Groups Primary (1 to 5) Boys",
+        "Upper Primary (6 to 8) Girls",
+        "Elementary (1 to 8) Total",
+        "Secondary (9-10) Boys",
+        "Higher Secondary (11-12) Girls",
+        "Total",
+        "Boys",
+        "Girls",
+        "Total__1",
+        "Boys__1",
+        "Girls__1",
+        "Total__2",
+        "Boys__2",
+        "Girls__2",
+        "Total__3"
+      ],
+      "n_rows": 37,
+      "n_cols": 16,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi"
+      ]
+    },
+    "ger::2023-24": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2023-24/csv_files/Table 6.1 Gross Enrolment Ratio (GER) by Gender and Level of School Education, 2023-24 All Social Groups - page 107.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/State/ UT",
+        "Gross Enrolment Ratio (GER) – All Social Groups Primary (1 to 5) Boys",
+        "Upper Primary (6 to 8) Girls",
+        "Elementary (1 to 8) Total",
+        "Secondary (9-10) Boys",
+        "Higher Secondary (11-12) Girls",
+        "Total",
+        "Boys",
+        "Girls",
+        "Total__1",
+        "Boys__1",
+        "Girls__1",
+        "Total__2",
+        "Boys__2",
+        "Girls__2",
+        "Total__3"
+      ],
+      "n_rows": 37,
+      "n_cols": 16,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi"
+      ]
+    },
+    "ger::2024-25": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2024-25/csv_files/Table 6.1 Gross Enrolment Ratio (GER) by Gender and Level of School Education, 2024-25 All Social Groups - page 108.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/State/ UT",
+        "Gross Enrolment Ratio (GER) – All Social Groups Primary (1 to 5) Boys",
+        "Upper Primary (6 to 8) Girls",
+        "Elementary (1 to 8) Total",
+        "Secondary (9-10) Boys",
+        "Higher Secondary (11-12) Girls",
+        "Total",
+        "Boys",
+        "Girls",
+        "Total__1",
+        "Boys__1",
+        "Girls__1",
+        "Total__2",
+        "Boys__2",
+        "Girls__2",
+        "Total__3"
+      ],
+      "n_rows": 37,
+      "n_cols": 16,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi"
+      ]
+    },
+    "infra::2024-25::Table 2.5 (continued) State wise highlights of the UDISE+ 2024-25 data Infrastructure., - page 36.csv": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2024-25/csv_files/Table 2.5 (continued) State wise highlights of the UDISE+ 2024-25 data Infrastructure., - page 36.csv",
+      "header_rows": 2,
+      "detected_columns": [
+        "India/State/UT",
+        "Total Schools",
+        "Number of School having",
+        "Computer facility",
+        "Functional Computer facility for pedagogical purposes",
+        "Internet Facility",
+        "Drinking Water",
+        "Functional Drinking Water",
+        "Hand wash facility",
+        "Functional Rainwater Harvesting System",
+        "Conducting Medical Checkup of Students in Last Academic Year",
+        "Ramp",
+        "Ramp and Handrails",
+        "Schools with CWSN Toilet facilities",
+        "col_14"
+      ],
+      "n_rows": 37,
+      "n_cols": 15,
+      "sample_states": [
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi",
+        "Goa"
+      ]
+    },
+    "infra::2024-25::Table 2.5 State wise highlights of the UDISE+ 2024-25 data Infrastructure,, - page 35.csv": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2024-25/csv_files/Table 2.5 State wise highlights of the UDISE+ 2024-25 data Infrastructure,, - page 35.csv",
+      "header_rows": 2,
+      "detected_columns": [
+        "India/State/UT",
+        "Total Schools",
+        "Number of School having",
+        "Library/ Book Bank/ Reading Corner",
+        "Playground",
+        "Digital Library",
+        "Kitchen Garden",
+        "Girls' Toilet",
+        "Functional Girls' Toilet",
+        "Boys' Toilet",
+        "Functional Boys' Toilet",
+        "Electricity",
+        "Functional Electricity",
+        "Solar Panel",
+        "col_14"
+      ],
+      "n_rows": 37,
+      "n_cols": 15,
+      "sample_states": [
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi",
+        "Goa"
+      ]
+    },
+    "single_teacher::2024-25": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2024-25/csv_files/Table 2.2 State wise highlights of the UDISE+ 2024-25 data Schools, Enrolments and Teachers,, - page 32.csv",
+      "header_rows": 2,
+      "detected_columns": [
+        "India/State/UT",
+        "Total number of Schools",
+        "Pupil Teacher Ratio Enrolments",
+        "Average Teachers Per School Teachers",
+        "Average Enrolments Per School",
+        "Schools with Zero Enrolments",
+        "Teachers in schools having zero Enrolments",
+        "Schools with Single Teachers",
+        "Enrolments in Single Teacher Schools",
+        "col_9",
+        "col_10"
+      ],
+      "n_rows": 37,
+      "n_cols": 11,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi"
+      ]
+    },
+    "female_teachers::2024-25": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2024-25/csv_files/Table 4.13 (continued) Number of teachers by management, gender and classes taught, 2024-25 All Management - page 65.csv",
+      "header_rows": 3,
+      "detected_columns": [
+        "India/State /UT",
+        "Number of teachers by Gender and Classes Taught – All Types of Management Primary & Upper Primary Male",
+        "Upper Primary Only Female",
+        "Upper Primary & Secondary Total",
+        "Male",
+        "Female",
+        "Total",
+        "Male__1",
+        "Female__1",
+        "Total__1"
+      ],
+      "n_rows": 37,
+      "n_cols": 10,
+      "sample_states": [
+        "India",
+        "Andaman and Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra and Nagar Haveli and Daman and Diu",
+        "Delhi"
+      ]
+    },
+    "ict_labs::2023-24": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2023-24/csv_files/Table 9.9 Number of Government and Government Aided Schools with Upper Primary, Secondary and Higher Secondary sections having ICT and - page 178.csv",
+      "header_rows": 2,
+      "detected_columns": [
+        "India/ State/ UT",
+        "Number of Government Schools with Upper Primary, Secondary and Higher Secondary sections having Total",
+        "Number of Government Aided Schools with Upper Primary, Secondary and Higher Secondary sections having ICT labs",
+        "Percentage of Government Schools with Upper Primary, Secondary and Higher Secondary sections having Functional ICT Labs",
+        "Percentage of Government Aided Schools with Upper Primary, Secondary and Higher Secondary sections having Total",
+        "ICT labs",
+        "Functional ICT Labs",
+        "ICT labs__1",
+        "Functional ICT Labs__1",
+        "ICT labs__2",
+        "Functional ICT Labs__2"
+      ],
+      "n_rows": 37,
+      "n_cols": 11,
+      "sample_states": [
+        "India",
+        "Andaman & Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra & Nagar Haveli and Daman & Diu",
+        "Delhi"
+      ]
+    },
+    "ict_labs::2022-23": {
+      "file": "/home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2022-23/csv_files/Table 9.9 Number of Government and Government Aided Schools with Upper Primary, Secondary and Higher Secondary sections having ICT and - page 175.csv",
+      "header_rows": 2,
+      "detected_columns": [
+        "India/ State/ UT",
+        "Number of Government Schools with Upper Primary, Secondary and Higher Secondary sections having Total",
+        "Number of Government Aided Schools with Upper Primary, Secondary and Higher Secondary sections having ICT labs",
+        "Percentage of Government Schools with Upper Primary, Secondary and Higher Secondary sections having Functional ICT Labs",
+        "Percentage of Government Aided Schools with Upper Primary, Secondary and Higher Secondary sections having Total",
+        "ICT labs",
+        "Functional ICT Labs",
+        "ICT labs__1",
+        "Functional ICT Labs__1",
+        "ICT labs__2",
+        "Functional ICT Labs__2"
+      ],
+      "n_rows": 37,
+      "n_cols": 11,
+      "sample_states": [
+        "India",
+        "Andaman & Nicobar Islands",
+        "Andhra Pradesh",
+        "Arunachal Pradesh",
+        "Assam",
+        "Bihar",
+        "Chandigarh",
+        "Chhattisgarh",
+        "Dadra & Nagar Haveli and Daman & Diu",
+        "Delhi"
+      ]
+    }
+  },
+  "audit_report": "audit_report.txt",
+  "validation_report": "data/validation_report.json",
+  "notes": {
+    "table_number_drift": "Table numbers shift across years; loaders search by title patterns.",
+    "no_python_html": "Python writes JSON only; docs/ is rendered by JavaScript from JSON."
+  }
+}

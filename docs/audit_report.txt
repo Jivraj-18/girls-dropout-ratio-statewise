@@ -1,0 +1,46 @@
+JSON-FIRST ANALYSIS AUDIT
+=
+Generated at (UTC): 2026-03-31T21:22:59.252773+00:00
+Infra year used for joins: 2024-25
+Dropout states/UTs (2024-25): 37
+Infrastructure states/UTs (2024-25): 36
+In dropout but missing in infra (first 25): ['India']
+In infra but missing in dropout (first 25): []
+
+TABLE FILES USED (DISCOVERY-BASED, NOT HARD-CODED)
+=
+dropout::2018-19: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2018-19/csv_files/Table 5.13 Dropout Rate by level of school education and gender, 2018-19 - page 83.csv
+dropout::2019-20: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2019-20/csv_files/Table 5.13 Dropout Rate by level of school education and gender - page 99.csv
+dropout::2020-21: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2020-21/csv_files/Table 5.13 Dropout Rate by level of education and gender - page 109.csv
+dropout::2021-22: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2021-22/csv_files/Table 6.13 Dropout Rate by level of education and gender- page 121.csv
+dropout::2022-23: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2022-23/csv_files/Table 6.13 Dropout Rate by level of education and gender, 2022-23, - page 116.csv
+dropout::2023-24: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2023-24/csv_files/Table 6.13 Dropout Rate by level of education and gender, 2023-24, - page 119.csv
+dropout::2024-25: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2024-25/csv_files/Table 6.13 Dropout Rate by level of education and gender, 2024-25,,,, - page 120.csv
+promotion::2018-19: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2018-19/csv_files/Table 5.11 Promotion Rate by level of school education and gender, 2018-19 - page 81.csv
+promotion::2019-20: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2019-20/csv_files/Table 5.11 Promotion Rate by level of school education and gender - page 97.csv
+promotion::2020-21: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2020-21/csv_files/Table 5.11 Promotion Rate by level of education and gender - page 107.csv
+promotion::2021-22: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2021-22/csv_files/Table 6.11 Promotion Rate by level of education and gender- page 119.csv
+promotion::2022-23: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2022-23/csv_files/Table 6.11 Promotion Rate by level of education and gender, 2022-23, - page 114.csv
+promotion::2023-24: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2023-24/csv_files/Table 6.11 Promotion Rate by level of education and gender, 2023-24, - page 117.csv
+promotion::2024-25: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2024-25/csv_files/Table 6.11 Promotion Rate by level of education and gender, 2024-25,,,, - page 118.csv
+repetition::2018-19: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2018-19/csv_files/Table 5.12 Repetition Rate by level of school education and gender, 2018-19 - page 82.csv
+repetition::2019-20: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2019-20/csv_files/Table 5.12 Repetition Rate by level of school education and gender - page 98.csv
+repetition::2020-21: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2020-21/csv_files/Table 5.12 Repetition Rate by level of education and gender.csv
+repetition::2021-22: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2021-22/csv_files/Table 6.12 Repetition Rate by level of education and gender, 2021-22 - page 120.csv
+repetition::2022-23: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2022-23/csv_files/Table 6.12 Repetition Rate by level of education and gender, 2022-23 - page 115.csv
+repetition::2023-24: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2023-24/csv_files/Table 6.12 Repetition Rate by level of education and gender, 2023-24 - page 118.csv
+repetition::2024-25: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2024-25/csv_files/Table 6.12 Repetition Rate by level of education and gender, 2024-25,,, - page 119.csv
+ger::2018-19: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2018-19/csv_files/Table 5.1 Gross Enrolment Ratio (GER) by Gender and Level of School Education, 2018-19 - page 71.csv
+ger::2019-20: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2019-20/csv_files/Table 5.1 Gross Enrolment Ratio (GER) by Gender and Level of school education - page 87.csv
+ger::2020-21: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2020-21/csv_files/Table 5.1 Gross Enrolment Ratio (GER) by Gender and Level of School Education.csv
+ger::2021-22: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2021-22/csv_files/Table 6.1 Gross Enrolment Ratio (GER) by Gender and Level of School Education, 2021-22 - page 109.csv
+ger::2022-23: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2022-23/csv_files/Table 6.1 Gross Enrolment Ratio (GER) by Gender and Level of School Education, 2022-23 All Social Groups - page 104.csv
+ger::2023-24: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2023-24/csv_files/Table 6.1 Gross Enrolment Ratio (GER) by Gender and Level of School Education, 2023-24 All Social Groups - page 107.csv
+ger::2024-25: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2024-25/csv_files/Table 6.1 Gross Enrolment Ratio (GER) by Gender and Level of School Education, 2024-25 All Social Groups - page 108.csv
+infra::2024-25::Table 2.5 (continued) State wise highlights of the UDISE+ 2024-25 data Infrastructure., - page 36.csv: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2024-25/csv_files/Table 2.5 (continued) State wise highlights of the UDISE+ 2024-25 data Infrastructure., - page 36.csv
+infra::2024-25::Table 2.5 State wise highlights of the UDISE+ 2024-25 data Infrastructure,, - page 35.csv: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2024-25/csv_files/Table 2.5 State wise highlights of the UDISE+ 2024-25 data Infrastructure,, - page 35.csv
+single_teacher::2024-25: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2024-25/csv_files/Table 2.2 State wise highlights of the UDISE+ 2024-25 data Schools, Enrolments and Teachers,, - page 32.csv
+female_teachers::2024-25: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2024-25/csv_files/Table 4.13 (continued) Number of teachers by management, gender and classes taught, 2024-25 All Management - page 65.csv
+ict_labs::2023-24: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2023-24/csv_files/Table 9.9 Number of Government and Government Aided Schools with Upper Primary, Secondary and Higher Secondary sections having ICT and - page 178.csv
+ict_labs::2022-23: /home/jivraj/straive/girl-dropout-rate-analysis/udise_csv_data/2022-23/csv_files/Table 9.9 Number of Government and Government Aided Schools with Upper Primary, Secondary and Higher Secondary sections having ICT and - page 175.csv
+

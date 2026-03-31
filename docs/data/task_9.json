@@ -1,0 +1,1342 @@
+{
+  "task_id": 9,
+  "title": "Geographic Red Zones (Persistent High Dropout)",
+  "gender": "Girls",
+  "level": "Secondary (9-10)",
+  "threshold": 15.0,
+  "min_years": 3,
+  "findings": {
+    "red_zone_states": [
+      {
+        "state_ut": "Assam",
+        "max_consecutive_years": 7,
+        "latest_rate": 16.7
+      },
+      {
+        "state_ut": "Meghalaya",
+        "max_consecutive_years": 7,
+        "latest_rate": 16.6
+      },
+      {
+        "state_ut": "Gujarat",
+        "max_consecutive_years": 6,
+        "latest_rate": 14.6
+      },
+      {
+        "state_ut": "Bihar",
+        "max_consecutive_years": 6,
+        "latest_rate": 6.8
+      },
+      {
+        "state_ut": "Nagaland",
+        "max_consecutive_years": 5,
+        "latest_rate": 11.2
+      },
+      {
+        "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+        "max_consecutive_years": 5,
+        "latest_rate": 8.6
+      },
+      {
+        "state_ut": "Odisha",
+        "max_consecutive_years": 4,
+        "latest_rate": 12.6
+      },
+      {
+        "state_ut": "Arunachal Pradesh",
+        "max_consecutive_years": 3,
+        "latest_rate": 17.7
+      },
+      {
+        "state_ut": "Madhya Pradesh",
+        "max_consecutive_years": 3,
+        "latest_rate": 14.6
+      },
+      {
+        "state_ut": "Tripura",
+        "max_consecutive_years": 3,
+        "latest_rate": 10.2
+      },
+      {
+        "state_ut": "Sikkim",
+        "max_consecutive_years": 3,
+        "latest_rate": 8.4
+      }
+    ],
+    "n_red_zone_states": 11
+  },
+  "chart_data": {
+    "time_series": [
+      {
+        "state_ut": "Andaman and Nicobar Islands",
+        "year": "2018-19",
+        "rate": 18.0
+      },
+      {
+        "state_ut": "Andaman and Nicobar Islands",
+        "year": "2019-20",
+        "rate": 12.3
+      },
+      {
+        "state_ut": "Andaman and Nicobar Islands",
+        "year": "2020-21",
+        "rate": 6.9
+      },
+      {
+        "state_ut": "Andaman and Nicobar Islands",
+        "year": "2021-22",
+        "rate": 3.9
+      },
+      {
+        "state_ut": "Andaman and Nicobar Islands",
+        "year": "2022-23",
+        "rate": 4.6
+      },
+      {
+        "state_ut": "Andaman and Nicobar Islands",
+        "year": "2023-24",
+        "rate": 3.4
+      },
+      {
+        "state_ut": "Andaman and Nicobar Islands",
+        "year": "2024-25",
+        "rate": 3.5
+      },
+      {
+        "state_ut": "Andhra Pradesh",
+        "year": "2018-19",
+        "rate": 15.2
+      },
+      {
+        "state_ut": "Andhra Pradesh",
+        "year": "2019-20",
+        "rate": 12.2
+      },
+      {
+        "state_ut": "Andhra Pradesh",
+        "year": "2020-21",
+        "rate": 16.1
+      },
+      {
+        "state_ut": "Andhra Pradesh",
+        "year": "2021-22",
+        "rate": 15.0
+      },
+      {
+        "state_ut": "Andhra Pradesh",
+        "year": "2022-23",
+        "rate": 12.3
+      },
+      {
+        "state_ut": "Andhra Pradesh",
+        "year": "2023-24",
+        "rate": 10.6
+      },
+      {
+        "state_ut": "Andhra Pradesh",
+        "year": "2024-25",
+        "rate": 12.5
+      },
+      {
+        "state_ut": "Arunachal Pradesh",
+        "year": "2018-19",
+        "rate": 35.0
+      },
+      {
+        "state_ut": "Arunachal Pradesh",
+        "year": "2019-20",
+        "rate": 30.9
+      },
+      {
+        "state_ut": "Arunachal Pradesh",
+        "year": "2020-21",
+        "rate": 11.7
+      },
+      {
+        "state_ut": "Arunachal Pradesh",
+        "year": "2021-22",
+        "rate": 12.3
+      },
+      {
+        "state_ut": "Arunachal Pradesh",
+        "year": "2022-23",
+        "rate": 16.1
+      },
+      {
+        "state_ut": "Arunachal Pradesh",
+        "year": "2023-24",
+        "rate": 18.2
+      },
+      {
+        "state_ut": "Arunachal Pradesh",
+        "year": "2024-25",
+        "rate": 17.7
+      },
+      {
+        "state_ut": "Assam",
+        "year": "2018-19",
+        "rate": 32.1
+      },
+      {
+        "state_ut": "Assam",
+        "year": "2019-20",
+        "rate": 32.9
+      },
+      {
+        "state_ut": "Assam",
+        "year": "2020-21",
+        "rate": 32.1
+      },
+      {
+        "state_ut": "Assam",
+        "year": "2021-22",
+        "rate": 20.7
+      },
+      {
+        "state_ut": "Assam",
+        "year": "2022-23",
+        "rate": 29.9
+      },
+      {
+        "state_ut": "Assam",
+        "year": "2023-24",
+        "rate": 25.0
+      },
+      {
+        "state_ut": "Assam",
+        "year": "2024-25",
+        "rate": 16.7
+      },
+      {
+        "state_ut": "Bihar",
+        "year": "2018-19",
+        "rate": 29.5
+      },
+      {
+        "state_ut": "Bihar",
+        "year": "2019-20",
+        "rate": 22.7
+      },
+      {
+        "state_ut": "Bihar",
+        "year": "2020-21",
+        "rate": 19.0
+      },
+      {
+        "state_ut": "Bihar",
+        "year": "2021-22",
+        "rate": 21.4
+      },
+      {
+        "state_ut": "Bihar",
+        "year": "2022-23",
+        "rate": 28.8
+      },
+      {
+        "state_ut": "Bihar",
+        "year": "2023-24",
+        "rate": 25.1
+      },
+      {
+        "state_ut": "Bihar",
+        "year": "2024-25",
+        "rate": 6.8
+      },
+      {
+        "state_ut": "Chandigarh",
+        "year": "2018-19",
+        "rate": 4.3
+      },
+      {
+        "state_ut": "Chandigarh",
+        "year": "2019-20",
+        "rate": 3.3
+      },
+      {
+        "state_ut": "Chandigarh",
+        "year": "2020-21",
+        "rate": 1.0
+      },
+      {
+        "state_ut": "Chandigarh",
+        "year": "2021-22",
+        "rate": 0.0
+      },
+      {
+        "state_ut": "Chandigarh",
+        "year": "2022-23",
+        "rate": 0.4
+      },
+      {
+        "state_ut": "Chandigarh",
+        "year": "2023-24",
+        "rate": 1.4
+      },
+      {
+        "state_ut": "Chandigarh",
+        "year": "2024-25",
+        "rate": 1.1
+      },
+      {
+        "state_ut": "Chhattisgarh",
+        "year": "2018-19",
+        "rate": 15.6
+      },
+      {
+        "state_ut": "Chhattisgarh",
+        "year": "2019-20",
+        "rate": 17.2
+      },
+      {
+        "state_ut": "Chhattisgarh",
+        "year": "2020-21",
+        "rate": 11.4
+      },
+      {
+        "state_ut": "Chhattisgarh",
+        "year": "2021-22",
+        "rate": 8.1
+      },
+      {
+        "state_ut": "Chhattisgarh",
+        "year": "2022-23",
+        "rate": 15.3
+      },
+      {
+        "state_ut": "Chhattisgarh",
+        "year": "2023-24",
+        "rate": 12.6
+      },
+      {
+        "state_ut": "Chhattisgarh",
+        "year": "2024-25",
+        "rate": 11.6
+      },
+      {
+        "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+        "year": "2018-19",
+        "rate": 17.5
+      },
+      {
+        "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+        "year": "2018-19",
+        "rate": 19.3
+      },
+      {
+        "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+        "year": "2019-20",
+        "rate": 17.3
+      },
+      {
+        "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+        "year": "2019-20",
+        "rate": 16.5
+      },
+      {
+        "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+        "year": "2020-21",
+        "rate": 17.7
+      },
+      {
+        "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+        "year": "2021-22",
+        "rate": 8.4
+      },
+      {
+        "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+        "year": "2022-23",
+        "rate": 13.3
+      },
+      {
+        "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+        "year": "2023-24",
+        "rate": 15.4
+      },
+      {
+        "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+        "year": "2024-25",
+        "rate": 8.6
+      },
+      {
+        "state_ut": "Delhi",
+        "year": "2018-19",
+        "rate": 13.7
+      },
+      {
+        "state_ut": "Delhi",
+        "year": "2019-20",
+        "rate": 11.8
+      },
+      {
+        "state_ut": "Delhi",
+        "year": "2020-21",
+        "rate": 7.7
+      },
+      {
+        "state_ut": "Delhi",
+        "year": "2021-22",
+        "rate": 3.7
+      },
+      {
+        "state_ut": "Delhi",
+        "year": "2022-23",
+        "rate": 6.0
+      },
+      {
+        "state_ut": "Delhi",
+        "year": "2023-24",
+        "rate": 9.1
+      },
+      {
+        "state_ut": "Delhi",
+        "year": "2024-25",
+        "rate": 5.8
+      },
+      {
+        "state_ut": "Goa",
+        "year": "2018-19",
+        "rate": 6.2
+      },
+      {
+        "state_ut": "Goa",
+        "year": "2019-20",
+        "rate": 7.2
+      },
+      {
+        "state_ut": "Goa",
+        "year": "2020-21",
+        "rate": 5.2
+      },
+      {
+        "state_ut": "Goa",
+        "year": "2021-22",
+        "rate": 5.5
+      },
+      {
+        "state_ut": "Goa",
+        "year": "2022-23",
+        "rate": 6.4
+      },
+      {
+        "state_ut": "Goa",
+        "year": "2023-24",
+        "rate": 5.8
+      },
+      {
+        "state_ut": "Goa",
+        "year": "2024-25",
+        "rate": 6.3
+      },
+      {
+        "state_ut": "Gujarat",
+        "year": "2018-19",
+        "rate": 21.2
+      },
+      {
+        "state_ut": "Gujarat",
+        "year": "2019-20",
+        "rate": 20.7
+      },
+      {
+        "state_ut": "Gujarat",
+        "year": "2020-21",
+        "rate": 20.9
+      },
+      {
+        "state_ut": "Gujarat",
+        "year": "2021-22",
+        "rate": 15.9
+      },
+      {
+        "state_ut": "Gujarat",
+        "year": "2022-23",
+        "rate": 21.2
+      },
+      {
+        "state_ut": "Gujarat",
+        "year": "2023-24",
+        "rate": 18.3
+      },
+      {
+        "state_ut": "Gujarat",
+        "year": "2024-25",
+        "rate": 14.6
+      },
+      {
+        "state_ut": "Haryana",
+        "year": "2018-19",
+        "rate": 13.7
+      },
+      {
+        "state_ut": "Haryana",
+        "year": "2019-20",
+        "rate": 12.0
+      },
+      {
+        "state_ut": "Haryana",
+        "year": "2020-21",
+        "rate": 12.3
+      },
+      {
+        "state_ut": "Haryana",
+        "year": "2021-22",
+        "rate": 4.9
+      },
+      {
+        "state_ut": "Haryana",
+        "year": "2022-23",
+        "rate": 13.9
+      },
+      {
+        "state_ut": "Haryana",
+        "year": "2023-24",
+        "rate": 11.4
+      },
+      {
+        "state_ut": "Haryana",
+        "year": "2024-25",
+        "rate": 4.1
+      },
+      {
+        "state_ut": "Himachal Pradesh",
+        "year": "2018-19",
+        "rate": 6.7
+      },
+      {
+        "state_ut": "Himachal Pradesh",
+        "year": "2019-20",
+        "rate": 5.9
+      },
+      {
+        "state_ut": "Himachal Pradesh",
+        "year": "2020-21",
+        "rate": 7.2
+      },
+      {
+        "state_ut": "Himachal Pradesh",
+        "year": "2021-22",
+        "rate": 0.9
+      },
+      {
+        "state_ut": "Himachal Pradesh",
+        "year": "2022-23",
+        "rate": 5.3
+      },
+      {
+        "state_ut": "Himachal Pradesh",
+        "year": "2023-24",
+        "rate": 4.0
+      },
+      {
+        "state_ut": "Himachal Pradesh",
+        "year": "2024-25",
+        "rate": 4.8
+      },
+      {
+        "state_ut": "Jammu and Kashmir",
+        "year": "2018-19",
+        "rate": 17.7
+      },
+      {
+        "state_ut": "Jammu and Kashmir",
+        "year": "2019-20",
+        "rate": 16.6
+      },
+      {
+        "state_ut": "Jammu and Kashmir",
+        "year": "2020-21",
+        "rate": 4.4
+      },
+      {
+        "state_ut": "Jammu and Kashmir",
+        "year": "2021-22",
+        "rate": 6.3
+      },
+      {
+        "state_ut": "Jammu and Kashmir",
+        "year": "2022-23",
+        "rate": 9.5
+      },
+      {
+        "state_ut": "Jammu and Kashmir",
+        "year": "2023-24",
+        "rate": 12.6
+      },
+      {
+        "state_ut": "Jammu and Kashmir",
+        "year": "2024-25",
+        "rate": 12.2
+      },
+      {
+        "state_ut": "Jharkhand",
+        "year": "2018-19",
+        "rate": 22.4
+      },
+      {
+        "state_ut": "Jharkhand",
+        "year": "2019-20",
+        "rate": 17.0
+      },
+      {
+        "state_ut": "Jharkhand",
+        "year": "2020-21",
+        "rate": 13.7
+      },
+      {
+        "state_ut": "Jharkhand",
+        "year": "2021-22",
+        "rate": 8.9
+      },
+      {
+        "state_ut": "Jharkhand",
+        "year": "2022-23",
+        "rate": 25.5
+      },
+      {
+        "state_ut": "Jharkhand",
+        "year": "2023-24",
+        "rate": 15.1
+      },
+      {
+        "state_ut": "Jharkhand",
+        "year": "2024-25",
+        "rate": 2.4
+      },
+      {
+        "state_ut": "Karnataka",
+        "year": "2018-19",
+        "rate": 20.2
+      },
+      {
+        "state_ut": "Karnataka",
+        "year": "2019-20",
+        "rate": 14.1
+      },
+      {
+        "state_ut": "Karnataka",
+        "year": "2020-21",
+        "rate": 14.9
+      },
+      {
+        "state_ut": "Karnataka",
+        "year": "2021-22",
+        "rate": 13.0
+      },
+      {
+        "state_ut": "Karnataka",
+        "year": "2022-23",
+        "rate": 12.3
+      },
+      {
+        "state_ut": "Karnataka",
+        "year": "2023-24",
+        "rate": 19.6
+      },
+      {
+        "state_ut": "Karnataka",
+        "year": "2024-25",
+        "rate": 14.6
+      },
+      {
+        "state_ut": "Kerala",
+        "year": "2018-19",
+        "rate": 6.8
+      },
+      {
+        "state_ut": "Kerala",
+        "year": "2019-20",
+        "rate": 5.9
+      },
+      {
+        "state_ut": "Kerala",
+        "year": "2020-21",
+        "rate": 4.9
+      },
+      {
+        "state_ut": "Kerala",
+        "year": "2021-22",
+        "rate": 4.1
+      },
+      {
+        "state_ut": "Kerala",
+        "year": "2022-23",
+        "rate": 5.3
+      },
+      {
+        "state_ut": "Kerala",
+        "year": "2023-24",
+        "rate": 2.5
+      },
+      {
+        "state_ut": "Kerala",
+        "year": "2024-25",
+        "rate": 3.7
+      },
+      {
+        "state_ut": "Ladakh",
+        "year": "2019-20",
+        "rate": 0.0
+      },
+      {
+        "state_ut": "Ladakh",
+        "year": "2020-21",
+        "rate": 1.1
+      },
+      {
+        "state_ut": "Ladakh",
+        "year": "2021-22",
+        "rate": 5.7
+      },
+      {
+        "state_ut": "Ladakh",
+        "year": "2022-23",
+        "rate": 10.7
+      },
+      {
+        "state_ut": "Ladakh",
+        "year": "2023-24",
+        "rate": 16.7
+      },
+      {
+        "state_ut": "Ladakh",
+        "year": "2024-25",
+        "rate": 14.4
+      },
+      {
+        "state_ut": "Lakshadweep",
+        "year": "2018-19",
+        "rate": 5.5
+      },
+      {
+        "state_ut": "Lakshadweep",
+        "year": "2019-20",
+        "rate": 2.7
+      },
+      {
+        "state_ut": "Lakshadweep",
+        "year": "2020-21",
+        "rate": 0.0
+      },
+      {
+        "state_ut": "Lakshadweep",
+        "year": "2021-22",
+        "rate": 0.0
+      },
+      {
+        "state_ut": "Lakshadweep",
+        "year": "2022-23",
+        "rate": 8.2
+      },
+      {
+        "state_ut": "Lakshadweep",
+        "year": "2023-24",
+        "rate": 2.2
+      },
+      {
+        "state_ut": "Lakshadweep",
+        "year": "2024-25",
+        "rate": 5.0
+      },
+      {
+        "state_ut": "Madhya Pradesh",
+        "year": "2018-19",
+        "rate": 24.0
+      },
+      {
+        "state_ut": "Madhya Pradesh",
+        "year": "2019-20",
+        "rate": 21.8
+      },
+      {
+        "state_ut": "Madhya Pradesh",
+        "year": "2020-21",
+        "rate": 24.4
+      },
+      {
+        "state_ut": "Madhya Pradesh",
+        "year": "2021-22",
+        "rate": 9.7
+      },
+      {
+        "state_ut": "Madhya Pradesh",
+        "year": "2022-23",
+        "rate": 20.7
+      },
+      {
+        "state_ut": "Madhya Pradesh",
+        "year": "2023-24",
+        "rate": 15.5
+      },
+      {
+        "state_ut": "Madhya Pradesh",
+        "year": "2024-25",
+        "rate": 14.6
+      },
+      {
+        "state_ut": "Maharashtra",
+        "year": "2018-19",
+        "rate": 12.8
+      },
+      {
+        "state_ut": "Maharashtra",
+        "year": "2019-20",
+        "rate": 14.0
+      },
+      {
+        "state_ut": "Maharashtra",
+        "year": "2020-21",
+        "rate": 11.2
+      },
+      {
+        "state_ut": "Maharashtra",
+        "year": "2021-22",
+        "rate": 10.6
+      },
+      {
+        "state_ut": "Maharashtra",
+        "year": "2022-23",
+        "rate": 15.7
+      },
+      {
+        "state_ut": "Maharashtra",
+        "year": "2023-24",
+        "rate": 9.0
+      },
+      {
+        "state_ut": "Maharashtra",
+        "year": "2024-25",
+        "rate": 10.3
+      },
+      {
+        "state_ut": "Manipur",
+        "year": "2018-19",
+        "rate": 13.2
+      },
+      {
+        "state_ut": "Manipur",
+        "year": "2019-20",
+        "rate": 9.2
+      },
+      {
+        "state_ut": "Manipur",
+        "year": "2020-21",
+        "rate": 9.5
+      },
+      {
+        "state_ut": "Manipur",
+        "year": "2021-22",
+        "rate": 1.2
+      },
+      {
+        "state_ut": "Manipur",
+        "year": "2022-23",
+        "rate": 14.1
+      },
+      {
+        "state_ut": "Manipur",
+        "year": "2023-24",
+        "rate": 15.0
+      },
+      {
+        "state_ut": "Manipur",
+        "year": "2024-25",
+        "rate": 8.6
+      },
+      {
+        "state_ut": "Meghalaya",
+        "year": "2018-19",
+        "rate": 18.3
+      },
+      {
+        "state_ut": "Meghalaya",
+        "year": "2019-20",
+        "rate": 21.8
+      },
+      {
+        "state_ut": "Meghalaya",
+        "year": "2020-21",
+        "rate": 27.1
+      },
+      {
+        "state_ut": "Meghalaya",
+        "year": "2021-22",
+        "rate": 20.4
+      },
+      {
+        "state_ut": "Meghalaya",
+        "year": "2022-23",
+        "rate": 25.8
+      },
+      {
+        "state_ut": "Meghalaya",
+        "year": "2023-24",
+        "rate": 21.1
+      },
+      {
+        "state_ut": "Meghalaya",
+        "year": "2024-25",
+        "rate": 16.6
+      },
+      {
+        "state_ut": "Mizoram",
+        "year": "2018-19",
+        "rate": 10.1
+      },
+      {
+        "state_ut": "Mizoram",
+        "year": "2019-20",
+        "rate": 17.5
+      },
+      {
+        "state_ut": "Mizoram",
+        "year": "2020-21",
+        "rate": 17.9
+      },
+      {
+        "state_ut": "Mizoram",
+        "year": "2021-22",
+        "rate": 10.8
+      },
+      {
+        "state_ut": "Mizoram",
+        "year": "2022-23",
+        "rate": 22.8
+      },
+      {
+        "state_ut": "Mizoram",
+        "year": "2023-24",
+        "rate": 14.4
+      },
+      {
+        "state_ut": "Mizoram",
+        "year": "2024-25",
+        "rate": 16.0
+      },
+      {
+        "state_ut": "Nagaland",
+        "year": "2018-19",
+        "rate": 22.5
+      },
+      {
+        "state_ut": "Nagaland",
+        "year": "2019-20",
+        "rate": 20.7
+      },
+      {
+        "state_ut": "Nagaland",
+        "year": "2020-21",
+        "rate": 23.3
+      },
+      {
+        "state_ut": "Nagaland",
+        "year": "2021-22",
+        "rate": 16.2
+      },
+      {
+        "state_ut": "Nagaland",
+        "year": "2022-23",
+        "rate": 20.0
+      },
+      {
+        "state_ut": "Nagaland",
+        "year": "2023-24",
+        "rate": 11.1
+      },
+      {
+        "state_ut": "Nagaland",
+        "year": "2024-25",
+        "rate": 11.2
+      },
+      {
+        "state_ut": "Odisha",
+        "year": "2018-19",
+        "rate": 7.2
+      },
+      {
+        "state_ut": "Odisha",
+        "year": "2019-20",
+        "rate": 21.9
+      },
+      {
+        "state_ut": "Odisha",
+        "year": "2020-21",
+        "rate": 15.4
+      },
+      {
+        "state_ut": "Odisha",
+        "year": "2021-22",
+        "rate": 25.2
+      },
+      {
+        "state_ut": "Odisha",
+        "year": "2022-23",
+        "rate": 16.1
+      },
+      {
+        "state_ut": "Odisha",
+        "year": "2023-24",
+        "rate": 11.3
+      },
+      {
+        "state_ut": "Odisha",
+        "year": "2024-25",
+        "rate": 12.6
+      },
+      {
+        "state_ut": "Puducherry",
+        "year": "2018-19",
+        "rate": 7.9
+      },
+      {
+        "state_ut": "Puducherry",
+        "year": "2019-20",
+        "rate": 4.9
+      },
+      {
+        "state_ut": "Puducherry",
+        "year": "2020-21",
+        "rate": 5.3
+      },
+      {
+        "state_ut": "Puducherry",
+        "year": "2021-22",
+        "rate": 4.1
+      },
+      {
+        "state_ut": "Puducherry",
+        "year": "2022-23",
+        "rate": 5.2
+      },
+      {
+        "state_ut": "Puducherry",
+        "year": "2023-24",
+        "rate": 5.0
+      },
+      {
+        "state_ut": "Puducherry",
+        "year": "2024-25",
+        "rate": 3.1
+      },
+      {
+        "state_ut": "Punjab",
+        "year": "2018-19",
+        "rate": 9.6
+      },
+      {
+        "state_ut": "Punjab",
+        "year": "2019-20",
+        "rate": 0.0
+      },
+      {
+        "state_ut": "Punjab",
+        "year": "2020-21",
+        "rate": 11.1
+      },
+      {
+        "state_ut": "Punjab",
+        "year": "2021-22",
+        "rate": 16.0
+      },
+      {
+        "state_ut": "Punjab",
+        "year": "2022-23",
+        "rate": 8.8
+      },
+      {
+        "state_ut": "Punjab",
+        "year": "2023-24",
+        "rate": 5.0
+      },
+      {
+        "state_ut": "Punjab",
+        "year": "2024-25",
+        "rate": 5.2
+      },
+      {
+        "state_ut": "Rajasthan",
+        "year": "2018-19",
+        "rate": 12.8
+      },
+      {
+        "state_ut": "Rajasthan",
+        "year": "2019-20",
+        "rate": 12.1
+      },
+      {
+        "state_ut": "Rajasthan",
+        "year": "2020-21",
+        "rate": 8.8
+      },
+      {
+        "state_ut": "Rajasthan",
+        "year": "2021-22",
+        "rate": 7.5
+      },
+      {
+        "state_ut": "Rajasthan",
+        "year": "2022-23",
+        "rate": 11.5
+      },
+      {
+        "state_ut": "Rajasthan",
+        "year": "2023-24",
+        "rate": 9.7
+      },
+      {
+        "state_ut": "Rajasthan",
+        "year": "2024-25",
+        "rate": 7.1
+      },
+      {
+        "state_ut": "Sikkim",
+        "year": "2018-19",
+        "rate": 21.3
+      },
+      {
+        "state_ut": "Sikkim",
+        "year": "2019-20",
+        "rate": 21.1
+      },
+      {
+        "state_ut": "Sikkim",
+        "year": "2020-21",
+        "rate": 20.8
+      },
+      {
+        "state_ut": "Sikkim",
+        "year": "2021-22",
+        "rate": 9.5
+      },
+      {
+        "state_ut": "Sikkim",
+        "year": "2022-23",
+        "rate": 12.1
+      },
+      {
+        "state_ut": "Sikkim",
+        "year": "2023-24",
+        "rate": 17.2
+      },
+      {
+        "state_ut": "Sikkim",
+        "year": "2024-25",
+        "rate": 8.4
+      },
+      {
+        "state_ut": "Tamil Nadu",
+        "year": "2018-19",
+        "rate": 8.1
+      },
+      {
+        "state_ut": "Tamil Nadu",
+        "year": "2019-20",
+        "rate": 5.6
+      },
+      {
+        "state_ut": "Tamil Nadu",
+        "year": "2020-21",
+        "rate": 4.1
+      },
+      {
+        "state_ut": "Tamil Nadu",
+        "year": "2021-22",
+        "rate": 2.5
+      },
+      {
+        "state_ut": "Tamil Nadu",
+        "year": "2022-23",
+        "rate": 6.4
+      },
+      {
+        "state_ut": "Tamil Nadu",
+        "year": "2023-24",
+        "rate": 4.4
+      },
+      {
+        "state_ut": "Tamil Nadu",
+        "year": "2024-25",
+        "rate": 5.3
+      },
+      {
+        "state_ut": "Telangana",
+        "year": "2018-19",
+        "rate": 11.6
+      },
+      {
+        "state_ut": "Telangana",
+        "year": "2019-20",
+        "rate": 10.6
+      },
+      {
+        "state_ut": "Telangana",
+        "year": "2020-21",
+        "rate": 13.4
+      },
+      {
+        "state_ut": "Telangana",
+        "year": "2021-22",
+        "rate": 12.9
+      },
+      {
+        "state_ut": "Telangana",
+        "year": "2022-23",
+        "rate": 10.9
+      },
+      {
+        "state_ut": "Telangana",
+        "year": "2023-24",
+        "rate": 9.5
+      },
+      {
+        "state_ut": "Telangana",
+        "year": "2024-25",
+        "rate": 10.7
+      },
+      {
+        "state_ut": "Tripura",
+        "year": "2018-19",
+        "rate": 29.7
+      },
+      {
+        "state_ut": "Tripura",
+        "year": "2019-20",
+        "rate": 26.4
+      },
+      {
+        "state_ut": "Tripura",
+        "year": "2020-21",
+        "rate": 28.3
+      },
+      {
+        "state_ut": "Tripura",
+        "year": "2021-22",
+        "rate": 8.2
+      },
+      {
+        "state_ut": "Tripura",
+        "year": "2022-23",
+        "rate": 17.2
+      },
+      {
+        "state_ut": "Tripura",
+        "year": "2023-24",
+        "rate": 10.1
+      },
+      {
+        "state_ut": "Tripura",
+        "year": "2024-25",
+        "rate": 10.2
+      },
+      {
+        "state_ut": "Uttar Pradesh",
+        "year": "2018-19",
+        "rate": 15.6
+      },
+      {
+        "state_ut": "Uttar Pradesh",
+        "year": "2019-20",
+        "rate": 14.2
+      },
+      {
+        "state_ut": "Uttar Pradesh",
+        "year": "2020-21",
+        "rate": 13.0
+      },
+      {
+        "state_ut": "Uttar Pradesh",
+        "year": "2021-22",
+        "rate": 10.0
+      },
+      {
+        "state_ut": "Uttar Pradesh",
+        "year": "2022-23",
+        "rate": 14.4
+      },
+      {
+        "state_ut": "Uttar Pradesh",
+        "year": "2023-24",
+        "rate": 7.3
+      },
+      {
+        "state_ut": "Uttar Pradesh",
+        "year": "2024-25",
+        "rate": 5.1
+      },
+      {
+        "state_ut": "Uttarakhand",
+        "year": "2018-19",
+        "rate": 9.5
+      },
+      {
+        "state_ut": "Uttarakhand",
+        "year": "2019-20",
+        "rate": 7.3
+      },
+      {
+        "state_ut": "Uttarakhand",
+        "year": "2020-21",
+        "rate": 7.6
+      },
+      {
+        "state_ut": "Uttarakhand",
+        "year": "2021-22",
+        "rate": 4.6
+      },
+      {
+        "state_ut": "Uttarakhand",
+        "year": "2022-23",
+        "rate": 7.2
+      },
+      {
+        "state_ut": "Uttarakhand",
+        "year": "2023-24",
+        "rate": 5.3
+      },
+      {
+        "state_ut": "Uttarakhand",
+        "year": "2024-25",
+        "rate": 3.0
+      },
+      {
+        "state_ut": "West Bengal",
+        "year": "2018-19",
+        "rate": 19.6
+      },
+      {
+        "state_ut": "West Bengal",
+        "year": "2019-20",
+        "rate": 13.6
+      },
+      {
+        "state_ut": "West Bengal",
+        "year": "2020-21",
+        "rate": 15.7
+      },
+      {
+        "state_ut": "West Bengal",
+        "year": "2021-22",
+        "rate": 17.7
+      },
+      {
+        "state_ut": "West Bengal",
+        "year": "2022-23",
+        "rate": 7.6
+      },
+      {
+        "state_ut": "West Bengal",
+        "year": "2023-24",
+        "rate": 14.2
+      },
+      {
+        "state_ut": "West Bengal",
+        "year": "2024-25",
+        "rate": 16.7
+      }
+    ]
+  },
+  "narrative": {
+    "lede": "A one-year spike is a scare. Three years is a system.",
+    "so_what": "Persistent red zones are where standard programs bounce off — they need mission-mode diagnostics.",
+    "caveat": "This identifies State/UT-level persistence; district-level hotspots require district tables."
+  }
+}

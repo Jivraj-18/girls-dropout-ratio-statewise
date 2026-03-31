@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Girls' Dropout Rate Dashboard — UDISE+ 2018–2025 | IAS Strategic Brief</title>
+  <meta name="description" content="Interactive executive dashboard showing girls' dropout rates across Indian states from UDISE+ data (2018-2025). Built for IAS officers and education policymakers." />
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+</head>
+<body>
+  <script src="assets/nav.js"></script>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="kicker"><span class="dot"></span> UDISE+ Official Data · 2018–2025</p>
+      <h1 class="title">Where India's Girls Leave School</h1>
+      <p class="subtitle">A strategic analysis of girls' dropout rates across 36 states and union territories over 7 years — designed for policymakers who need clarity, not complexity.</p>
+      <p class="meta">Source: Ministry of Education, UDISE+ Annual Reports · Last updated: 2024-25 · <a href="data/validation_report.json">Validation Report</a></p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- KPI Cards -->
+    <div class="kpi-grid animate-in delay-1" id="kpi-section">
+      <!-- Filled by JS -->
+    </div>
+
+    <!-- Insight callout -->
+    <div class="insight-box animate-in delay-2" id="key-insight">
+      <div class="insight-label">🔑 Key Finding</div>
+      <p>Loading insight…</p>
+    </div>
+
+    <!-- National Trend Chart -->
+    <div class="section-header animate-in delay-2">
+      <div class="icon">📉</div>
+      <h2>National Girls' Dropout Trend (2018–2025)</h2>
+    </div>
+    <div class="card animate-in delay-2">
+      <div class="card-header">
+        <span class="badge badge-info">7-Year Trend</span>
+        <span class="small">Dropout Rate (%) — Girls only, Secondary Level (Classes 9-10)</span>
+      </div>
+      <div id="plot-national-trend" class="plot"></div>
+    </div>
+
+    <!-- Dropout by Level -->
+    <div class="section-header animate-in delay-3">
+      <div class="icon">🪜</div>
+      <h2>The Class 9 Cliff — Where Girls Drop Off</h2>
+    </div>
+    <div class="grid grid-2 animate-in delay-3">
+      <div class="card">
+        <div class="card-header">
+          <h2>Dropout by Education Level</h2>
+          <span class="badge badge-warning">2024-25</span>
+        </div>
+        <div id="plot-level-comparison" class="plot"></div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h2>Survival Funnel</h2>
+          <span class="badge badge-crisis">Out of 100 girls</span>
+        </div>
+        <div id="plot-survival" class="plot"></div>
+        <div class="insight-box" style="margin-top:12px;">
+          <div class="insight-label">So What?</div>
+          <p><strong>Secondary level (Classes 9-10) is ground zero.</strong> For every ₹100 of dropout-prevention budget, ₹80 should target this stage. Primary dropout is now nearly zero for girls — the crisis has moved up.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Biggest Movers -->
+    <div class="section-header">
+      <div class="icon">🏆</div>
+      <h2>Success vs. Crisis — State Performance</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="card-header">
+          <h2>Most Improved States</h2>
+          <span class="badge badge-success">↓ Dropout</span>
+        </div>
+        <div id="plot-improvers" class="plot"></div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h2>States Getting Worse</h2>
+          <span class="badge badge-crisis">↑ Dropout</span>
+        </div>
+        <div id="plot-worsening" class="plot"></div>
+        <div class="callout crisis" style="margin-top:12px;">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-body">
+            <div class="callout-title">Immediate Attention Required</div>
+            <div class="callout-text">Mizoram and Odisha are the only states where girls' dropout rates have <strong>increased</strong> over 7 years. Mizoram worsened by 5.9 percentage points despite having good infrastructure.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- State Ranking Table -->
+    <div class="section-header">
+      <div class="icon">📋</div>
+      <h2>Complete State Ranking — Girls' Secondary Dropout Rate</h2>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <h2 style="margin-bottom:4px;">All 36 States/UTs</h2>
+          <p class="small mb-0">Click any column header to sort. Search to filter states.</p>
+        </div>
+        <input type="text" id="state-search" class="search-input" placeholder="🔍 Search state…" />
+      </div>
+      <div class="state-table-wrapper" style="max-height:600px; overflow-y:auto;">
+        <table class="state-table" id="state-ranking-table">
+          <thead>
+            <tr>
+              <th class="rank-cell">#</th>
+              <th>State / UT</th>
+              <th>Status</th>
+              <th>2024-25 Rate (%)</th>
+              <th>2018-19 Rate (%)</th>
+              <th>Change (pp)</th>
+              <th>7-Year Trend</th>
+            </tr>
+          </thead>
+          <tbody id="state-table-body">
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="section-header">
+      <div class="icon">🔗</div>
+      <h2>Deep Dive Pages</h2>
+    </div>
+    <div class="kpi-grid">
+      <a href="trends.html" class="kpi-card info" style="text-decoration:none;">
+        <div class="kpi-label">📈 Trends</div>
+        <div class="kpi-value" style="font-size:20px;">7-Year Journey</div>
+        <div class="kpi-detail">State-by-state trend analysis with COVID markers</div>
+      </a>
+      <a href="attrition.html" class="kpi-card warning" style="text-decoration:none;">
+        <div class="kpi-label">🪜 Attrition</div>
+        <div class="kpi-value" style="font-size:20px;">Class 9 Cliff</div>
+        <div class="kpi-detail">Where exactly do girls drop out?</div>
+      </a>
+      <a href="infrastructure.html" class="kpi-card saffron" style="text-decoration:none;">
+        <div class="kpi-label">🏗️ Infrastructure</div>
+        <div class="kpi-value" style="font-size:20px;">Toilet ROI</div>
+        <div class="kpi-detail">Does building toilets keep girls in school?</div>
+      </a>
+      <a href="teachers.html" class="kpi-card success" style="text-decoration:none;">
+        <div class="kpi-label">👩‍🏫 Teachers</div>
+        <div class="kpi-value" style="font-size:20px;">Role Model Effect</div>
+        <div class="kpi-detail">Female teacher correlation (r = -0.41)</div>
+      </a>
+    </div>
+
+    <footer class="site-footer">
+      <p>Data: UDISE+ Ministry of Education · Analysis: Python + JavaScript · <a href="analysis_summary.json">analysis_summary.json</a> · <a href="data/validation_report.json">Validation Report</a></p>
+      <p>This dashboard presents official UDISE+ data for policy discussion. Correlations shown are not causal proof.</p>
+    </footer>
+  </main>
+
+  <script>
+  // ============================================================
+  // EXECUTIVE DASHBOARD — Data Loading & Visualization
+  // ============================================================
+
+  const PLOTLY_LAYOUT_DEFAULTS = {
+    paper_bgcolor: 'rgba(0,0,0,0)',
+    plot_bgcolor: 'rgba(0,0,0,0)',
+    font: { family: 'Inter, system-ui, sans-serif', color: '#94a3b8', size: 12 },
+    margin: { t: 30, r: 20, b: 50, l: 50 },
+    xaxis: { gridcolor: 'rgba(148,163,184,0.08)', zerolinecolor: 'rgba(148,163,184,0.15)' },
+    yaxis: { gridcolor: 'rgba(148,163,184,0.08)', zerolinecolor: 'rgba(148,163,184,0.15)' },
+    hoverlabel: { bgcolor: '#1a2235', bordercolor: '#FF9933', font: { color: '#f0f4fc', size: 13 } },
+  };
+
+  const PLOTLY_CONFIG = {
+    displayModeBar: false,
+    responsive: true,
+  };
+
+  // ---- Data Loading ----
+  async function loadJSON(path) {
+    const res = await fetch(path);
+    if (!res.ok) throw new Error(`Failed to load ${path}`);
+    return res.json();
+  }
+
+  async function init() {
+    try {
+      const [task1, task9, task2, task3, task10] = await Promise.all([
+        loadJSON('data/task_1.json'),
+        loadJSON('data/task_9.json'),
+        loadJSON('data/task_2.json'),
+        loadJSON('data/task_3.json'),
+        loadJSON('data/task_10.json'),
+      ]);
+
+      renderKPIs(task1, task9, task10);
+      renderKeyInsight(task1, task9);
+      renderNationalTrend(task9);
+      renderLevelComparison(task1);
+      renderSurvivalFunnel(task1);
+      renderImproversChart(task9);
+      renderWorseningChart(task9);
+      renderStateTable(task9);
+    } catch (err) {
+      console.error('Dashboard init error:', err);
+      document.getElementById('kpi-section').innerHTML = `
+        <div class="card" style="grid-column:1/-1;">
+          <h2>⚠️ Error Loading Data</h2>
+          <p class="small">${err.message}. Make sure to serve this via HTTP (not file://). Run: <code>python3 -m http.server -d docs 8000</code></p>
+        </div>
+      `;
+    }
+  }
+
+  // ---- KPI Cards ----
+  function renderKPIs(task1, task9, task10) {
+    const latestData = task1.chart_data.india_dropout_by_level;
+    const latestSecondary = latestData.find(d => d.year === '2024-25' && d.level === 'Secondary (9-10)');
+    const firstSecondary = latestData.find(d => d.year === '2018-19' && d.level === 'Secondary (9-10)');
+
+    const latestRate = latestSecondary ? latestSecondary.rate : '—';
+    const firstRate = firstSecondary ? firstSecondary.rate : '—';
+    const change = (firstRate - latestRate).toFixed(1);
+
+    // Count crisis states (>15%)
+    const timeSeries = task9.chart_data.time_series;
+    const latest = {};
+    timeSeries.forEach(d => {
+      if (d.year === '2024-25') latest[d.state_ut] = d.rate;
+    });
+    const crisisCount = Object.values(latest).filter(r => r >= 15).length;
+    const successCount = Object.values(latest).filter(r => r < 5).length;
+
+    // States on track for SDG
+    const onTrack = task10.chart_data.by_state.filter(s => s.implementation_gap_to_0 === 0).length;
+
+    document.getElementById('kpi-section').innerHTML = `
+      <div class="kpi-card crisis animate-in delay-1">
+        <div class="kpi-label">National Girls' Dropout</div>
+        <div class="kpi-value">${latestRate}%</div>
+        <div class="kpi-detail">Secondary level (Classes 9-10), 2024-25</div>
+        <div class="kpi-trend down">↓ ${change}pp from 2018-19</div>
+      </div>
+      <div class="kpi-card warning animate-in delay-2">
+        <div class="kpi-label">Crisis States</div>
+        <div class="kpi-value">${crisisCount}</div>
+        <div class="kpi-detail">States with dropout above 15%</div>
+        <div class="kpi-trend up">Need immediate intervention</div>
+      </div>
+      <div class="kpi-card success animate-in delay-3">
+        <div class="kpi-label">Excellence States</div>
+        <div class="kpi-value">${successCount}</div>
+        <div class="kpi-detail">States with dropout below 5%</div>
+        <div class="kpi-trend down">Models for replication</div>
+      </div>
+      <div class="kpi-card info animate-in delay-4">
+        <div class="kpi-label">SDG 2030 On-Track</div>
+        <div class="kpi-value">${onTrack}</div>
+        <div class="kpi-detail">States projected to reach near-zero by 2030</div>
+        <div class="kpi-trend down">At current improvement rate</div>
+      </div>
+    `;
+  }
+
+  // ---- Key Insight ----
+  function renderKeyInsight(task1, task9) {
+    const survivalData = task1.findings.survival_cohort_100;
+    const finalSurvival = survivalData.girls_remaining[survivalData.girls_remaining.length - 1];
+    const droppedOut = Math.round(100 - finalSurvival);
+
+    document.getElementById('key-insight').innerHTML = `
+      <div class="insight-label">🔑 The One Number That Matters</div>
+      <p>For every <strong>100 girls</strong> who start school in Class 1, only <strong>${Math.round(finalSurvival)}</strong> survive to complete Class 10. That means <strong>${droppedOut} girls are lost</strong> — and <strong>almost all of them drop out at the secondary stage</strong> (Classes 9-10). Primary education has nearly solved the dropout problem. The battle is now at the secondary gate.</p>
+    `;
+  }
+
+  // ---- National Trend Line ----
+  function renderNationalTrend(task9) {
+    // Get India-level data from time series
+    const states = {};
+    task9.chart_data.time_series.forEach(d => {
+      if (!states[d.state_ut]) states[d.state_ut] = {};
+      states[d.state_ut][d.year] = d.rate;
+    });
+
+    // Calculate national avg per year (simple mean across states)
+    const years = ['2018-19', '2019-20', '2020-21', '2021-22', '2022-23', '2023-24', '2024-25'];
+    const nationalAvg = years.map(y => {
+      const rates = Object.values(states).map(s => s[y]).filter(r => r !== undefined && r !== null);
+      return rates.length ? rates.reduce((a,b) => a+b, 0) / rates.length : null;
+    });
+
+    // Also get specific crisis states for comparison
+    const jharkhand = years.map(y => states['Jharkhand']?.[y] ?? null);
+    const mizoram = years.map(y => states['Mizoram']?.[y] ?? null);
+    const bihar = years.map(y => states['Bihar']?.[y] ?? null);
+
+    const traces = [
+      {
+        x: years, y: nationalAvg, name: 'National Average',
+        mode: 'lines+markers',
+        line: { color: '#FF9933', width: 3 },
+        marker: { size: 8, color: '#FF9933' },
+      },
+      {
+        x: years, y: jharkhand, name: 'Jharkhand (Best Turnaround)',
+        mode: 'lines+markers',
+        line: { color: '#22c55e', width: 2, dash: 'dot' },
+        marker: { size: 6 },
+      },
+      {
+        x: years, y: bihar, name: 'Bihar (Major Improvement)',
+        mode: 'lines+markers',
+        line: { color: '#3b82f6', width: 2, dash: 'dot' },
+        marker: { size: 6 },
+      },
+      {
+        x: years, y: mizoram, name: 'Mizoram (Worsening)',
+        mode: 'lines+markers',
+        line: { color: '#ef4444', width: 2, dash: 'dot' },
+        marker: { size: 6 },
+      },
+    ];
+
+    const layout = {
+      ...PLOTLY_LAYOUT_DEFAULTS,
+      showlegend: true,
+      legend: { orientation: 'h', y: -0.18, x: 0.5, xanchor: 'center', font: { size: 11 } },
+      yaxis: { ...PLOTLY_LAYOUT_DEFAULTS.yaxis, title: 'Dropout Rate (%)', range: [0, 40] },
+      xaxis: { ...PLOTLY_LAYOUT_DEFAULTS.xaxis, title: '' },
+      shapes: [
+        {
+          type: 'rect', x0: '2019-20', x1: '2020-21', y0: 0, y1: 40,
+          fillcolor: 'rgba(239,68,68,0.05)', line: { width: 0 },
+        }
+      ],
+      annotations: [
+        {
+          x: '2020-21', y: 38, text: 'COVID-19', showarrow: false,
+          font: { size: 10, color: '#ef4444' },
+        }
+      ],
+    };
+
+    Plotly.newPlot('plot-national-trend', traces, layout, PLOTLY_CONFIG);
+  }
+
+  // ---- Dropout by Level ----
+  function renderLevelComparison(task1) {
+    const data = task1.chart_data.india_dropout_by_level;
+    const levels = ['Primary (1-5)', 'Upper Primary (6-8)', 'Secondary (9-10)'];
+    const years = ['2018-19', '2024-25'];
+    const colors = { 'Primary (1-5)': '#22c55e', 'Upper Primary (6-8)': '#f59e0b', 'Secondary (9-10)': '#ef4444' };
+
+    const traces = levels.map(level => ({
+      x: years,
+      y: years.map(y => {
+        const match = data.find(d => d.year === y && d.level === level);
+        return match ? match.rate : 0;
+      }),
+      name: level,
+      type: 'bar',
+      marker: { color: colors[level], opacity: 0.85, line: { width: 0 } },
+      text: years.map(y => {
+        const match = data.find(d => d.year === y && d.level === level);
+        return match ? match.rate + '%' : '0%';
+      }),
+      textposition: 'outside',
+      textfont: { size: 12, color: '#f0f4fc' },
+    }));
+
+    const layout = {
+      ...PLOTLY_LAYOUT_DEFAULTS,
+      barmode: 'group',
+      showlegend: true,
+      legend: { orientation: 'h', y: -0.15, x: 0.5, xanchor: 'center', font: { size: 11 } },
+      yaxis: { ...PLOTLY_LAYOUT_DEFAULTS.yaxis, title: 'Dropout Rate (%)', range: [0, 22] },
+    };
+
+    Plotly.newPlot('plot-level-comparison', traces, layout, PLOTLY_CONFIG);
+  }
+
+  // ---- Survival Funnel ----
+  function renderSurvivalFunnel(task1) {
+    const labels = task1.chart_data.survival_step.x;
+    const values = task1.chart_data.survival_step.y;
+
+    const barColors = values.map((v, i) => {
+      if (i === 0) return '#3b82f6';
+      if (v >= 97) return '#22c55e';
+      if (v >= 90) return '#f59e0b';
+      return '#ef4444';
+    });
+
+    const trace = {
+      x: labels, y: values,
+      type: 'bar',
+      marker: {
+        color: barColors,
+        opacity: 0.9,
+        line: { width: 0 },
+      },
+      text: values.map(v => v.toFixed(1)),
+      textposition: 'outside',
+      textfont: { size: 14, color: '#f0f4fc', family: 'Inter' },
+      hovertemplate: '%{x}<br>Girls remaining: <b>%{y:.1f}</b> out of 100<extra></extra>',
+    };
+
+    const layout = {
+      ...PLOTLY_LAYOUT_DEFAULTS,
+      yaxis: { ...PLOTLY_LAYOUT_DEFAULTS.yaxis, title: 'Girls remaining (out of 100)', range: [0, 115] },
+      xaxis: { ...PLOTLY_LAYOUT_DEFAULTS.xaxis, tickangle: 0 },
+      showlegend: false,
+      annotations: [{
+        x: labels[labels.length - 1], y: values[values.length - 1] + 8,
+        text: `<b>${(100 - values[values.length - 1]).toFixed(0)} girls lost</b>`,
+        showarrow: false,
+        font: { size: 13, color: '#ef4444' },
+      }],
+    };
+
+    Plotly.newPlot('plot-survival', [trace], layout, PLOTLY_CONFIG);
+  }
+
+  // ---- Top Improvers ----
+  function renderImproversChart(task9) {
+    const ts = task9.chart_data.time_series;
+    const stateMap = {};
+    ts.forEach(d => {
+      if (!stateMap[d.state_ut]) stateMap[d.state_ut] = {};
+      stateMap[d.state_ut][d.year] = d.rate;
+    });
+
+    const changes = Object.keys(stateMap)
+      .filter(s => stateMap[s]['2018-19'] !== undefined && stateMap[s]['2024-25'] !== undefined)
+      .map(s => ({
+        state: s,
+        start: stateMap[s]['2018-19'],
+        end: stateMap[s]['2024-25'],
+        change: stateMap[s]['2018-19'] - stateMap[s]['2024-25'],
+      }))
+      .sort((a, b) => b.change - a.change)
+      .slice(0, 8);
+
+    const trace = {
+      y: changes.map(c => c.state),
+      x: changes.map(c => c.change),
+      type: 'bar',
+      orientation: 'h',
+      marker: {
+        color: changes.map(c => {
+          if (c.change > 15) return '#22c55e';
+          if (c.change > 8) return '#3b82f6';
+          return '#f59e0b';
+        }),
+        opacity: 0.85,
+      },
+      text: changes.map(c => `↓ ${c.change.toFixed(1)}pp (${c.start}% → ${c.end}%)`),
+      textposition: 'outside',
+      textfont: { size: 11, color: '#94a3b8' },
+      hovertemplate: '<b>%{y}</b><br>Improvement: %{x:.1f}pp<extra></extra>',
+    };
+
+    const layout = {
+      ...PLOTLY_LAYOUT_DEFAULTS,
+      margin: { ...PLOTLY_LAYOUT_DEFAULTS.margin, l: 140 },
+      xaxis: { ...PLOTLY_LAYOUT_DEFAULTS.xaxis, title: 'Improvement (percentage points)' },
+      yaxis: { ...PLOTLY_LAYOUT_DEFAULTS.yaxis, autorange: 'reversed' },
+      showlegend: false,
+    };
+
+    Plotly.newPlot('plot-improvers', [trace], layout, PLOTLY_CONFIG);
+  }
+
+  // ---- Worsening States ----
+  function renderWorseningChart(task9) {
+    const ts = task9.chart_data.time_series;
+    const stateMap = {};
+    ts.forEach(d => {
+      if (!stateMap[d.state_ut]) stateMap[d.state_ut] = {};
+      stateMap[d.state_ut][d.year] = d.rate;
+    });
+
+    const worsening = Object.keys(stateMap)
+      .filter(s => stateMap[s]['2018-19'] !== undefined && stateMap[s]['2024-25'] !== undefined)
+      .map(s => ({
+        state: s,
+        start: stateMap[s]['2018-19'],
+        end: stateMap[s]['2024-25'],
+        change: stateMap[s]['2024-25'] - stateMap[s]['2018-19'],
+      }))
+      .filter(c => c.change > 0)
+      .sort((a, b) => b.change - a.change);
+
+    if (worsening.length === 0) {
+      document.getElementById('plot-worsening').innerHTML = '<div class="callout success"><div class="callout-icon">✅</div><div class="callout-body"><div class="callout-title">Good News</div><div class="callout-text">No states show a net worsening over the 7-year period.</div></div></div>';
+      return;
+    }
+
+    const trace = {
+      y: worsening.map(c => c.state),
+      x: worsening.map(c => c.change),
+      type: 'bar',
+      orientation: 'h',
+      marker: { color: '#ef4444', opacity: 0.85 },
+      text: worsening.map(c => `↑ ${c.change.toFixed(1)}pp (${c.start}% → ${c.end}%)`),
+      textposition: 'outside',
+      textfont: { size: 11, color: '#94a3b8' },
+      hovertemplate: '<b>%{y}</b><br>Worsening: +%{x:.1f}pp<extra></extra>',
+    };
+
+    const layout = {
+      ...PLOTLY_LAYOUT_DEFAULTS,
+      margin: { ...PLOTLY_LAYOUT_DEFAULTS.margin, l: 120 },
+      xaxis: { ...PLOTLY_LAYOUT_DEFAULTS.xaxis, title: 'Worsening (percentage points)' },
+      yaxis: { ...PLOTLY_LAYOUT_DEFAULTS.yaxis, autorange: 'reversed' },
+      showlegend: false,
+      height: Math.max(200, worsening.length * 60 + 100),
+    };
+
+    Plotly.newPlot('plot-worsening', [trace], layout, PLOTLY_CONFIG);
+  }
+
+  // ---- State Ranking Table ----
+  function renderStateTable(task9) {
+    const ts = task9.chart_data.time_series;
+    const stateMap = {};
+    ts.forEach(d => {
+      if (!stateMap[d.state_ut]) stateMap[d.state_ut] = {};
+      stateMap[d.state_ut][d.year] = d.rate;
+    });
+
+    const rows = Object.keys(stateMap)
+      .filter(s => stateMap[s]['2024-25'] !== undefined)
+      .map(s => {
+        const latest = stateMap[s]['2024-25'];
+        const first = stateMap[s]['2018-19'] ?? null;
+        const change = first !== null ? first - latest : null;
+        return { state: s, latest, first, change };
+      })
+      .sort((a, b) => b.latest - a.latest);
+
+    const tbody = document.getElementById('state-table-body');
+
+    function renderRows(data) {
+      tbody.innerHTML = data.map((r, i) => {
+        const severityClass = r.latest >= 15 ? 'severity-crisis' :
+                              r.latest >= 10 ? 'severity-warning' :
+                              r.latest >= 5 ? 'severity-moderate' : 'severity-good';
+        const statusLabel = r.latest >= 15 ? 'Crisis' :
+                            r.latest >= 10 ? 'Concern' :
+                            r.latest >= 5 ? 'Moderate' : 'Excellent';
+        const trendClass = r.change === null ? 'stable' : r.change > 0 ? 'improving' : 'worsening';
+        const trendLabel = r.change === null ? '—' :
+                          r.change > 0 ? `↓ ${r.change.toFixed(1)}pp` : `↑ ${Math.abs(r.change).toFixed(1)}pp`;
+
+        // Sparkline from all years
+        const years = ['2018-19','2019-20','2020-21','2021-22','2022-23','2023-24','2024-25'];
+        const sparkVals = years.map(y => stateMap[r.state]?.[y]);
+        const maxVal = Math.max(...sparkVals.filter(v => v != null), 1);
+        const sparkHTML = sparkVals.map(v => {
+          if (v == null) return '<div class="sparkline-bar" style="height:0; background:transparent;"></div>';
+          const h = Math.max(3, (v / maxVal) * 100);
+          const c = v >= 15 ? '#ef4444' : v >= 10 ? '#f59e0b' : v >= 5 ? '#3b82f6' : '#22c55e';
+          return `<div class="sparkline-bar" style="height:${h}%; background:${c};" title="${v}%"></div>`;
+        }).join('');
+
+        return `<tr data-state="${r.state.toLowerCase()}">
+          <td class="rank-cell">${i + 1}</td>
+          <td class="state-name">${r.state}</td>
+          <td><span class="severity-dot ${severityClass}"></span>${statusLabel}</td>
+          <td class="rate-cell" style="color:${r.latest >= 15 ? '#ef4444' : r.latest >= 10 ? '#f59e0b' : r.latest >= 5 ? '#94a3b8' : '#22c55e'}">${r.latest}%</td>
+          <td class="rate-cell" style="color:#64748b">${r.first !== null ? r.first + '%' : '—'}</td>
+          <td><span class="trend-arrow ${trendClass}">${trendLabel}</span></td>
+          <td><div class="sparkline-container">${sparkHTML}</div></td>
+        </tr>`;
+      }).join('');
+    }
+
+    renderRows(rows);
+
+    // Search filter
+    document.getElementById('state-search').addEventListener('input', function(e) {
+      const q = e.target.value.toLowerCase();
+      const filtered = q ? rows.filter(r => r.state.toLowerCase().includes(q)) : rows;
+      renderRows(filtered);
+    });
+
+    // Click-to-sort
+    const headers = document.querySelectorAll('.state-table th');
+    let sortCol = 3; // Default: 2024-25 rate
+    let sortDir = 'desc';
+
+    headers.forEach((th, idx) => {
+      th.addEventListener('click', () => {
+        headers.forEach(h => h.classList.remove('sorted-asc', 'sorted-desc'));
+        if (sortCol === idx) sortDir = sortDir === 'desc' ? 'asc' : 'desc';
+        else { sortCol = idx; sortDir = 'desc'; }
+        th.classList.add(sortDir === 'asc' ? 'sorted-asc' : 'sorted-desc');
+
+        const sorted = [...rows].sort((a, b) => {
+          let va, vb;
+          switch (idx) {
+            case 1: va = a.state; vb = b.state; return sortDir === 'asc' ? va.localeCompare(vb) : vb.localeCompare(va);
+            case 3: va = a.latest; vb = b.latest; break;
+            case 4: va = a.first ?? -1; vb = b.first ?? -1; break;
+            case 5: va = a.change ?? -999; vb = b.change ?? -999; break;
+            default: va = a.latest; vb = b.latest;
+          }
+          return sortDir === 'asc' ? va - vb : vb - va;
+        });
+        renderRows(sorted);
+      });
+    });
+  }
+
+  // ---- Boot ----
+  init();
+  </script>
+</body>
+</html>

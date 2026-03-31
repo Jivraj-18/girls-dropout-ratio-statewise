@@ -1,0 +1,166 @@
+{
+  "generated_from": "/home/jivraj/straive/girl-dropout-rate-analysis",
+  "task_feasibility": {
+    "task_1_peak_attrition": {
+      "feasible": true,
+      "requires": [
+        "dropout",
+        "promotion",
+        "repetition"
+      ],
+      "evidence": {
+        "dropout_files": [
+          "udise_csv_data/2018-19/csv_files/Table 5.13 Dropout Rate by level of school education and gender, 2018-19 - page 83.csv",
+          "udise_csv_data/2019-20/csv_files/Table 5.13 Dropout Rate by level of school education and gender - page 99.csv",
+          "udise_csv_data/2020-21/csv_files/Table 5.13 Dropout Rate by level of education and gender - page 109.csv",
+          "udise_csv_data/2021-22/csv_files/Table 6.13 Dropout Rate by level of education and gender- page 121.csv",
+          "udise_csv_data/2022-23/csv_files/Table 6.13 Dropout Rate by level of education and gender, 2022-23, - page 116.csv"
+        ],
+        "promotion_files": [
+          "udise_csv_data/2018-19/csv_files/Table 5.11 Promotion Rate by level of school education and gender, 2018-19 - page 81.csv",
+          "udise_csv_data/2019-20/csv_files/Table 5.11 Promotion Rate by level of school education and gender - page 97.csv",
+          "udise_csv_data/2020-21/csv_files/Table 5.11 Promotion Rate by level of education and gender - page 107.csv",
+          "udise_csv_data/2021-22/csv_files/Table 6.11 Promotion Rate by level of education and gender- page 119.csv",
+          "udise_csv_data/2022-23/csv_files/Table 6.11 Promotion Rate by level of education and gender, 2022-23, - page 114.csv"
+        ],
+        "repetition_files": [
+          "udise_csv_data/2018-19/csv_files/Table 5.12 Repetition Rate by level of school education and gender, 2018-19 - page 82.csv",
+          "udise_csv_data/2019-20/csv_files/Table 5.12 Repetition Rate by level of school education and gender - page 98.csv",
+          "udise_csv_data/2020-21/csv_files/Table 5.12 Repetition Rate by level of education and gender.csv",
+          "udise_csv_data/2021-22/csv_files/Table 6.12 Repetition Rate by level of education and gender, 2021-22 - page 120.csv",
+          "udise_csv_data/2022-23/csv_files/Table 6.12 Repetition Rate by level of education and gender, 2022-23 - page 115.csv"
+        ]
+      },
+      "granularity": "State/UT x year x level x gender"
+    },
+    "task_2_infrastructure_roi": {
+      "feasible": true,
+      "requires": [
+        "dropout",
+        "infrastructure"
+      ],
+      "evidence": {
+        "infra_files": [
+          "udise_csv_data/2022-23/csv_files/Table 2.5 (continued) State wise highlights of the UDISE+ 2022-23 data Infrastructure. - page 34.csv",
+          "udise_csv_data/2022-23/csv_files/Table 2.5 State wise highlights of the UDISE+ 2022-23 data Infrastructure - page 33.csv",
+          "udise_csv_data/2023-24/csv_files/Table 2.5 (continued) State wise highlights of the UDISE+ 2023-24 data Infrastructure - page 35.csv",
+          "udise_csv_data/2023-24/csv_files/Table 2.5 State wise highlights of the UDISE+ 2023-24 data Infrastructure - page 34.csv",
+          "udise_csv_data/2024-25/csv_files/Table 2.5 (continued) State wise highlights of the UDISE+ 2024-25 data Infrastructure., - page 36.csv"
+        ],
+        "dropout_files": [
+          "udise_csv_data/2018-19/csv_files/Table 5.13 Dropout Rate by level of school education and gender, 2018-19 - page 83.csv",
+          "udise_csv_data/2019-20/csv_files/Table 5.13 Dropout Rate by level of school education and gender - page 99.csv",
+          "udise_csv_data/2020-21/csv_files/Table 5.13 Dropout Rate by level of education and gender - page 109.csv",
+          "udise_csv_data/2021-22/csv_files/Table 6.13 Dropout Rate by level of education and gender- page 121.csv",
+          "udise_csv_data/2022-23/csv_files/Table 6.13 Dropout Rate by level of education and gender, 2022-23, - page 116.csv"
+        ]
+      },
+      "granularity": "State/UT x year (for dropout) + State/UT x year (infra, 2022-23+)"
+    },
+    "task_3_female_teacher_multiplier": {
+      "feasible": true,
+      "requires": [
+        "dropout",
+        "female_teacher_share"
+      ],
+      "evidence": {
+        "female_teacher_files": [
+          "udise_csv_data/2022-23/csv_files/Table 4.13 (continued) Number of teachers by management, gender and classes taught, 2022-23 All Management - page 62.csv",
+          "udise_csv_data/2022-23/csv_files/Table 4.13 (continued) Number of teachers by management, gender and classes taught, 2022-23All Management - page 61.csv",
+          "udise_csv_data/2022-23/csv_files/Table 4.13 Number of teachers by management, gender and classes taught, 2022-23 All Management - page 60.csv"
+        ]
+      },
+      "notes": "Feasible using Table 4.13 (teachers by gender). In this repo, Table 2.4 is NOT female teachers."
+    },
+    "task_4_peer_benchmarking": {
+      "feasible": true,
+      "requires": [
+        "dropout",
+        "ger"
+      ],
+      "evidence": {
+        "ger_files": [
+          "udise_csv_data/2018-19/csv_files/Table 5.1 Gross Enrolment Ratio (GER) by Gender and Level of School Education, 2018-19 - page 71.csv",
+          "udise_csv_data/2018-19/csv_files/Table 5.2 Gross Enrolment Ratio (GER) by Gender and Level of School Education, 2018-19 - page 72.csv",
+          "udise_csv_data/2018-19/csv_files/Table 5.3 Gross Enrolment Ratio (GER) by Gender and Level of School Education, 2018-19 - page 73.csv",
+          "udise_csv_data/2019-20/csv_files/Table 5.1 Gross Enrolment Ratio (GER) by Gender and Level of school education - page 87.csv",
+          "udise_csv_data/2019-20/csv_files/Table 5.2 Gross Enrolment Ratio (GER) by Gender and Level of school education - page 88.csv"
+        ]
+      }
+    },
+    "task_5_equity_gap": {
+      "feasible": false,
+      "requires": [
+        "dropout_by_social_category"
+      ],
+      "evidence": {
+        "candidate_files": []
+      },
+      "notes": "Not found in current dump (dropout appears by gender/level, not social category)."
+    },
+    "task_6_incentive_efficiency": {
+      "feasible": false,
+      "requires": [
+        "incentives_table"
+      ],
+      "evidence": {
+        "candidate_files": []
+      },
+      "notes": "The only Table 5.18 present is 'Gifted Children' (2021-22), not incentives."
+    },
+    "task_7_single_teacher_risk": {
+      "feasible": true,
+      "requires": [
+        "dropout",
+        "single_teacher"
+      ],
+      "evidence": {
+        "single_teacher_files": [
+          "udise_csv_data/2022-23/csv_files/Table 2.2 State wise highlights of the UDISE+ 2022-23 data Schools, Enrolments and Teachers - page 30.csv",
+          "udise_csv_data/2023-24/csv_files/Table 2.2 State wise highlights of the UDISE+ 2023-24 data Schools, Enrolments and Teachers - page 31.csv",
+          "udise_csv_data/2024-25/csv_files/Table 2.2 State wise highlights of the UDISE+ 2024-25 data Schools, Enrolments and Teachers,, - page 32.csv"
+        ]
+      }
+    },
+    "task_8_digital_hope": {
+      "feasible": true,
+      "requires": [
+        "dropout",
+        "infra_ict",
+        "vocational_or_ict_table"
+      ],
+      "evidence": {
+        "vocational_ict_files": [
+          "udise_csv_data/2022-23/csv_files/Table 9.9 Number of Government and Government Aided Schools with Upper Primary, Secondary and Higher Secondary sections having ICT and - page 175.csv",
+          "udise_csv_data/2023-24/csv_files/Table 9.9 Number of Government and Government Aided Schools with Upper Primary, Secondary and Higher Secondary sections having ICT and - page 178.csv"
+        ]
+      },
+      "notes": "We have infra computer/internet coverage, but no separate vocational/ICT outcomes table in this dump."
+    },
+    "task_9_red_zone_hotspots": {
+      "feasible": true,
+      "requires": [
+        "dropout"
+      ],
+      "granularity": "State/UT only (no district series found)",
+      "notes": "Feasible at State/UT level; district-level clustering requires district-wise dropout tables (not found)."
+    },
+    "task_10_sdg_forecast": {
+      "feasible": true,
+      "requires": [
+        "dropout"
+      ],
+      "granularity": "Per state linear trend using 2018–2025"
+    }
+  },
+  "table_presence_summary": {
+    "dropout_rate_files": 7,
+    "promotion_rate_files": 7,
+    "repetition_rate_files": 7,
+    "infrastructure_files": 12,
+    "ger_files": 21,
+    "single_teacher_files": 3,
+    "female_teacher_files": 9,
+    "district_level_files": 0
+  }
+}

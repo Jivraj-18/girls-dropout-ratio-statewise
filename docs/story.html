@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Where Girls Leave School — A Data Story (UDISE+ 2018–2025)</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+</head>
+<body>
+  <main class="wrap story">
+    <header class="sitehead">
+      <p class="kicker">A narrative data story</p>
+      <h1 class="title">The Class 9 Cliff</h1>
+      <p class="subtitle">A detective story told with UDISE+ (2018–2025). No assumptions. No magic. Just the trail girls leave behind in the data.</p>
+      <p class="meta">
+        Rendered from JSON in <span class="mono">docs/data/</span>.
+        <span class="links">
+          <a href="index.html">dashboard</a>
+          · <a href="analysis_summary.json">analysis_summary.json</a>
+          · <a href="data/validation_report.json">validation_report.json</a>
+        </span>
+      </p>
+    </header>
+
+    <section id="status" class="card small">
+      <div>Loading…</div>
+      <div class="small">If this stays stuck, open via GitHub Pages (https://) or run <span class="mono">python3 -m http.server -d docs 8000</span> and visit <span class="mono">http://localhost:8000/story.html</span>. (It won’t fully work on <span class="mono">file://</span>.)</div>
+    </section>
+
+    <section class="card">
+      <h2>1) The Hook</h2>
+      <div id="hook"></div>
+    </section>
+
+    <section class="card">
+      <h2>2) The Complication</h2>
+      <p class="small">The obvious story is that dropout is a single number — a national problem with a national solution. The data refuses to cooperate.</p>
+      <div class="grid">
+        <div>
+          <h3 id="t1_headline">Loading…</h3>
+          <div id="plot_t1_story" class="plot"></div>
+          <div id="t1_caption" class="small"></div>
+        </div>
+        <div>
+          <h3 id="t9_headline">Loading…</h3>
+          <div id="t9_table"></div>
+          <div id="t9_caption" class="small"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>3) The Revelation</h2>
+      <p class="small">If you want a single lever, you want something that is both common enough to matter and sharp enough to act on.</p>
+      <div class="grid">
+        <div>
+          <h3 id="t2_headline">Loading…</h3>
+          <div id="plot_t2_story" class="plot"></div>
+          <div id="t2_caption" class="small"></div>
+        </div>
+        <div>
+          <h3 id="t3_headline">Loading…</h3>
+          <div id="plot_t3_story" class="plot"></div>
+          <div id="t3_caption" class="small"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>4) The Hidden System</h2>
+      <p class="small">Sometimes the constraint isn’t the building. It’s the adult-to-child ratio inside it.</p>
+      <div class="grid">
+        <div>
+          <h3 id="t7_headline">Loading…</h3>
+          <div id="plot_t7_story" class="plot"></div>
+          <div id="t7_caption" class="small"></div>
+        </div>
+        <div>
+          <h3 id="t4_headline">Loading…</h3>
+          <div id="t4_blocks"></div>
+          <div id="t4_caption" class="small"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>5) The "Wait, Really?" Ending</h2>
+      <div id="ending"></div>
+      <div id="plot_t10_story" class="plot"></div>
+      <div id="t10_caption" class="small"></div>
+    </section>
+
+    <section class="card">
+      <h2>Honest Caveats</h2>
+      <ul class="small" id="caveats"></ul>
+    </section>
+
+    <footer class="footer small">
+      Static page for GitHub Pages. Use <span class="mono">python -m http.server -d docs 8000</span> for local viewing.
+    </footer>
+  </main>
+
+  <script src="story.js"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+{
+  "task_id": 7,
+  "title": "Single-Teacher School Risk Mapping",
+  "year": "2024-25",
+  "gender": "Girls",
+  "findings": {
+    "n_states": 36,
+    "correlation": 0.3135910930418741,
+    "correlation_perm_p": 0.013397320535892822,
+    "top_10_single_teacher_pct": [
+      {
+        "state_ut": "West Bengal",
+        "single_teacher_pct": 19.169823400736274,
+        "secondary_dropout_rate": 16.7
+      },
+      {
+        "state_ut": "Telangana",
+        "single_teacher_pct": 2.3543588079899895,
+        "secondary_dropout_rate": 10.7
+      },
+      {
+        "state_ut": "Ladakh",
+        "single_teacher_pct": 1.8730489073881373,
+        "secondary_dropout_rate": 14.4
+      },
+      {
+        "state_ut": "Manipur",
+        "single_teacher_pct": 1.2858979854264896,
+        "secondary_dropout_rate": 8.6
+      },
+      {
+        "state_ut": "Meghalaya",
+        "single_teacher_pct": 1.0420237197504627,
+        "secondary_dropout_rate": 16.6
+      },
+      {
+        "state_ut": "Tamil Nadu",
+        "single_teacher_pct": 0.7456632432898939,
+        "secondary_dropout_rate": 5.3
+      },
+      {
+        "state_ut": "Mizoram",
+        "single_teacher_pct": 0.6794162053346754,
+        "secondary_dropout_rate": 16.0
+      },
+      {
+        "state_ut": "Arunachal Pradesh",
+        "single_teacher_pct": 0.4645401052957572,
+        "secondary_dropout_rate": 17.7
+      },
+      {
+        "state_ut": "Karnataka",
+        "single_teacher_pct": 0.4114401741941517,
+        "secondary_dropout_rate": 14.6
+      },
+      {
+        "state_ut": "Rajasthan",
+        "single_teacher_pct": 0.2756298094109236,
+        "secondary_dropout_rate": 7.1
+      }
+    ]
+  },
+  "chart_data": {
+    "points": [
+      {
+        "state_ut": "Andaman and Nicobar Islands",
+        "single_teacher_pct": 0.0,
+        "secondary_dropout_rate": 3.5
+      },
+      {
+        "state_ut": "Andhra Pradesh",
+        "single_teacher_pct": 0.004892607270414404,
+        "secondary_dropout_rate": 12.5
+      },
+      {
+        "state_ut": "Arunachal Pradesh",
+        "single_teacher_pct": 0.4645401052957572,
+        "secondary_dropout_rate": 17.7
+      },
+      {
+        "state_ut": "Assam",
+        "single_teacher_pct": 0.0,
+        "secondary_dropout_rate": 16.7
+      },
+      {
+        "state_ut": "Bihar",
+        "single_teacher_pct": 0.018020118932784955,
+        "secondary_dropout_rate": 6.8
+      },
+      {
+        "state_ut": "Chandigarh",
+        "single_teacher_pct": 0.0,
+        "secondary_dropout_rate": 1.1
+      },
+      {
+        "state_ut": "Chhattisgarh",
+        "single_teacher_pct": 0.0,
+        "secondary_dropout_rate": 11.6
+      },
+      {
+        "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+        "single_teacher_pct": 0.0,
+        "secondary_dropout_rate": 8.6
+      },
+      {
+        "state_ut": "Delhi",
+        "single_teacher_pct": 0.0,
+        "secondary_dropout_rate": 5.8
+      },
+      {
+        "state_ut": "Goa",
+        "single_teacher_pct": 0.0,
+        "secondary_dropout_rate": 6.3
+      },
+      {
+        "state_ut": "Gujarat",
+        "single_teacher_pct": 0.14619061006466122,
+        "secondary_dropout_rate": 14.6
+      },
+      {
+        "state_ut": "Haryana",
+        "single_teacher_pct": 0.0,
+        "secondary_dropout_rate": 4.1
+      },
+      {
+        "state_ut": "Himachal Pradesh",
+        "single_teacher_pct": 0.0,
+        "secondary_dropout_rate": 4.8
+      },
+      {
+        "state_ut": "Jammu and Kashmir",
+        "single_teacher_pct": 0.2521494708994709,
+        "secondary_dropout_rate": 12.2
+      },
+      {
+        "state_ut": "Jharkhand",
+        "single_teacher_pct": 0.06985758067423832,
+        "secondary_dropout_rate": 2.4
+      },
+      {
+        "state_ut": "Karnataka",
+        "single_teacher_pct": 0.4114401741941517,
+        "secondary_dropout_rate": 14.6
+      },
+      {
+        "state_ut": "Kerala",
+        "single_teacher_pct": 0.12058132893317255,
+        "secondary_dropout_rate": 3.7
+      },
+      {
+        "state_ut": "Ladakh",
+        "single_teacher_pct": 1.8730489073881373,
+        "secondary_dropout_rate": 14.4
+      },
+      {
+        "state_ut": "Lakshadweep",
+        "single_teacher_pct": 0.0,
+        "secondary_dropout_rate": 5.0
+      },
+      {
+        "state_ut": "Madhya Pradesh",
+        "single_teacher_pct": 0.1826072715361939,
+        "secondary_dropout_rate": 14.6
+      },
+      {
+        "state_ut": "Maharashtra",
+        "single_teacher_pct": 0.0,
+        "secondary_dropout_rate": 10.3
+      },
+      {
+        "state_ut": "Manipur",
+        "single_teacher_pct": 1.2858979854264896,
+        "secondary_dropout_rate": 8.6
+      },
+      {
+        "state_ut": "Meghalaya",
+        "single_teacher_pct": 1.0420237197504627,
+        "secondary_dropout_rate": 16.6
+      },
+      {
+        "state_ut": "Mizoram",
+        "single_teacher_pct": 0.6794162053346754,
+        "secondary_dropout_rate": 16.0
+      },
+      {
+        "state_ut": "Nagaland",
+        "single_teacher_pct": 0.0,
+        "secondary_dropout_rate": 11.2
+      },
+      {
+        "state_ut": "Odisha",
+        "single_teacher_pct": 0.0016242995208316413,
+        "secondary_dropout_rate": 12.6
+      },
+      {
+        "state_ut": "Puducherry",
+        "single_teacher_pct": 0.0,
+        "secondary_dropout_rate": 3.1
+      },
+      {
+        "state_ut": "Punjab",
+        "single_teacher_pct": 0.03298999303544591,
+        "secondary_dropout_rate": 5.2
+      },
+      {
+        "state_ut": "Rajasthan",
+        "single_teacher_pct": 0.2756298094109236,
+        "secondary_dropout_rate": 7.1
+      },
+      {
+        "state_ut": "Sikkim",
+        "single_teacher_pct": 0.0,
+        "secondary_dropout_rate": 8.4
+      },
+      {
+        "state_ut": "Tamil Nadu",
+        "single_teacher_pct": 0.7456632432898939,
+        "secondary_dropout_rate": 5.3
+      },
+      {
+        "state_ut": "Telangana",
+        "single_teacher_pct": 2.3543588079899895,
+        "secondary_dropout_rate": 10.7
+      },
+      {
+        "state_ut": "Tripura",
+        "single_teacher_pct": 0.0,
+        "secondary_dropout_rate": 10.2
+      },
+      {
+        "state_ut": "Uttar Pradesh",
+        "single_teacher_pct": 0.02134487989693472,
+        "secondary_dropout_rate": 5.1
+      },
+      {
+        "state_ut": "Uttarakhand",
+        "single_teacher_pct": 0.14698022447888828,
+        "secondary_dropout_rate": 3.0
+      },
+      {
+        "state_ut": "West Bengal",
+        "single_teacher_pct": 19.169823400736274,
+        "secondary_dropout_rate": 16.7
+      }
+    ]
+  },
+  "narrative": {
+    "lede": "Single-teacher schools aren’t just a staffing statistic — they are a fragility signal. When one teacher is absent, the school is absent.",
+    "so_what": "Use this as a risk triage: staffing reinforcement beats cosmetic interventions in high-risk states."
+  }
+}

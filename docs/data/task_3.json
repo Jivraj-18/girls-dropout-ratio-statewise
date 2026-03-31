@@ -1,0 +1,217 @@
+{
+  "task_id": 3,
+  "title": "Female Teacher Multiplier (Role Model Effect)",
+  "year": "2024-25",
+  "gender": "Girls",
+  "level": "Secondary (9-10)",
+  "findings": {
+    "n_states": 36,
+    "correlation": -0.40666351351340396,
+    "correlation_perm_p": 0.013597280543891222,
+    "critical_mass_scan": {
+      "threshold_pct": 75.0,
+      "n_a": 26,
+      "n_b": 10,
+      "mean_diff": 6.863846153846153,
+      "ci95": [
+        4.940730769230768,
+        8.794692307692305
+      ]
+    }
+  },
+  "checksums": {
+    "teacher_totals_sanity": {
+      "rows": 37,
+      "rows_with_total_mismatch": 0
+    }
+  },
+  "chart_data": {
+    "points": [
+      {
+        "state_ut": "Andaman and Nicobar Islands",
+        "female_teacher_share": 0.7282913165266106,
+        "dropout_rate": 3.5
+      },
+      {
+        "state_ut": "Andhra Pradesh",
+        "female_teacher_share": 0.5994024439371559,
+        "dropout_rate": 12.5
+      },
+      {
+        "state_ut": "Arunachal Pradesh",
+        "female_teacher_share": 0.4871949989917322,
+        "dropout_rate": 17.7
+      },
+      {
+        "state_ut": "Assam",
+        "female_teacher_share": 0.5459138095678157,
+        "dropout_rate": 16.7
+      },
+      {
+        "state_ut": "Bihar",
+        "female_teacher_share": 0.38651259933437476,
+        "dropout_rate": 6.8
+      },
+      {
+        "state_ut": "Chandigarh",
+        "female_teacher_share": 0.7980416156670747,
+        "dropout_rate": 1.1
+      },
+      {
+        "state_ut": "Chhattisgarh",
+        "female_teacher_share": 0.7100849884106712,
+        "dropout_rate": 11.6
+      },
+      {
+        "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+        "female_teacher_share": 0.6725352112676056,
+        "dropout_rate": 8.6
+      },
+      {
+        "state_ut": "Delhi",
+        "female_teacher_share": 0.8379362670713202,
+        "dropout_rate": 5.8
+      },
+      {
+        "state_ut": "Goa",
+        "female_teacher_share": 0.8195121951219512,
+        "dropout_rate": 6.3
+      },
+      {
+        "state_ut": "Gujarat",
+        "female_teacher_share": 0.69736793120137,
+        "dropout_rate": 14.6
+      },
+      {
+        "state_ut": "Haryana",
+        "female_teacher_share": 0.8108866175421916,
+        "dropout_rate": 4.1
+      },
+      {
+        "state_ut": "Himachal Pradesh",
+        "female_teacher_share": 0.8084348897713268,
+        "dropout_rate": 4.8
+      },
+      {
+        "state_ut": "Jammu and Kashmir",
+        "female_teacher_share": 0.49403467840288456,
+        "dropout_rate": 12.2
+      },
+      {
+        "state_ut": "Jharkhand",
+        "female_teacher_share": 0.38477121711414836,
+        "dropout_rate": 2.4
+      },
+      {
+        "state_ut": "Karnataka",
+        "female_teacher_share": 0.643921601404154,
+        "dropout_rate": 14.6
+      },
+      {
+        "state_ut": "Kerala",
+        "female_teacher_share": 0.8816606207174527,
+        "dropout_rate": 3.7
+      },
+      {
+        "state_ut": "Ladakh",
+        "female_teacher_share": 0.45278330019880714,
+        "dropout_rate": 14.4
+      },
+      {
+        "state_ut": "Lakshadweep",
+        "female_teacher_share": 0.4827586206896552,
+        "dropout_rate": 5.0
+      },
+      {
+        "state_ut": "Madhya Pradesh",
+        "female_teacher_share": 0.5685976353494121,
+        "dropout_rate": 14.6
+      },
+      {
+        "state_ut": "Maharashtra",
+        "female_teacher_share": 0.5755218084737536,
+        "dropout_rate": 10.3
+      },
+      {
+        "state_ut": "Manipur",
+        "female_teacher_share": 0.5829853054911059,
+        "dropout_rate": 8.6
+      },
+      {
+        "state_ut": "Meghalaya",
+        "female_teacher_share": 0.7089508002371073,
+        "dropout_rate": 16.6
+      },
+      {
+        "state_ut": "Mizoram",
+        "female_teacher_share": 0.572139303482587,
+        "dropout_rate": 16.0
+      },
+      {
+        "state_ut": "Nagaland",
+        "female_teacher_share": 0.6129875789932447,
+        "dropout_rate": 11.2
+      },
+      {
+        "state_ut": "Odisha",
+        "female_teacher_share": 0.5254543236980119,
+        "dropout_rate": 12.6
+      },
+      {
+        "state_ut": "Puducherry",
+        "female_teacher_share": 0.8525377229080933,
+        "dropout_rate": 3.1
+      },
+      {
+        "state_ut": "Punjab",
+        "female_teacher_share": 0.8825176331233511,
+        "dropout_rate": 5.2
+      },
+      {
+        "state_ut": "Rajasthan",
+        "female_teacher_share": 0.4608618417282677,
+        "dropout_rate": 7.1
+      },
+      {
+        "state_ut": "Sikkim",
+        "female_teacher_share": 0.6674033149171271,
+        "dropout_rate": 8.4
+      },
+      {
+        "state_ut": "Tamil Nadu",
+        "female_teacher_share": 0.8781839131180897,
+        "dropout_rate": 5.3
+      },
+      {
+        "state_ut": "Telangana",
+        "female_teacher_share": 0.7433109850438371,
+        "dropout_rate": 10.7
+      },
+      {
+        "state_ut": "Tripura",
+        "female_teacher_share": 0.45383867832847424,
+        "dropout_rate": 10.2
+      },
+      {
+        "state_ut": "Uttar Pradesh",
+        "female_teacher_share": 0.5597875004229689,
+        "dropout_rate": 5.1
+      },
+      {
+        "state_ut": "Uttarakhand",
+        "female_teacher_share": 0.7537399309551208,
+        "dropout_rate": 3.0
+      },
+      {
+        "state_ut": "West Bengal",
+        "female_teacher_share": 0.6039579158316634,
+        "dropout_rate": 16.7
+      }
+    ]
+  },
+  "narrative": {
+    "lede": "In adolescent years, schools don’t just teach — they signal safety and possibility. Female teachers can act like social infrastructure.",
+    "so_what": "Recruitment and posting policy is retention policy when it changes who girls see in front of the classroom.",
+    "caveat": "This is a cross-state association; treat it as a lead, not a verdict."
+  }
+}

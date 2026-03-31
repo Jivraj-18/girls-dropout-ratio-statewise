@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "notes": "Known data quirks that are expected to show up in validation. This is NOT used to change task results; it only annotates validation checks.",
+  "anomalies": [
+    {
+      "id": "t1_checksum_ladakh_2019_20_all_levels_zero",
+      "task_id": 1,
+      "check": "rate_sum_checksum",
+      "match": {
+        "year": "2019-20",
+        "state_ut": "Ladakh",
+        "dropout": 0.0,
+        "promotion": 0.0,
+        "repetition": 0.0
+      },
+      "note": "Ladakh 2019-20 appears as 0/0/0 in some extracted tables; this yields a 100pp checksum deviation and is treated as a known edge-case for validation reporting."
+    }
+  ]
+}

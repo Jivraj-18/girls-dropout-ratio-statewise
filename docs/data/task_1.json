@@ -1,0 +1,338 @@
+{
+  "task_id": 1,
+  "title": "Peak Attrition Identification (Policy Bottleneck)",
+  "focus_year": "2024-25",
+  "gender": "Girls",
+  "findings": {
+    "india_peak_level_by_year": [
+      {
+        "year": "2018-19",
+        "peak_level": "Secondary (9-10)",
+        "peak_rate": 17.1
+      },
+      {
+        "year": "2019-20",
+        "peak_level": "Secondary (9-10)",
+        "peak_rate": 15.1
+      },
+      {
+        "year": "2020-21",
+        "peak_level": "Secondary (9-10)",
+        "peak_rate": 14.2
+      },
+      {
+        "year": "2021-22",
+        "peak_level": "Secondary (9-10)",
+        "peak_rate": 12.3
+      },
+      {
+        "year": "2022-23",
+        "peak_level": "Secondary (9-10)",
+        "peak_rate": 15.4
+      },
+      {
+        "year": "2023-24",
+        "peak_level": "Secondary (9-10)",
+        "peak_rate": 12.6
+      },
+      {
+        "year": "2024-25",
+        "peak_level": "Secondary (9-10)",
+        "peak_rate": 9.6
+      }
+    ],
+    "india_peak_level_counts": {
+      "Secondary (9-10)": 7
+    },
+    "bottleneck_level_most_years": "Secondary (9-10)",
+    "india_yoy_pct_change": {
+      "2018-19": {
+        "Primary (1-5)": null,
+        "Secondary (9-10)": null,
+        "Upper Primary (6-8)": null
+      },
+      "2019-20": {
+        "Primary (1-5)": -72.09,
+        "Secondary (9-10)": -11.7,
+        "Upper Primary (6-8)": -41.18
+      },
+      "2020-21": {
+        "Primary (1-5)": -41.67,
+        "Secondary (9-10)": -5.96,
+        "Upper Primary (6-8)": -23.33
+      },
+      "2021-22": {
+        "Primary (1-5)": 100.0,
+        "Secondary (9-10)": -13.38,
+        "Upper Primary (6-8)": 43.48
+      },
+      "2022-23": {
+        "Primary (1-5)": 457.14,
+        "Secondary (9-10)": 25.2,
+        "Upper Primary (6-8)": 151.52
+      },
+      "2023-24": {
+        "Primary (1-5)": -78.21,
+        "Secondary (9-10)": -18.18,
+        "Upper Primary (6-8)": -36.14
+      },
+      "2024-25": {
+        "Primary (1-5)": -100.0,
+        "Secondary (9-10)": -23.81,
+        "Upper Primary (6-8)": -45.28
+      }
+    },
+    "survival_cohort_100": {
+      "levels": [
+        "Start (Class 1)",
+        "After Primary (1-5)",
+        "After Upper Primary (6-8)",
+        "After Secondary (9-10)"
+      ],
+      "girls_remaining": [
+        100.0,
+        100.0,
+        97.1,
+        87.78
+      ],
+      "assumption": "Illustrative multiplication of level dropout rates (not a tracked cohort)."
+    }
+  },
+  "checksums": {
+    "promotion_dropout_repetition_sum": {
+      "rows_checked": 819,
+      "max_abs_deviation": 100.0,
+      "p95_abs_deviation": 0.5000000000000036,
+      "rows_over_1pct": 26,
+      "worst_10_rows": [
+        {
+          "year": "2019-20",
+          "state_ut": "Ladakh",
+          "level": "Upper Primary (6-8)",
+          "dropout": 0.0,
+          "promotion": 0.0,
+          "repetition": 0.0,
+          "sum_rates": 0.0,
+          "abs_deviation": 100.0
+        },
+        {
+          "year": "2019-20",
+          "state_ut": "Ladakh",
+          "level": "Secondary (9-10)",
+          "dropout": 0.0,
+          "promotion": 0.0,
+          "repetition": 0.0,
+          "sum_rates": 0.0,
+          "abs_deviation": 100.0
+        },
+        {
+          "year": "2019-20",
+          "state_ut": "Ladakh",
+          "level": "Primary (1-5)",
+          "dropout": 0.0,
+          "promotion": 0.0,
+          "repetition": 0.0,
+          "sum_rates": 0.0,
+          "abs_deviation": 100.0
+        },
+        {
+          "year": "2023-24",
+          "state_ut": "Odisha",
+          "level": "Secondary (9-10)",
+          "dropout": 11.3,
+          "promotion": 96.7,
+          "repetition": 0.9,
+          "sum_rates": 108.9,
+          "abs_deviation": 8.900000000000006
+        },
+        {
+          "year": "2021-22",
+          "state_ut": "West Bengal",
+          "level": "Upper Primary (6-8)",
+          "dropout": 0.0,
+          "promotion": 98.7,
+          "repetition": 6.9,
+          "sum_rates": 105.60000000000001,
+          "abs_deviation": 5.6000000000000085
+        },
+        {
+          "year": "2018-19",
+          "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+          "level": "Secondary (9-10)",
+          "dropout": 19.3,
+          "promotion": 80.4,
+          "repetition": 4.3,
+          "sum_rates": 104.0,
+          "abs_deviation": 4.0
+        },
+        {
+          "year": "2018-19",
+          "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+          "level": "Secondary (9-10)",
+          "dropout": 17.5,
+          "promotion": 76.5,
+          "repetition": 2.2,
+          "sum_rates": 96.2,
+          "abs_deviation": 3.799999999999997
+        },
+        {
+          "year": "2023-24",
+          "state_ut": "Goa",
+          "level": "Secondary (9-10)",
+          "dropout": 5.8,
+          "promotion": 94.4,
+          "repetition": 3.0,
+          "sum_rates": 103.2,
+          "abs_deviation": 3.200000000000003
+        },
+        {
+          "year": "2018-19",
+          "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+          "level": "Upper Primary (6-8)",
+          "dropout": 2.4,
+          "promotion": 100.0,
+          "repetition": 0.5,
+          "sum_rates": 102.9,
+          "abs_deviation": 2.9000000000000057
+        },
+        {
+          "year": "2018-19",
+          "state_ut": "Dadra and Nagar Haveli and Daman and Diu",
+          "level": "Upper Primary (6-8)",
+          "dropout": 0.0,
+          "promotion": 97.1,
+          "repetition": 0.0,
+          "sum_rates": 97.1,
+          "abs_deviation": 2.9000000000000057
+        }
+      ]
+    }
+  },
+  "chart_data": {
+    "india_dropout_by_level": [
+      {
+        "year": "2018-19",
+        "level": "Primary (1-5)",
+        "rate": 4.3
+      },
+      {
+        "year": "2018-19",
+        "level": "Secondary (9-10)",
+        "rate": 17.1
+      },
+      {
+        "year": "2018-19",
+        "level": "Upper Primary (6-8)",
+        "rate": 5.1
+      },
+      {
+        "year": "2019-20",
+        "level": "Primary (1-5)",
+        "rate": 1.2
+      },
+      {
+        "year": "2019-20",
+        "level": "Secondary (9-10)",
+        "rate": 15.1
+      },
+      {
+        "year": "2019-20",
+        "level": "Upper Primary (6-8)",
+        "rate": 3.0
+      },
+      {
+        "year": "2020-21",
+        "level": "Primary (1-5)",
+        "rate": 0.7
+      },
+      {
+        "year": "2020-21",
+        "level": "Secondary (9-10)",
+        "rate": 14.2
+      },
+      {
+        "year": "2020-21",
+        "level": "Upper Primary (6-8)",
+        "rate": 2.3
+      },
+      {
+        "year": "2021-22",
+        "level": "Primary (1-5)",
+        "rate": 1.4
+      },
+      {
+        "year": "2021-22",
+        "level": "Secondary (9-10)",
+        "rate": 12.3
+      },
+      {
+        "year": "2021-22",
+        "level": "Upper Primary (6-8)",
+        "rate": 3.3
+      },
+      {
+        "year": "2022-23",
+        "level": "Primary (1-5)",
+        "rate": 7.8
+      },
+      {
+        "year": "2022-23",
+        "level": "Secondary (9-10)",
+        "rate": 15.4
+      },
+      {
+        "year": "2022-23",
+        "level": "Upper Primary (6-8)",
+        "rate": 8.3
+      },
+      {
+        "year": "2023-24",
+        "level": "Primary (1-5)",
+        "rate": 1.7
+      },
+      {
+        "year": "2023-24",
+        "level": "Secondary (9-10)",
+        "rate": 12.6
+      },
+      {
+        "year": "2023-24",
+        "level": "Upper Primary (6-8)",
+        "rate": 5.3
+      },
+      {
+        "year": "2024-25",
+        "level": "Primary (1-5)",
+        "rate": 0.0
+      },
+      {
+        "year": "2024-25",
+        "level": "Secondary (9-10)",
+        "rate": 9.6
+      },
+      {
+        "year": "2024-25",
+        "level": "Upper Primary (6-8)",
+        "rate": 2.9
+      }
+    ],
+    "survival_step": {
+      "x": [
+        "Start (Class 1)",
+        "After Primary (1-5)",
+        "After Upper Primary (6-8)",
+        "After Secondary (9-10)"
+      ],
+      "y": [
+        100.0,
+        100.0,
+        97.1,
+        87.78
+      ]
+    }
+  },
+  "narrative": {
+    "lede": "Every system has a narrow door. In India’s dropout profile, that door is usually Secondary (9-10). Not because the earlier years are easy — but because the later years are where the system demands more: more safety, more relevance, more reason to stay.",
+    "so_what": "Treat the bottleneck level as mission-mode: that’s where small changes move the headline number."
+  }
+}
