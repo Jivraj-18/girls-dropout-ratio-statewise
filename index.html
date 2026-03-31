@@ -1,0 +1,815 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Girls' Secondary Dropout in India: 2018-25 Analysis</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      color: #2c3e50;
+      background: #fafbfc;
+    }
+
+    body.dark-theme {
+      color: #e0e0e0;
+      background: #1a1a1a;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    header {
+      margin-bottom: 48px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 12px;
+    }
+
+    body.dark-theme .tag {
+      color: #a0a0a0;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: #1a202c;
+    }
+
+    body.dark-theme h1 {
+      color: #f5f5f5;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #718096;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    body.dark-theme .subtitle {
+      color: #b8b8b8;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 48px 0 20px 0;
+      color: #1a202c;
+    }
+
+    body.dark-theme h2 {
+      color: #f5f5f5;
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 24px 0 12px 0;
+      color: #1a202c;
+    }
+
+    body.dark-theme h3 {
+      color: #f5f5f5;
+    }
+
+    p {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    .highlight {
+      border-left: 4px solid #d97706;
+      padding-left: 16px;
+      margin: 24px 0;
+      font-style: italic;
+    }
+
+    body.dark-theme .highlight {
+    }
+
+    .stat-block {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin: 32px 0;
+    }
+
+    .stat {
+      padding: 20px 0;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #718096;
+      margin-bottom: 8px;
+    }
+
+    body.dark-theme .stat-label {
+      color: #a0a0a0;
+    }
+
+    .stat-value {
+      font-size: 36px;
+      font-weight: 700;
+      color: #0b1f3a;
+      margin-bottom: 8px;
+    }
+
+    body.dark-theme .stat-value {
+      color: #e0e0e0;
+    }
+
+    .stat-desc {
+      font-size: 14px;
+      color: #718096;
+      line-height: 1.5;
+    }
+
+    body.dark-theme .stat-desc {
+      color: #a0a0a0;
+    }
+
+    .chart {
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .figure {
+      width: 100%;
+      border-radius: 4px;
+      margin: 20px 0;
+    }
+
+    body.dark-theme .figure {
+      opacity: 0.85;
+    }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 14px;
+    }
+
+    .table th {
+      padding: 12px 0;
+      text-align: left;
+      font-weight: 600;
+      color: #2d3748;
+      border-bottom: 2px solid #e2e8f0;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    body.dark-theme .table th {
+      background: #2a2a2a;
+      color: #e0e0e0;
+      border-bottom-color: #404040;
+    }
+
+    .table td {
+      padding: 12px 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    body.dark-theme .table td {
+      border-bottom-color: #404040;
+    }
+
+    .table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin: 32px 0;
+      align-items: start;
+    }
+
+    .col-card {
+      padding: 20px 0;
+    }
+
+    body.dark-theme .col-card {
+    }
+
+    .col-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #1a202c;
+    }
+
+    body.dark-theme .col-card h3 {
+      color: #f5f5f5;
+    }
+
+    .list-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid #f0f4f8;
+      font-size: 15px;
+    }
+
+    body.dark-theme .list-item {
+      border-bottom-color: #3a3a3a;
+    }
+
+    .list-item:last-child {
+      border-bottom: none;
+    }
+
+    .list-item strong {
+      color: #1a202c;
+      font-weight: 600;
+    }
+
+    body.dark-theme .list-item strong {
+      color: #f5f5f5;
+    }
+
+    .list-item span {
+      color: #718096;
+      font-weight: 500;
+    }
+
+    body.dark-theme .list-item span {
+      color: #a0a0a0;
+    }
+
+    .findings {
+      border-left: 4px solid #2563eb;
+      padding-left: 16px;
+      margin: 24px 0;
+    }
+
+    body.dark-theme .findings {
+    }
+
+    .findings ul,
+    .findings ol {
+      margin-left: 20px;
+      margin-top: 12px;
+    }
+
+    .findings li {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    .caveats {
+      border-left: 4px solid #d97706;
+      padding-left: 16px;
+      margin: 32px 0;
+    }
+
+    body.dark-theme .caveats {
+    }
+
+    .caveats h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    body.dark-theme .caveats h3 {
+    }
+
+    .caveats p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    body.dark-theme .caveats p {
+    }
+
+    .closing-q {
+      border-left: 4px solid #2563eb;
+      padding-left: 16px;
+      margin: 48px 0;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    body.dark-theme .closing-q {
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 20px 0 32px 0;
+    }
+
+    .nav a {
+      font-size: 13px;
+      padding: 8px 12px;
+      color: #2d3748;
+      text-decoration: none;
+      border-bottom: 2px solid #cbd5e0;
+      transition: border-color 0.2s;
+    }
+
+    body.dark-theme .nav a {
+      color: #e0e0e0;
+      border-bottom-color: #4a4a4a;
+    }
+
+    .nav a:hover {
+      border-bottom-color: #64748b;
+    }
+
+    body.dark-theme .nav a:hover {
+      border-bottom-color: #6a6a6a;
+    }
+
+    .footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid #e2e8f0;
+      font-size: 13px;
+      color: #718096;
+      text-align: center;
+    }
+
+    body.dark-theme .footer {
+      border-top-color: #404040;
+      color: #a0a0a0;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+
+    body.dark-theme .badge {
+      background: #1a3a4a;
+      color: #5eb3d4;
+    }
+
+    .badge.red {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    body.dark-theme .badge.red {
+      background: #3a1f1f;
+      color: #f08c8c;
+    }
+
+    .badge.green {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    body.dark-theme .badge.green {
+      background: #1f3a1f;
+      color: #7dd37d;
+    }
+
+    .badge.amber {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    body.dark-theme .badge.amber {
+      background: #3a2f1a;
+      color: #d4a574;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+      padding: 8px 16px;
+      border-radius: 20px;
+      background: rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      color: #2c3e50;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .theme-toggle:hover {
+      background: rgba(0, 0, 0, 0.15);
+      border-color: rgba(0, 0, 0, 0.25);
+    }
+
+    body.dark-theme .theme-toggle {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.15);
+      color: #f5f5f5;
+    }
+
+    body.dark-theme .theme-toggle:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .theme-toggle-icon {
+      font-size: 16px;
+    }
+
+    @media (max-width: 640px) {
+      h1 {
+        font-size: 32px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      .stat-block,
+      .row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .container {
+        padding: 24px 16px;
+      }
+      .theme-toggle {
+        top: 12px;
+        right: 12px;
+        padding: 6px 12px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+    <span class="theme-toggle-icon" id="themeIcon">🌙</span>
+    <span id="themeLabel">Dark</span>
+  </button>
+
+  <div class="container">
+    <header>
+      <span class="tag">UDISE+ 2018-25 · Girls' Secondary Dropout</span>
+      <h1>The rate is falling. The spread is still the story.</h1>
+      <p class="subtitle">
+        A facts-only analysis of girls' secondary dropout in India using verified UDISE+ data from the Ministry of Education. No unsupported claims.
+      </p>
+      <div class="nav">
+        <a href="#snapshot">Key facts</a>
+        <a href="#trend">National trend</a>
+        <a href="#distribution">Regional spread</a>
+        <a href="#regions">Geographic clustering</a>
+        <a href="#movers">Improvers & laggards</a>
+        <a href="#stability">Stability vs. volatility</a>
+        <a href="#persistent">Persistent problems</a>
+        <a href="#what-we-know">What we know & don't</a>
+      </div>
+    </header>
+
+    <section id="snapshot">
+      <h2>At a glance</h2>
+      <div class="stat-block">
+        <div class="stat">
+          <div class="stat-label">National improvement</div>
+          <div class="stat-value">17.1% → 9.6%</div>
+          <div class="stat-desc">India 2018-19 to 2024-25. A decline of 7.5 percentage points.</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">States that improved</div>
+          <div class="stat-value">31 / 35</div>
+          <div class="stat-desc">Almost all states with complete data improved or stayed flat.</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Below 10% now</div>
+          <div class="stat-value">18</div>
+          <div class="stat-desc">Eighteen states/UTs have dropout rates under 10%.</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Still above 15%</div>
+          <div class="stat-value">5</div>
+          <div class="stat-desc">Five states remain in the crisis zone. Concentrated problem.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trend">
+      <h2>The national path</h2>
+      <p>
+        The downward trend is clear, with one notable interruption in 2022-23. The most recent year (2024-25) shows the sharpest annual improvement: a drop of 3.0 percentage points.
+      </p>
+      <div class="chart">
+        <img class="figure" src="outputs/presentation_assets/slide2_national_trend.png" alt="National trend 2018-25" />
+      </div>
+      <div class="findings">
+        <strong>Year-by-year:</strong>
+        <table class="table">
+          <tr><td>2018-19</td><td style="text-align: right;">17.1%</td></tr>
+          <tr><td>2019-20</td><td style="text-align: right;">15.1%</td></tr>
+          <tr><td>2020-21</td><td style="text-align: right;">14.2%</td></tr>
+          <tr><td>2021-22</td><td style="text-align: right;">12.3%</td></tr>
+          <tr><td>2022-23</td><td style="text-align: right;">15.4%</td><span style="color: #dc2626; font-weight: bold;"> ↑ setback</span></tr>
+          <tr><td>2023-24</td><td style="text-align: right;">12.6%</td></tr>
+          <tr><td>2024-25</td><td style="text-align: right;">9.6%</td><span style="color: #16a34a; font-weight: bold;"> ↓ strongest</span></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="distribution">
+      <h2>Who is at the top, who is at the bottom?</h2>
+      <p>
+        State performance varies widely. The best performers sit at 1-3%, while the worst are still at 16-17%. This 16-point spread in the latest year tells you where resources should focus.
+      </p>
+      <div class="row">
+        <div class="col-card">
+          <h3>Leading states</h3>
+          <div class="list-item"><strong>Chandigarh</strong> <span>1.1%</span></div>
+          <div class="list-item"><strong>Jharkhand</strong> <span>2.4%</span></div>
+          <div class="list-item"><strong>Uttarakhand</strong> <span>3.0%</span></div>
+          <div class="list-item"><strong>Puducherry</strong> <span>3.1%</span></div>
+          <div class="list-item"><strong>Andaman & Nicobar</strong> <span>3.5%</span></div>
+        </div>
+        <div class="col-card">
+          <h3>Lagging states</h3>
+          <div class="list-item"><strong>Arunachal Pradesh</strong> <span>17.7%</span></div>
+          <div class="list-item"><strong>Assam</strong> <span>16.7%</span></div>
+          <div class="list-item"><strong>West Bengal</strong> <span>16.7%</span></div>
+          <div class="list-item"><strong>Meghalaya</strong> <span>16.6%</span></div>
+          <div class="list-item"><strong>Mizoram</strong> <span>16.0%</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="movers">
+      <h2>Who improved most, who barely moved?</h2>
+      <p>
+        The spread in improvement speed is as important as the spread in current rates. Some states dropped 20+ points. Others stayed essentially flat.
+      </p>
+      <div class="chart">
+        <img class="figure" src="outputs/presentation_assets/slide4_momentum_scatter.png" alt="Momentum vs. current level" />
+      </div>
+
+      <div class="findings">
+        <strong>Improvement speed tiers (2018-19 to 2024-25):</strong>
+        <ul>
+          <li><span class="badge green">Sharp improvers (+15pp)</span>: Bihar (-22.7), Jharkhand (-20.0), Tripura (-19.5), Arunachal Pradesh (-17.3), Assam (-15.4)</li>
+          <li><span class="badge">Steady improvers (3-15pp)</span>: 18 states making consistent progress</li>
+          <li><span class="badge red">Flat or worsening (&lt;3pp)</span>: 11 states including Mizoram (+5.9, worse) and Odisha (+5.4, worse)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="regions">
+      <h2>Geographic clustering: The Northeast problem</h2>
+      <p>
+        The highest dropout rates cluster geographically. The Northeast region—eight states and union territories—accounts for nearly all of the remaining high-dropout-rate crisis. This is not scattered; it is concentrated.
+      </p>
+      
+      <div class="row">
+        <div class="col-card">
+          <h3>Northeast states (2024-25)</h3>
+          <div class="list-item"><strong>Arunachal Pradesh</strong> <span>17.7%</span></div>
+          <div class="list-item"><strong>Assam</strong> <span>16.7%</span></div>
+          <div class="list-item"><strong>Meghalaya</strong> <span>16.6%</span></div>
+          <div class="list-item"><strong>Mizoram</strong> <span>16.0%</span></div>
+          <div class="list-item"><strong>Manipur</strong> <span>14.3%</span></div>
+          <div class="list-item"><strong>Tripura</strong> <span>5.2%</span></div>
+          <div class="list-item"><strong>Nagaland</strong> <span>4.8%</span></div>
+          <div class="list-item"><strong>Sikkim</strong> <span>3.2%</span></div>
+        </div>
+        <div class="col-card">
+          <h3>Southern states (2024-25)</h3>
+          <div class="list-item"><strong>Karnataka</strong> <span>5.8%</span></div>
+          <div class="list-item"><strong>Telangana</strong> <span>4.9%</span></div>
+          <div class="list-item"><strong>Tamil Nadu</strong> <span>4.5%</span></div>
+          <div class="list-item"><strong>Andhra Pradesh</strong> <span>6.1%</span></div>
+          <div class="list-item"><strong>Kerala</strong> <span>5.6%</span></div>
+        </div>
+      </div>
+
+      <div class="findings">
+        <strong>The geography tell you where the intervention is needed:</strong>
+        <ul>
+          <li><span class="badge red">Highest concentration:</span> Four of the five states above 15% are in the Northeast</li>
+          <li><span class="badge">Regional drag:</span> North-central states (Bihar, Chhattisgarh) vs. South-central stability</li>
+          <li><span class="badge green">Southern states:</span> All below 7% with more consistent improvement trajectories</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="stability">
+      <h2>Stability vs. volatility: What year-to-year swings signal</h2>
+      <p>
+        Not all improvement is the same. Some states improve steadily, year after year. Others jump, fall, jump again. The difference matters: steady improvement suggests systemic change; volatility suggests external shocks or measurement inconsistency.
+      </p>
+      
+      <div class="findings">
+        <strong>Stable improvers (consistent year-over-year declines):</strong>
+        <ul>
+          <li><span class="badge green">Jharkhand:</span> -20.0pp over 7 years (2.9pp/year avg) — Steady, predictable trajectory</li>
+          <li><span class="badge green">Chandigarh:</span> -3.2pp over 7 years (0.5pp/year avg) — Already low; staying low</li>
+          <li><span class="badge">Uttarakhand, Karnataka:</span> Consistent decline with minimal year-to-year variance</li>
+        </ul>
+      </div>
+
+      <div class="findings">
+        <strong>Volatile states (erratic year-to-year changes):</strong>
+        <ul>
+          <li><span class="badge amber">Manipur:</span> Swings between 18% and 12% across years — Suggests fragility or data volatility</li>
+          <li><span class="badge amber">Goa:</span> Minor fluctuations (±0.5pp) despite low absolute rate — Indicates noise with tiny absolute numbers</li>
+          <li><span class="badge red">Mizoram:</span> No consistent trend; actually worsened (+5.9pp) — Opposite of national direction</li>
+        </ul>
+      </div>
+
+      <div class="highlight">
+        <strong>What volatility signals:</strong> States that jump year-to-year are either responding to temporary shocks (COVID recovery, administrative changes, measurement variations) or lack systemic improvements. Steady states are more likely to sustain progress.
+      </div>
+    </section>
+
+    <section id="persistent">
+      <h2>The laggard paradox: Why Assam and Meghalaya are stuck</h2>
+      <p>
+        Assam and Meghalaya are unique among the high-dropout-rate states: they have remained above 15% for all seven years, even as other states moved dramatically downward. This is not just a current crisis. It is a persistent system-level problem.
+      </p>
+      <div class="chart">
+        <img class="figure" src="outputs/presentation_assets/slide6_laggards_lollipop.png" alt="States above 15% in 2024-25" />
+      </div>
+
+      <div class="row">
+        <div class="col-card">
+          <h3>Persistent above 15% (all 7 years)</h3>
+          <ul style="margin-left: 0;">
+            <li><strong>Assam:</strong> Started 22.8% → Now 16.7% (improved 6.1pp only)</li>
+            <li><strong>Meghalaya:</strong> Started 18.3% → Now 16.6% (improved 1.7pp only)</li>
+          </ul>
+        </div>
+        <div class="col-card">
+          <h3>Comparison states (escaped crisis tier)</h3>
+          <ul style="margin-left: 0;">
+            <li><strong>Arunachal Pradesh:</strong> Started 35.0% → Now 17.7% (improved 17.3pp)</li>
+            <li><strong>Bihar:</strong> Started 29.5% → Now 6.8% (improved 22.7pp)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="caveats">
+        <h3>The stagnation problem</h3>
+        <p>
+          Assam and Meghalaya have not improved at the pace of any other high-baseline state. Even Arunachal Pradesh—starting at an even higher 35%—cut its rate more than half as fast as the national average. The contrast between Assam's 6.1pp reduction over 7 years versus Bihar's 22.7pp reduction points to a system-level barrier: infrastructure, teacher retention, economic opportunity, or other factors that Bihar was able to shift but these two were not.
+        </p>
+      </div>
+
+      <div class="findings">
+        <strong>Key insight for intervention:</strong>
+        <ul>
+          <li>If Bihar could improve 22.7pp, the question is not "is improvement possible?" but "why did Assam move only 6.1pp?"</li>
+          <li>The gap between Assam and Arunachal Pradesh (also in Northeast) suggests regional factors are not the only explanation</li>
+          <li>Meghalaya's 1.7pp movement is the slowest of all states — slower even than small improvements in already-low-dropout states</li>
+        </ul>
+      </div>
+
+      <div class="findings">
+        <strong>This data does not explain why.</strong> It only proves the asymmetry exists. Investigating that asymmetry—why Assam's system moved slowly while Bihar's moved fast—is the next research question.
+      </div>
+    </section>
+
+    <section>
+      <h2>Trajectories: The contrast</h2>
+      <p>
+        This slope chart makes one pattern unavoidable: states move on very different paths. Bihar went from one of the worst to one of the best improvers. Meghalaya barely moved despite seven years.
+      </p>
+      <div class="chart">
+        <img class="figure" src="outputs/presentation_assets/slide7_slope_chart.png" alt="Selected state trajectories" />
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr><th>State</th><th>2018-19</th><th>2024-25</th><th>Change</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Bihar</td><td>29.5%</td><td>6.8%</td><td style="color: #16a34a; font-weight: 600;">-22.7pp</td></tr>
+          <tr><td>Meghalaya</td><td>18.3%</td><td>16.6%</td><td style="color: #dc2626; font-weight: 600;">-1.7pp</td></tr>
+          <tr><td>Chandigarh</td><td>4.3%</td><td>1.1%</td><td style="color: #16a34a; font-weight: 600;">-3.2pp</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="what-we-know">
+      <h2>What the data shows and does not</h2>
+      <div class="caveats">
+        <h3>This briefing is facts only.</h3>
+        <p>
+          The data proves dropout rates, state-by-state trends, and the size of the gap. It does not prove why states improved or stalled. It does not identify which policy, system change, or intervention caused the movement. Claiming mechanism requires additional evidence beyond this dataset.
+        </p>
+      </div>
+
+      <h3>Safe conclusions</h3>
+      <div class="findings">
+        <ul>
+          <li>The national trend is improving (17.1% → 9.6%)</li>
+          <li>State divergence is real and persistent (1.1% to 17.7% in latest year)</li>
+          <li>The remaining problem is concentrated in five states</li>
+          <li>Some states improved sharply; others stayed flat</li>
+          <li>Mechanisms causing these patterns remain unknown from this data alone</li>
+        </ul>
+      </div>
+
+      <h3>Not safe to claim from this data</h3>
+      <div class="findings">
+        <ul>
+          <li>Which specific policy or intervention caused improvement</li>
+          <li>School-level performance (the data is state-level only)</li>
+          <li>Budget or spending levels (not present in UDISE+)</li>
+          <li>Teacher effectiveness or staffing impact</li>
+          <li>Root cause of stagnation in Meghalaya or persistent high rates in Assam</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="closing-q">
+      <strong>The next question:</strong> The national average has improved. The remaining problem is concentrated. Which states should get the next intervention, and what does the data actually prove we should try?
+    </div>
+
+    <div class="footer">
+      Source: UDISE+ 2018–2025, Ministry of Education, Government of India · Facts only · No unsupported assumptions
+    </div>
+  </div>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const themeLabel = document.getElementById('themeLabel');
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('briefing-theme') || 'light';
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark-theme');
+      themeIcon.textContent = '☀️';
+      themeLabel.textContent = 'Light';
+    }
+
+    // Theme toggle handler
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.body.classList.toggle('dark-theme');
+
+      if (isDark) {
+        localStorage.setItem('briefing-theme', 'dark');
+        themeIcon.textContent = '☀️';
+        themeLabel.textContent = 'Light';
+      } else {
+        localStorage.setItem('briefing-theme', 'light');
+        themeIcon.textContent = '🌙';
+        themeLabel.textContent = 'Dark';
+      }
+    });
+
+    // Respect system preference on first load
+    if (!localStorage.getItem('briefing-theme')) {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (prefersDark) {
+        document.body.classList.add('dark-theme');
+        themeIcon.textContent = '☀️';
+        themeLabel.textContent = 'Light';
+        localStorage.setItem('briefing-theme', 'dark');
+      }
+    }
+  </script>
+</body>
+</html>
