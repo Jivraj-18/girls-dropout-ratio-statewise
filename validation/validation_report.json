@@ -1,0 +1,128 @@
+{
+  "generated": "2026-04-01T00:12:18.269227",
+  "data_year": "2024-25",
+  "national_stats": {
+    "dropout_by_gender": {
+      "boys": 13.3,
+      "girls": 9.6,
+      "gap": 3.700000000000001,
+      "total": 11.5
+    }
+  },
+  "crisis_states": [
+    {
+      "State": "West Bengal",
+      "Boys": 23.4,
+      "Girls": 16.7,
+      "Total": 20.0
+    },
+    {
+      "State": "Arunachal Pradesh",
+      "Boys": 19.0,
+      "Girls": 17.7,
+      "Total": 18.3
+    },
+    {
+      "State": "Karnataka",
+      "Boys": 21.9,
+      "Girls": 14.6,
+      "Total": 18.3
+    },
+    {
+      "State": "Assam",
+      "Boys": 18.5,
+      "Girls": 16.7,
+      "Total": 17.5
+    },
+    {
+      "State": "Mizoram",
+      "Boys": 18.9,
+      "Girls": 16.0,
+      "Total": 17.4
+    }
+  ],
+  "exemplar_states": [
+    {
+      "State": "Chandigarh",
+      "Boys": 2.8,
+      "Girls": 1.1,
+      "Total": 2.0
+    },
+    {
+      "State": "Jharkhand",
+      "Boys": 4.6,
+      "Girls": 2.4,
+      "Total": 3.5
+    },
+    {
+      "State": "Lakshadweep",
+      "Boys": 3.2,
+      "Girls": 5.0,
+      "Total": 4.1
+    },
+    {
+      "State": "Uttarakhand",
+      "Boys": 6.0,
+      "Girls": 3.0,
+      "Total": 4.6
+    },
+    {
+      "State": "Kerala",
+      "Boys": 5.8,
+      "Girls": 3.7,
+      "Total": 4.8
+    }
+  ],
+  "gender_analysis": {
+    "largest_gaps": [
+      {
+        "State": "Chhattisgarh",
+        "Boys": 19.2,
+        "Girls": 11.6,
+        "gender_gap": 7.6
+      },
+      {
+        "State": "Dadra and Nagar Haveli and Daman and Diu",
+        "Boys": 16.1,
+        "Girls": 8.6,
+        "gender_gap": 7.500000000000002
+      },
+      {
+        "State": "Karnataka",
+        "Boys": 21.9,
+        "Girls": 14.6,
+        "gender_gap": 7.299999999999999
+      },
+      {
+        "State": "West Bengal",
+        "Boys": 23.4,
+        "Girls": 16.7,
+        "gender_gap": 6.699999999999999
+      },
+      {
+        "State": "Tamil Nadu",
+        "Boys": 11.6,
+        "Girls": 5.3,
+        "gender_gap": 6.3
+      }
+    ],
+    "boys_higher_count": 35,
+    "total_states": 36
+  },
+  "formula_validation": {
+    "boys_promotion_repetition_dropout": {
+      "promotion": 81.7,
+      "repetition": 5.0,
+      "dropout": 13.3,
+      "sum": 100.0,
+      "valid": true
+    },
+    "girls_promotion_repetition_dropout": {
+      "promotion": 86.3,
+      "repetition": 4.1,
+      "dropout": 9.6,
+      "sum": 99.99999999999999,
+      "valid": true
+    }
+  }
+}
